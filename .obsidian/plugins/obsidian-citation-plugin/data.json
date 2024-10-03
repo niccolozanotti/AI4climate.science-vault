@@ -1,9 +1,0 @@
-{
-  "citationExportFormat": "biblatex",
-  "literatureNoteTitleTemplate": "@{{citekey}}",
-  "literatureNoteFolder": "References/Literature Notes",
-  "literatureNoteContentTemplate": "---\ntitle: >\n   <% tp.user.reference_title(\"{{entry.type}}\", \"{{authorString}}\", \"{{year}}\", \"{{DOI}}\").replace('\\n', '') %>\nType: {{entry.type}}\nCitekey: {{entry.id}}\n<% tp.user.reference_info(\"{{entry.type}}\", \"{{authorString}}\", \"{{year}}\", \"{{DOI}}\") %> \ntags: \naliases:\ndescription: >\n\n---\n\n- [Zotero]({{zoteroSelectURI}}) \n- <% tp.user.doi_or_url('{{DOI}}', '{{URL}}') %> \n\n# {{title}}\n\n### Abstract\n{{abstract}}",
-  "markdownCitationTemplate": "[[@{{citekey}}|{{authorString}} ({{year}})]]",
-  "alternativeMarkdownCitationTemplate": "[@{{citekey}}]({{zoteroSelectURI}})",
-  "citationExportPath": "References/library.bib"
-}
