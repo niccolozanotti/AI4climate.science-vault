@@ -12,7 +12,7 @@ description: >
 
 ---
 
-- [Zotero](zotero://select/items/@Carrassi2018) 
+- [Zotero item](zotero://select/items/@Carrassi2018) 
 - [doi](https://doi.org/10.1002/wcc.535) 
 
 # Data assimilation in the geosciences: An overview of methods, issues, and perspectives
