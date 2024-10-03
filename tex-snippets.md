@@ -1,6 +1,4 @@
 // snippets used as Latex suite [plugin](https://github.com/artisticat1/obsidian-latex-suite) configuration
-
-
 [
     // Math mode
 	{trigger: "mk", replacement: "$$0$", options: "tA"},
