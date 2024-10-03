@@ -12,10 +12,7 @@ description: >
 
 ---
 
-- [Zotero](zotero://select/items/@Russell2021) 
+- [Zotero item](zotero://select/items/@Russell2021) 
 - [Link](https://elibrary.pearson.de/book/99.150005/9781292401171) 
 
 # Artificial intelligence : A modern approach
-
-### Abstract
-xviii, 1132 pages : illustrations ; 26 cm

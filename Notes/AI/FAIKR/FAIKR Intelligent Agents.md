@@ -9,7 +9,7 @@ aliases:
 description:
 ---
 >[!info]- Source material
-
+> - [[@Russell2021|S. Russell, P. Norvig (2021)]] - Chapter 2
 
 | [[FAIKR#Contents|Next topic]] >>
 
