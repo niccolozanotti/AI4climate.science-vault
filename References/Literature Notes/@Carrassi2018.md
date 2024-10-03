@@ -1,8 +1,8 @@
 ---
 title: >
    A. Carrassi et al. (2018)
-Type: article
-Citekey: Carrassi2018
+type: article
+citekey: Carrassi2018
 Author: A. Carrassi et al.
 Year: 2018
 DOI: 10.1002/wcc.535 
