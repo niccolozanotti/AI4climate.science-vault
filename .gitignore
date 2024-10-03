@@ -1,0 +1,10 @@
+*.DS_Store
+.venv/
+.obsidian/
+.trash/
+
+# Personal folders
+Daily Notes/
+tmp/
+
+
