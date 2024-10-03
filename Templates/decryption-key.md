@@ -1,0 +1,1 @@
+[^1]: Decryption key: `Go4hOnlNYszI7QySrvLmWA` ([[FAQs#What's the point of using a user-decryption key in the same place of the link?|Why]]?)
