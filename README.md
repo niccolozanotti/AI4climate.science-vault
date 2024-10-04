@@ -26,4 +26,4 @@ The list of community [plugins](https://obsidian.md/plugins) I am currently usin
 
 ### License
 
-This repository is licensed under the [MIT License](LICENSE).
+	This repository is licensed under the [MIT License](LICENSE).
