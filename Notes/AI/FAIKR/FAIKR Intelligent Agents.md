@@ -81,9 +81,10 @@ subgraph ZA[" "]
 direction TB
     D-->E
     E-->F
+    A --> D
+    C --> F
 end
 
-Z --> ZA
 ```
 
 ```mermaid
@@ -103,13 +104,12 @@ flowchart TB
  subgraph Env["Environment"]
  direction TB
 
-  A:::hidden
+  A
 
   B:::hidden
+  Env --> Sensors
+  Actuators --> Env
  end
-
-A --> Sensors
-Actuators --> B
 
 classDef hidden display: none;
 ```
