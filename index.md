@@ -12,17 +12,15 @@ This website stems from the notes I am taking using [Obsidian](https://obsidian
 
 _As of now_ it holds:
 - my [[Notes|University notes]] with the main topics being [[AI|Artificial Intelligence]] and [[Climate|Climate science]] (📓Notes in the header)
-- My personal [[Projects|projects]]
 - [[Miscellaneous|Miscellanea]]
-
-The full list of reference books/articles can be found [[References|here]].
+- Some [[References/Literature-Notes/|references]] (books/papers) I am reading and taking notes on 
 
 ---
 ### How to navigate the website
 
 As in Obsidian, from the [Graph view](https://help.obsidian.md/Plugins/Graph+view) in the bottom panel - or in the right panel if in full screen mode - you can navigate the website through linked notes. 
 
-You can also search the notes using the website 🔍 button or by Ctrl+k. You can search for the notes with a certain tag with #tag-name (see [[/tags|here]] the full tag list).
+You can also search the notes using the website 🔍 button or by Ctrl+k. You can search for the notes with a certain tag with #tag-name (check [[/tags|here]] the full tag list).
 
 ### License
 
