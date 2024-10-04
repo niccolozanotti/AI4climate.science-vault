@@ -21,7 +21,7 @@ description:
 
 This simple idea is illustrated in the following [[FAIKR Intelligent Agents#^basic-agent-diagram|diagram]].
 ```mermaid
-graph TD
+graph LR
     subgraph AgentBox[Agent]
         direction TB
         Sensors --> Decision[?]
@@ -46,7 +46,26 @@ flowchart LR
     markdown --> newLines
 ```
 
+```mermaid
+graph LR
+    START[ ]-->A[Sample Text]
+    A-->B
+    B-->A 
+    B-->STOP[ ]
+    
+    style START fill:#FFFFFF00, stroke:#FFFFFF00;
+    style STOP  fill:#FFFFFF00, stroke:#FFFFFF00;
+```
 
+```mermaid
+graph LR
+    START:::hidden --> A
+    A --> B --> A 
+    B --> Environment
+    END:::hidden
+
+    classDef hidden display: none;
+```
 
 
 
