@@ -14,8 +14,8 @@ description:
 | [[FAIKR#Contents|Next topic]] >>
 
 ---
-
 ## Agents and Environments
+
 
 ## Rationality
 
