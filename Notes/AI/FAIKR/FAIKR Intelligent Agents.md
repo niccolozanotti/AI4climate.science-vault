@@ -23,7 +23,11 @@ This simple idea is illustrated in the following [[FAIKR Intelligent Agents#^bas
 
 ![[basic-agent-diagram.png]]
 ^basic-agent-diagram
+
+
+
 ## Rationality
+
 
 ## The nature of Environments
 
