@@ -86,6 +86,34 @@ end
 Z --> ZA
 ```
 
+```mermaid
+flowchart TB
+
+ subgraph Agent["Agent"]
+ direction TB
+
+  Sensors([Sensors])
+  ?("`**?**`")
+  Actuators("`*Actuators*`")
+ 
+  Sensors --> ?
+  ? --> Actuators
+ end
+
+ subgraph Env["Environment"]
+ direction TB
+
+  A:::hidden
+
+  B:::hidden
+ end
+
+A --> Sensors
+Actuators --> B
+
+classDef hidden display: none;
+```
+
 
 ![[basic-agent-diagram.png]]
 ^basic-agent-diagram
