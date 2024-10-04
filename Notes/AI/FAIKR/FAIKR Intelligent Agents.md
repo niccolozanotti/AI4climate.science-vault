@@ -68,7 +68,23 @@ graph LR
 ```
 
 
+```mermaid
+flowchart LR
 
+subgraph Z[" "]
+direction TB
+  A --> B
+  B --> C
+end
+
+subgraph ZA[" "]
+direction TB
+    D-->E
+    E-->F
+end
+
+Z --> ZA
+```
 
 
 ![[basic-agent-diagram.png]]
