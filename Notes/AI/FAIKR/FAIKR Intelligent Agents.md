@@ -90,6 +90,14 @@ end
 ```mermaid
 flowchart TB
 
+ subgraph Env["Environment"]
+ direction TB
+
+  A
+  B
+  
+ end
+
  subgraph Agent["Agent"]
  direction TB
 
@@ -101,18 +109,15 @@ flowchart TB
   ? --> Actuators
  end
 
- subgraph Env["Environment"]
- direction TB
-
-  A
-
-  B:::hidden
-  Env --> Sensors
-  Actuators --> Env
- end
+ A -- Percepts --> Sensors
+ Actuators -- Actions --> B
+ 
 
 classDef hidden display: none;
 ```
+
+
+
 
 
 ![[basic-agent-diagram.png]]
