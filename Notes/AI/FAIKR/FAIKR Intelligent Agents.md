@@ -131,11 +131,13 @@ So far, we have discussed agents in terms of their behavior—the action perform
 
 >The goal of AI is to design an **agent program** that implements the agent function, which maps percepts to actions. 
 
-This program is assumed to run on a computing device with physical sensors and actuators, referred to as the **agent architecture**. In essence, an **agent** consists of the **architecture** and the **program**:
+This program is assumed to run on a computing device with physical sensors and actuators, referred to as the **agent architecture**:
+>[!def] DEF - Agent Architecture
+> $$
+>  \text{agent} = \text{architecture} + \text{program}
+> $$
+^agent-architecture-def
 
-  
-
-**agent = architecture + program**.
 
 ---
 - [[FAIKR|Course page]]

@@ -24,7 +24,7 @@ def fix_callout(file_path):
 
 if __name__ == "__main__":
     # Provide the path to the markdown file
-    file_path = "/Users/niccolozanotti/Documents/GitHub/obsidian-vault/tmp/callout-to-fix.md"
+    file_path = "/Users/niccolozanotti/Documents/GitHub/AI4climate.science-vault/tmp/callout-to-fix.md"
     fix_callout(file_path)
     print('callout format fixed')
 ```
