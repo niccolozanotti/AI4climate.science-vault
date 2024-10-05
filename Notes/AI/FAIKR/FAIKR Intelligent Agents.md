@@ -50,7 +50,7 @@ This leads to a definition of a rational agent:
 >[!def] **DEF** - **Rational Agent**
 >For each possible percept sequence, a rational agent should select an action that is expected to maximize its performance measure, given the evidence provided by the percept sequence and whatever built-in knowledge the agent has.
 ^rational-agent-def
-#### Rationality vs omniscience
+### Rationality vs omniscience
 
 **Rationality** differs from **perfection**. Rationality maximizes **expected performance**, while perfection maximizes **actual performance**. Expecting an agent to always take the best action after the fact is impossible without **omniscience** or tools like **crystal balls** or **time machines**.
 
@@ -58,7 +58,7 @@ Rationality relies on the agent’s **percept sequence** up to the present momen
 
 **Information gathering** and **learning** from experience are essential aspects of rationality. While prior knowledge can guide the agent, it must adapt its knowledge based on new **percepts**. In fully **predictable environments**, however, the agent doesn’t need to learn or perceive—it just acts.
 
-#### Autonomy
+### Autonomy
 
 An agent that relies heavily on its designer’s prior knowledge rather than its own **percepts** and **learning processes** lacks **autonomy**. A **rational agent** should strive for autonomy by learning to compensate for partial or incorrect prior knowledge.  
 However, **complete autonomy** isn’t needed right away. Initially, an agent may require guidance from the designer, much like animals rely on **built-in reflexes** to survive until they can learn. Over time, as the agent gains more **experience**, its behavior can become independent of prior knowledge. **Learning** enables the creation of a single rational agent capable of succeeding in a wide range of environments.
@@ -67,13 +67,15 @@ However, **complete autonomy** isn’t needed right away. Initially, an agent ma
 
 With a [[FAIKR Intelligent Agents#^rational-agent-def|definition]] of **rationality**, we can start thinking about building **rational agents**. However, first, we need to define **task environments**, which are the “problems” that rational agents are designed to solve. The nature of the **task environment** significantly influences the appropriate agent design.
 
+### Task environments
+
 In specifying the task environment the following are needed:
 - **P**erformance measure
 - **E**nvironment
 - **A**ctuators
 - **S**ensors
 
-which under the acronym **PEAS**.
+which go under the acronym **PEAS**.
 
 ## The structure of Agents
 
