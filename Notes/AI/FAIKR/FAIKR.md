@@ -22,7 +22,7 @@ description: >
 > *Prerequisites*: user-level knowledge of a high-level programming language, in order to successfully understand case studies and applications presented during the lessons.
 ## Contents
  
->[!summary] Complementary material
+>[!summary]- Complementary material
 > [[FAIKR Intelligent Agents|Intelligent Agents]]
 
 >[!summary]- Content - Module 1
