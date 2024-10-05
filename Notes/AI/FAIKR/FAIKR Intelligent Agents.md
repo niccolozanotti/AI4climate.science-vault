@@ -16,7 +16,9 @@ description:
 
 >[!def] **DEF** - **Agent**
 >An **agent** is anything that can be viewed as perceiving its environment through **sensors** and acting upon that environment through **actuators**. We use the term **percept** to refer to the content an agent’s sensors are perceiving. An agent’s **percept sequence** is the complete history of everything the agent has ever perceived.
+
 ^agent-def
+
 This simple idea is illustrated in the following [[FAIKR Intelligent Agents#^basic-agent-diagram|diagram]].
 
 ![[basic-agent-diagram.png]]
@@ -39,15 +41,14 @@ Humans have **desires** and **preferences** of their own, so the notion of **rat
 
 What is rational at any given time depends on four things:
 
-• The performance measure that defines the criterion of success.
-• The agent’s prior knowledge of the environment.
-• The actions that the agent can perform.
-• The agent’s percept sequence to date.
+- The performance measure that defines the criterion of success.
+- The agent’s prior knowledge of the environment.
+- The actions that the agent can perform.
+- The agent’s percept sequence to date.
 
 This leads to a definition of a rational agent:
 >[!def] **DEF** - **Rational Agent**
-For each possible percept sequence, a rational agent should select an action that is expected to maximize its performance measure, given the evidence provided by the percept
-sequence and whatever built-in knowledge the agent has.
+>For each possible percept sequence, a rational agent should select an action that is expected to maximize its performance measure, given the evidence provided by the percept sequence and whatever built-in knowledge the agent has.
 ^rational-agent-def
 #### Rationality vs omniscience
 
@@ -71,6 +72,7 @@ In specifying the task environment the following are needed:
 - **E**nvironment
 - **A**ctuators
 - **S**ensors
+
 which under the acronym **PEAS**.
 
 ## The structure of Agents
