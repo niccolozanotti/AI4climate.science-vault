@@ -12,9 +12,8 @@ Python package to handle YouTube videos: [pytube](https://pytube.io/en/latest/)
 ```python
 from pytube import YouTube
 yt = YouTube('https://www.youtube.com/watch?v=mpE6yWb6l70')
-print(yt.title)
-print(yt.thumbnail_url)
-yt.streams.filter(file_extension='mp4')
+
+yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download()
 ```
 
 
