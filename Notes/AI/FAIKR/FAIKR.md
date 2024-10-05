@@ -23,7 +23,11 @@ description: >
 ## Contents
  
 >[!summary]- Complementary material
-> [[FAIKR Intelligent Agents|Intelligent Agents]]
+> - [[FAIKR Intelligent Agents|Intelligent Agents]]
+> 	- [[FAIKR Intelligent Agents#Agents and Environments|Agents and Environments]]
+> 	- [[FAIKR Intelligent Agents#Rationality|Rationality]]
+> 	- [[FAIKR Intelligent Agents#The nature of Environments|The nature of Environments]]
+> 	- [[FAIKR Intelligent Agents#The structure of Agents|The structure of Agents]]
 
 >[!summary]- Content - Module 1
 > - Introduction to Artificial Intelligence: historical perspective, main application fields, introduction to knowledge-based systems and architectural organization.
