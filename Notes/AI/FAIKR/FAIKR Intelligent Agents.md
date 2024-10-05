@@ -130,14 +130,13 @@ An Example: Taxi driving is **nondeterministic** due to unpredictable traffic an
 So far, we have discussed agents in terms of their behavior—the action performed after any given sequence of percepts. Now, we need to examine how their internal mechanisms work. 
 
 >The goal of AI is to design an **agent program** that implements the agent function, which maps percepts to actions. 
-
-This program is assumed to run on a computing device with physical sensors and actuators, referred to as the **agent architecture**:
->[!def] DEF - Agent Architecture
-> $$
->  \text{agent} = \text{architecture} + \text{program}
-> $$
+>This program is assumed to run on a computing device with physical sensors and actuators, referred to as the **agent architecture**:
+ $$
+  \text{agent} = \text{architecture} + \text{program}
+ $$
 ^agent-architecture-def
 
+The key challenge for AI is to find out how to write programs that, to the extent possible, *produce rational behavior from a smallish program rather than from a vast table*.
 
 ---
 - [[FAIKR|Course page]]
