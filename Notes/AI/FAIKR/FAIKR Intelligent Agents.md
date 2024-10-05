@@ -77,6 +77,79 @@ In specifying the task environment the following are needed:
 
 which go under the acronym **PEAS**.
 
+**Task environments** in AI can be categorized along several **dimensions** which help determine the **appropriate agent design** and the techniques for implementation.
+
+  
+
+**Dimensions of task environments:**
+
+  
+
+• **Fully observable vs. partially observable**:
+
+• **Fully observable**: The agent’s **sensors** provide complete access to the environment at all times. The agent does not need to maintain **internal state**.
+
+• **Partially observable**: Sensors may be **noisy**, **inaccurate**, or missing relevant state data. For example, a vacuum agent with a local dirt sensor or a taxi unable to perceive what other drivers are thinking.
+
+• **Unobservable**: An agent has no sensors at all. However, some goals may still be achievable even in this case.
+
+• **Single-agent vs. multiagent**:
+
+• **Single-agent**: The agent operates alone, like solving a crossword puzzle.
+
+• **Multiagent**: There are multiple agents, such as in a game of chess.
+
+• **Competitive multiagent**: Agents work against each other, e.g., in chess, where one agent’s success reduces the other’s performance.
+
+• **Partially cooperative multiagent**: In scenarios like taxi-driving, avoiding collisions benefits all agents, but competition arises, e.g., when fighting for a parking spot.
+
+• Multiagent environments introduce challenges like the need for **communication** or **randomized behavior** to avoid being predictable.
+
+
+• **Deterministic vs. Nondeterministic**:
+
+• **Deterministic**: The next state of the environment is fully determined by the current state and the agent’s action.
+
+• **Nondeterministic**: The environment is not entirely predictable, often due to complexity or unobserved aspects.
+
+• **Stochastic**: Similar to nondeterministic but deals with **probabilities**.
+
+• Example: Taxi driving is **nondeterministic** due to unpredictable traffic and potential mechanical issues.
+
+• **Episodic vs. Sequential**:
+
+• **Episodic**: The agent’s experience is divided into **independent episodes** where past actions do not affect future ones.
+
+• **Sequential**: **Current actions affect future decisions**; examples include chess and taxi driving.
+
+• **Episodic environments** are simpler as agents don’t need to plan ahead.
+
+• **Static vs. Dynamic**:
+
+• **Static**: The environment does not change while the agent is deliberating.
+
+• **Dynamic**: The environment changes continuously, requiring the agent to keep up with it.
+
+• **Semidynamic**: The environment remains unchanged, but the performance score changes over time (e.g., chess with a clock).
+
+• **Discrete vs. Continuous**:
+
+• **Discrete**: The environment has a finite set of states and actions (e.g., chess).
+
+• **Continuous**: The environment involves **smooth transitions** over time (e.g., taxi driving with continuous changes in speed and position).
+
+• **Known vs. Unknown**:
+
+• **Known**: The agent/designer knows the **laws of physics** of the environment.
+
+• **Unknown**: The agent must learn how the environment works to make good decisions.
+
+• This is distinct from **observable** environments; an environment can be **known but partially observable** or **unknown but fully observable**.
+
+• **Performance measure uncertainty**: In some cases, the performance measure may be **unknown**, requiring the agent to learn through interactions with the **user** or **designer** (e.g., a taxi driver learning passenger preferences).
+
+
+
 ## The structure of Agents
 
 
