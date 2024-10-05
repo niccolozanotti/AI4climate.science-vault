@@ -7,8 +7,12 @@ description:
 draft: true
 ---
 
-```python
+Python package to handle YouTube videos: [pytube](https://pytube.io/en/latest/)
 
+```python
+from pytube import YouTube
+yt = YouTube('https://www.youtube.com/watch?v=mpE6yWb6l70')
+print(str(yt))
 ```
 
 
