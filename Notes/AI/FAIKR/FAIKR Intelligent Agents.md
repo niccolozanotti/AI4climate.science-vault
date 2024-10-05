@@ -16,7 +16,7 @@ description:
 
 >[!def] **DEF** - **Agent**
 >An **agent** is anything that can be viewed as perceiving its environment through **sensors** and acting upon that environment through **actuators**. We use the term **percept** to refer to the content an agent’s sensors are perceiving. An agent’s **percept sequence** is the complete history of everything the agent has ever perceived.
-
+^agent-def
 This simple idea is illustrated in the following [[FAIKR Intelligent Agents#^basic-agent-diagram|diagram]].
 
 ![[basic-agent-diagram.png]]
@@ -48,7 +48,7 @@ This leads to a definition of a rational agent:
 >[!def] **DEF** - **Rational Agent**
 For each possible percept sequence, a rational agent should select an action that is expected to maximize its performance measure, given the evidence provided by the percept
 sequence and whatever built-in knowledge the agent has.
-
+^rational-agent-def
 #### Rationality vs omniscience
 
 **Rationality** differs from **perfection**. Rationality maximizes **expected performance**, while perfection maximizes **actual performance**. Expecting an agent to always take the best action after the fact is impossible without **omniscience** or tools like **crystal balls** or **time machines**.
@@ -64,6 +64,14 @@ However, **complete autonomy** isn’t needed right away. Initially, an agent ma
 
 ## The nature of Environments
 
+With a [[FAIKR Intelligent Agents#^rational-agent-def|definition]] of **rationality**, we can start thinking about building **rational agents**. However, first, we need to define **task environments**, which are the “problems” that rational agents are designed to solve. The nature of the **task environment** significantly influences the appropriate agent design.
+
+In specifying the task environment the following are needed:
+- **P**erformance measure
+- **E**nvironment
+- **A**ctuators
+- **S**ensors
+which under the acronym **PEAS**.
 
 ## The structure of Agents
 
