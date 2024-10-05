@@ -2,8 +2,6 @@
 title: >
   Intelligent Agents
 date: 2024-10-03
-recording: >
- https://unibo.cloud.panopto.eu/Panopto/
 tags: 
 aliases: 
 description:
