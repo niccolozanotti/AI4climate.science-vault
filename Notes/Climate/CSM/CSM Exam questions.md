@@ -15,7 +15,6 @@ draft: true
 ## Written Test, Dec 18, 2023
 
 Answer the following questions, using equations and schemes where appropriate:
-
 1. **Primitive equations in General Circulation Models:**  Describe and discuss their properties. (25 points)
 2. **Finite differencing and time differencing schemes:**  Explain and discuss two-level time differencing schemes. (25 points)
 3. **Radiative-convective equilibrium models:** Describe and discuss. (25 points)
@@ -61,3 +60,15 @@ Answer the following questions, using equations and schemes where appropriate:
 - **Chosen Topic:** Climate system components and temperature trends.
 - **Follow-up questions:** Solar energy received and re-emitted (generic formulas), numerical methods.
 
+```mermaid
+timeline
+    title Timeline of Industrial Revolution
+    section 17th-20th century
+        Industry 1.0 : Machinery, Water power, Steam <br>power
+        Industry 2.0 : Electricity, Internal combustion engine, Mass production
+        Industry 3.0 : Electronics, Computers, Automation
+    section 21st century
+        Industry 4.0 : Internet, Robotics, Internet of Things
+        Industry 5.0 : Artificial intelligence, Big data, 3D printing
+
+```
