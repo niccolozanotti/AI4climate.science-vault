@@ -22,6 +22,7 @@ description:
 This simple idea is illustrated in the following [[FAIKR Intelligent Agents#^basic-agent-diagram|diagram]].
 
 ![[basic-agent-diagram.png]]
+*Taken from* [[@Russell2021|S. Russell, P. Norvig (2021)]]
 ^basic-agent-diagram
 
 In general, an agent’s choice of action at any given moment *can depend on its built-in knowledge and the entire percept sequence observed so far, but not on anything it hasn’t perceived*. By specifying the agent’s choice of action for every possible percept sequence, we have essentially defined the agent’s behavior. **Mathematically**, an agent’s behavior is described by the **agent function**, which maps any given percept sequence to an action.
