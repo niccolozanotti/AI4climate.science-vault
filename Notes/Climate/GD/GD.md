@@ -17,7 +17,7 @@ description: >
 > Revised version of *Notes on Global dynamics* by Prof. Antonio Navarra. All rights reserved. Original content accessible [here](https://wanderer.cmcc.it/index_GD.html)[^1].
 ## Course contents
 
->[!summary] Contents ( #fix of #wikilinks in progress **done** up to section 4.)
+>[!summary]- Contents ( #fix of #wikilinks in progress **done** up to section 4.)
 > - [[GD Intro|1. Introduction]]
 >     - [[GD Intro#Coordinate systems|1.1. Coordinate systems]] 
 >         - [[GD Intro#Spherical Coordinates|1.1.1. Spherical Coordinates]] 
