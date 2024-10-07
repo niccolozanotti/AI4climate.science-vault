@@ -135,4 +135,4 @@ $$
 $$
 ^ErtelBTP
 
-[^1]: Use the vector identity $\nabla \times A\times B = A(\nabla\cdot B) -B(\nabla\cdot A) + (B\cdot\nabla)A-(A\cdot\nabla)B$ and note that in our case the term :$`B(\nabla\cdot A)` correspond to $\mathbf{v}(\nabla\cdot \nabla\times \mathbf{v})$ that is identically zero.
+[^1]: Use the vector identity $\nabla \times A\times B = A(\nabla\cdot B) -B(\nabla\cdot A) + (B\cdot\nabla)A-(A\cdot\nabla)B$ and note that in our case the term$B(\nabla\cdot A)$ correspond to $\mathbf{v}(\nabla\cdot \nabla\times \mathbf{v})$ that is identically zero.
