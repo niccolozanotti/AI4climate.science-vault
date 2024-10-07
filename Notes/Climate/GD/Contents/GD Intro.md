@@ -7,8 +7,7 @@ description:
 original: https://wanderer.cmcc.it/chp01chap.html
 ---
 
-The atmosphere is in motion and it is a continuous mixing and clashing
-of vortices and structures, but when it is averaged over a long period of time (see Figure [[GD Intro#^img-wind200|below]]) it shows a remarkable simple structure.
+The atmosphere is in motion and it is a continuous mixing and clashing of vortices and structures, but when it is averaged over a long period of time (see Figure [[GD Intro#^img-wind200|below]]) it shows a remarkable simple structure.
 
 ![[Wind200.png]]
 ^img-wind200
@@ -43,15 +42,8 @@ of coordinate, the Coriolis terms.
 
 ### The $\beta$-plane
 
-It is sometimes convenient to shift coordinate system if the latitudinal
-extension of the motion is not too great with respect to the motion
-parameters as they are expressed in the adimensional numbers. When this
-is possible, a tangent coordinate system is applied at a specific
-latitude $\phi_0$ and the resultant Cartesian coordinates system is
-called the $\beta$-plane. Usually symbols $(x,y)$ are used in this case
-for the zonal and meridional coordinate. In the $\beta$-plane the
-planetary vorticity $f$ is linearized as $f=f_0 + \beta y$, where
-$\beta = \frac{\partial f}{\partial y}({\phi_0})$.
+It is sometimes convenient to shift coordinate system if the latitudinal extension of the motion is not too great with respect to the motion parameters as they are expressed in the adimensional numbers. When this is possible, a tangent coordinate system is applied at a specific latitude $\phi_0$ and the resultant Cartesian coordinates system is called the $\beta$-plane.
+Usually symbols $(x,y)$ are used in this case for the zonal and meridional coordinate. In the $\beta$-plane the planetary vorticity $f$ is linearized as $f=f_0 + \beta y$, where $\beta = \frac{\partial f}{\partial y}({\phi_0})$.
 
 ## Advective derivative 
 
