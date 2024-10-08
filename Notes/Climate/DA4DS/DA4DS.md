@@ -63,7 +63,6 @@ description: >
 > 	- Estimating a model using ML
 > 	- Estimating a model using DA
 > - Combining DA and ML
-
 ^syllabus-DA4DS
 
 ## Lectures
