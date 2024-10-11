@@ -11,17 +11,15 @@ tags:
  - course
 aliases: 
 description: >
-  
 ---
+
 >[!info] Description
 >
 ## Course contents
 
 >[!summary]- Contents 
 > - Introduction
-
 ^syllabus-APAI
-
 ## Lectures
 
 >[!summary]- Lecture list
