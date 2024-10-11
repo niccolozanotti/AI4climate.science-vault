@@ -49,7 +49,6 @@ description: >
 > 	- Cross entropy and Kullback-Leibler divergence.
 ^syllabus-SMMAI-theory
 
-
 >[!summary]- Lab module contents
 > - Numerical Linear Algebra with `python`
 > 	- `python` basics
