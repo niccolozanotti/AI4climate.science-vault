@@ -24,6 +24,7 @@ URL: https://corsi.unibo.it/2cycle/artificial-intelligence/
 - [[EIAI|Ethics in Artificial Intelligence]]
 - [[APAI|Architectures and Platforms for AI]]
 
-
----
 - [[Climate|Climate science courses]]
+
+
+
