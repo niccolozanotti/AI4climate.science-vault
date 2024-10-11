@@ -23,7 +23,6 @@ URL: https://corsi.unibo.it/2cycle/artificial-intelligence/
 - [[NLP|Natural Language Processing]]
 - [[EIAI|Ethics in Artificial Intelligence]]
 - [[APAI|Architectures and Platforms for AI]]
-- [[ML4CV|Machine learning for Computer Vision]]
 
 
 ---
