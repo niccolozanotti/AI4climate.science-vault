@@ -49,7 +49,21 @@ description: >
 > 	- Cross entropy and Kullback-Leibler divergence.
 ^syllabus-SMMAI-theory
 
+
 >[!summary]- Lab module contents
+> - Numerical Linear Algebra with `python`
+> 	- `python` basics
+> 	- Introduction to `python` for NLA
+> 	- Visualization with `matplotlib` 
+> 	- Solving linear systems with `python`
+> - Basics of Machine Learning
+> 	- [A (very short) introduction to Machine Learning](https://devangelista2.github.io/statistical-mathematical-methods/ML/intro_ML.html#)
+> 	- [Data Compression with Singular Value Decomposition (SVD)](https://devangelista2.github.io/statistical-mathematical-methods/ML/SVD.html)
+> 	- [Dimensionality Reduction with PCA](https://devangelista2.github.io/statistical-mathematical-methods/ML/PCA.html)
+> - Optimization
+^syllabus-SMMAI-lab
+
+>[!summary]- Lab module contents #old
 > - Numerical Linear Algebra with `python`
 > 
 > - [[SMMAI-labs Lecture1|Lecture 1]] : Introduction to `numpy`
@@ -63,7 +77,7 @@ description: >
 > - [[SMMAI-labs Lecture9|Lecture 9]]: Linear and Polynomial Regression
 > - [[SMMAI-labs Lecture10|Lecture 10]]: MLE and MAP
 > - [[SMMAI-labs Lecture11|Lecture 11]]: Logistic regression (for [[SMMAI Homework 3|Homework 3]])
-^syllabus-SMMAI-lab
+
 ## Homework assignments
 
 >[!summary]- Homework assignments
