@@ -50,6 +50,8 @@ description: >
 ^syllabus-SMMAI-theory
 
 >[!summary]- Lab module contents
+> - Numerical Linear Algebra with `python`
+> 
 > - [[SMMAI-labs Lecture1|Lecture 1]] : Introduction to `numpy`
 > - [[SMMAI-labs Lecture2|Lecture 2]]: Plotting with `matplotlib`
 > - [[SMMAI-labs Lecture3|Lecture 3]]: Introduction to the solution of linear systems using `numpy` 
