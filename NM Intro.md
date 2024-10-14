@@ -4,6 +4,69 @@ draft: true
 
 ## Introduction, general remarks about the grid point method
 
+In this chapter, following a short historical introduction on the development and use of numerical methods in atmospheric models, methods available for numerical solution of the differential equations governing the atmosphere will be briefly reviewed. Then, basic elements of the finite difference method for solving these equations will be introduced. Finally, the concept of stability of finite difference equations, and methods for testing the stability of such equations, will be discussed at some length.
+
+### Historical introduction
+
+It is considered that Wilhelm Bjerknes (1904) was the first to point out that the future state of the atmosphere can in principle be obtained by an integration of differential equations which govern the behaviour of the atmosphere, using as initial values fields describing an observed state of the atmosphere. Such an integration performed using numerical methods is called numerical weather prediction. When, however, a numerical integration is performed starting from fictitious initial fields, it is called numerical simulation.
+
+A first practical attempt at a numerical weather prediction was made by Richardson. After very tedious and time-consuming computations, carried out mostly during the First World War, Richardson obtained a totally unacceptable result. Despite this, he described his method and results in a book (Richardson, 1922), and this is today one of the most famous in meteorology.
+
+The wrong result obtained by Richardson, and his estimate that 64,000 men are necessary to advance the calculations as fast as the weather itself is advancing, left some doubt as to whether the method would be of practical use. A number of developments that followed, however, improved the situation. Courant, Friedrichs, and Lewy (1928) found that space and time increments in integrations of this type have to meet a certain stability criterion. Mainly due to the work of Rossby in the late 1930s, it became understood that even a rather simple equation, that describing the conservation of absolute vorticity following the motion of air particles, suffices for an approximate description of large-scale motions of the atmosphere. Finally, in 1945, the first electronic computer ENIAC (Electronic Numerical Integrator and Computer) was constructed. The absolute vorticity conservation equation, and this first electronic computer, were used by Charney, Fjortoft, and von Neumann in the late 1940s for the first successful numerical forecast (Charney et al., 1950).
+
+Much faster computers, and improved understanding of computational problems, now also enable long-term integrations of the basic primitive equations. It is generally considered that integration of the primitive equations enables easier incorporation of various physical processes than the integration of modified equations, that is, the integration of the divergence and vorticity equations. Thus, it is mostly the primitive equations that are used today for practical numerical forecasting by meteorological services. Charts obtained by numerical forecasting are used by synopticians in these services as the principal basis for decisions on forecasts issued for public use.
+
+A number of research groups have been actively engaged for more than a decade in development of models for the numerical simulation of the general circulation of the atmosphere. In such simulations, starting from a fictitious initial state, e.g., an isothermal and motionless atmosphere, is often considered to be an advantage for the experiments. It enables a test of the ability of the computational and physical schemes of the model to simulate an atmosphere with statistical properties similar to those of the real atmosphere, with no, or not much, prior information on these properties.
+
+Numerical models are also very frequently developed for studies of some smaller-scale atmospheric phenomena. Foremost among these are studies of the cumulus convection problem, and simulation of processes within the planetary boundary layer. In this text, however, we shall primarily have in mind the application of numerical methods to the prediction and simulation of large-scale atmospheric motions.
+
+### Methods for the numerical solution of the equations of motion
+
+Numerical solution of the equations of motion today in most cases is performed using the *grid point method*. In this method, a set of points is introduced in the region of interest, and dependent variables are initially defined and subsequently computed at these points. This set of points is called the *grid*. The words *mesh* or *lattice* are also used. It is necessary to have the grid points at fixed locations in the horizontal. This means that, according to the Eulerian system of equations, space and time coordinates are chosen as independent variables.
+
+A number of attempts have been made to develop atmospheric models using an approach which is at least partly Lagrangian. Serious difficulties are encountered when a straightforward numerical integration of the Lagrangian system of equations is undertaken. However, it is possible to construct methods with some Lagrangian properties; for example, to have some or all of the computation points moving with the fluid. In hydrodynamics, a number of such methods have proved to be very useful, especially for some problems which are not amenable to treatment by a strictly Eulerian technique (e.g., Harlow and Amsden, 1971). However, in meteorology, the performance of Lagrangian or semi-Lagrangian models that have so far been developed has not been quite satisfactory. A discussion of one way of constructing a Lagrangian model, and a review of earlier attempts, can be found in a paper by Mesinger (1971).
+
+Another possible approach is to express the spatial dependence of the variables in terms of a series of orthogonal functions and then substitute this into the governing equations. In this way, the equations reduce to a set of ordinary differential equations, so that the coefficients of the series can be computed as functions of time. This is the *spectral method* of solving the governing equations. Until relatively recently, it was considered that in efficiency, the spectral method could not be competitive with the grid point method. But the use of the fast Fourier transform has completely changed the situation, and investigation of spectral methods is now the subject of intensive research.
+
+In the following, we shall consider the technique of using the grid point method, and the problems associated with it, using a grid of computation points fixed in space. This is the most direct way of solving the equations of motion numerically. Furthermore, knowledge of this method is necessary for the investigation and understanding of the relative merits of other alternatives mentioned in this section.
+
+### Basic elements of the grid point method
+
+With the grid point method, the most common way of solving the governing equations is to find approximate expressions for derivatives appearing in the equations. These approximate expressions are defined using only values of the dependent variables at the grid points and at discrete time intervals. Thus, they are formed using differences of dependent variables over finite space and time intervals; for that reason, this approach is called the *finite difference method*. The approximations for derivatives are then used to construct a system of algebraic equations that approximates the governing partial differential equations. This algebraic system is considered valid at each of the interior grid points of the computation region. For the initial time and at space boundary points, additional constraints or equations are defined that approximate the initial and boundary conditions as required by the physics of the problem. The set of algebraic equations obtained in this way is then solved, usually using an electronic computer, by a suitable step-wise procedure.
+
+We shall now consider some basic elements of the finite difference method. For simplicity, we start by considering a function of one independent variable
+
+$$
+u = u(x)
+$$
+
+The function *u* is a solution to a differential equation that we are interested in. We want to find an approximation to this solution in a bounded region $ R $ of the independent variable, having a length *L*. The simplest way of introducing a set of grid points is to require that they divide the region $ R $ into an integer number of intervals of equal length $ \Delta x $. This length $ \Delta x $ is called the *grid interval*, or *grid length*. Let us denote the number of grid intervals by *J*. It is convenient to locate the origin of the *x* axis at the left-hand end of the region $ R $. Thus, we are looking for approximations to $ u(x) $ at discrete points $ x = j \Delta x $, where *j* takes integer values 0, 1, 2, ..., *J*. These approximate values we shall denote by
+
+$$
+u_j = u(j \Delta x)
+$$
+
+Thus, we are interested in finding $ J + 1 $ values $ u_j $.
+
+Knowledge of a discrete set of values $ u_j $, even if the approximations were perfect, offers, obviously, less information than knowledge of the function $ u(x) $. Let us briefly consider the situation in that respect. We shall very often find it convenient to think of the function $ u(x) $ as being formed by a sum of its Fourier components, that is
+
+$$
+u(x) = \frac{a_{0}}{2} + \sum_{n \geq 1} \left[ a_{n} \cos \left(2\pi n \frac{x}{L}\right) + b_{n} \sin\left(2\pi n \frac{x}{L}\right) \right]
+$$
+
+Now, the available $ J + 1 $ values $ u_j $ do not enable the computation of all of the coefficients $ a_n $ and $ b_n $; rather, they can be used to compute only $ J + 1 $ different coefficients. A natural choice is to assume that the $ J + 1 $ values $ u_j $ define the near value $ a_0 $ and as many as possible of the coefficients of the Fourier components at the long wavelength end of the series, that is, coefficients for $ n = 1, 2, 3, ..., \frac{J}{2} $. Of these components, the one with the shortest wavelength will have $ n = J/2 $, and will have wavelength
+
+$$
+\lambda = \frac{2L}{J} = 2\Delta x
+$$
+
+Thus, the shortest wavelength Fourier component that can be defined with the values $ u_j $ has wavelength $ 2 \Delta x $. We shall see in later sections that Fourier components with shorter wavelengths may develop during the integration, but it is not possible to account for them using the finite difference method.
+
+Thus, with the finite difference method, we are looking for a solution of the governing equations by discretizing the region of interest into *J* intervals. This means that we shall be able to compute the Fourier components with wavelengths longer than $ 2 \Delta x $. This also means that wavelengths shorter than $ 2 \Delta x $ will not be able to be resolved and may cause issues with the accuracy of the solution if such components are present in the system.
+
+---
+## Introduction, general remarks about the grid point method
+
 In this chapter, following a short historical introduction on the
 development and use of numerical methods in atmospheric models, methods
 available for numerical solution of the differential equations governing
