@@ -157,9 +157,7 @@ equations of motion numerically. Furthermore, knowledge of this method
 is necessary for the investigation and underÂ­standing of the relative
 merits of other alternatives mentioned in this section.
 
-### \texorpdfstring{\textbf{Basic elements of the grid point
-method}}{Basic elements of the grid point method}}\label{basic-elements-of-the-grid-point-method}
-
+### Basic elements of the grid point method
 With the grid point method, the most common way of solving the governing
 equations is to find approximate expressions for derivatives appearing
 in the equations. These approximate expressions are defined using only
@@ -181,8 +179,7 @@ We shall now consider some basic elements of the finite difference
 method. For simplicity, we start by considering a function of one
 independent variable
 
-\[u = u(x)\]
-
+$$u = u(x)$$
 The function \emph{u} is a solution to a differential equation that we
 are interested in. We want to find an approximaÂ­tion to this solution in
 a bounded region R of the indeÂ­pendent variable, having a length
@@ -197,7 +194,7 @@ points \(\mathcal{x = j}\Delta\mathcal{x, }\) where \emph{j} takes
 integer values 0,1,2,... \emph{J}. These approximate values we shall
 denote by
 
-\[u_j = u_j(j \Delta x)\]
+$$u_j = u_j(j \Delta x)$$
 
 Thus, we are interested in finding \emph{J} + 1 values \(u_ j\)
 
@@ -208,8 +205,8 @@ the situation in that respect. We shall very often find it convenient to
 think of the function \emph{u} (\emph{x}) as being formed by a sum of
 its Fourier compoÂ­nents, that is
 
-\[u( x ) = \frac{a_{0}}{2} + \sum_{n \geq 1}(\left[  a_{n}  \cos\left(2\pi n \frac{x}{L}\right) 
-+ b_{n}   \sin\left(2\pi n \frac{x}{L} \right))\right]\]
+$$u( x ) = \frac{a_{0}}{2} + \sum_{n \geq 1}(\left[  a_{n}  \cos\left(2\pi n \frac{x}{L}\right) 
++ b_{n}   \sin\left(2\pi n \frac{x}{L} \right))\right]$$
 
 Now, the available \emph{J} + 1 values \(u_j\) do not enable the
 computation of all of the coefficients \(a_{n}b_{n}\); rather, they can
@@ -221,7 +218,7 @@ coefficients for \emph{n} = 1,2,3,..., \emph{J/} 2. Of these components,
 the one with the shortest wavelength will have n=J/2, with the wave
 length
 
-\[\frac{L}{n} =  \frac{2L}{j} =  \frac{2L}{\frac{L}{\Delta\mathcal{x}}} = 2\Delta\mathcal{x}\]
+$$\frac{L}{n} =  \frac{2L}{j} =  \frac{2L}{\frac{L}{\Delta\mathcal{x}}} = 2\Delta\mathcal{x}$$
 
 Having made that choice, we can say that with values \(u_{j}\) at
 discrete points \(\mathcal{x =}j\Delta\mathcal{x}\) it is not possible
@@ -235,11 +232,11 @@ which the values are taken to the point where the derivative is
 required, they can be \emph{centered or uncentered}. An un-centered
 difference is, for example, the \emph{forward} difference
 
-\[\Delta u_{\text{i }} = u_{j + 1}  - u_{j}\]
+$$\Delta u_{\text{i }} = u_{j + 1}  - u_{j}$$
 
 More often centered (or \emph{central}) differences are used, such as
 
-\[\text{Î´u}_{j + \frac{1}{2}} =  u_{i + 1} -  u_{j}\]
+$$\text{Î´u}_{j + \frac{1}{2}} =  u_{i + 1} -  u_{j}$$
 
 In a centered difference the difference is between values symmetrical
 about the point where the difference is being calculated.
@@ -249,7 +246,7 @@ simply replace the derivatives by approÂ­priate \emph{finite difference
 quotients}. For example, for the first derivative one can use the
 approximation
 
-{\[\left( \frac{d u}{d x } \right)_j \to \frac{u_{j + 1} - u_{j}}{\Delta x}\]}
+$$\left( \frac{d u}{d x } \right)_j \to \frac{u_{j + 1} - u_{j}}{\Delta x}$$}
 
 The finite difference quotient here is, of course, only one of many
 possible approximations to the first derivative at point j.
@@ -266,18 +263,18 @@ in place of the grid point values \(u_{j}\), and \(u(j\Delta x)\) is
 expanded in a Taylor series about the central point. For the quotient
 \texttt{3.1} this procedure gives
 
-\[\frac{u_{j+1} - u_j}{\Delta x} \to \left( \frac{d u}{d x} \right)_j +
+$$\frac{u_{j+1} - u_j}{\Delta x} \to \left( \frac{d u}{d x} \right)_j +
 \frac{1}{2} \left( \frac{d^2 u}{dx^2} \right)_j \Delta x +
 \frac{1}{6} \left( \frac{d^3 u}{dx^3} \right)_j
-( \Delta x )^2 + \ldots\]
+( \Delta x )^2 + \ldots$$
 
 The difference between this expression and the derivative
 
-\[\left( \frac{\text{du}}{\text{dx}} \right)_{j}\]
+$$\left( \frac{\text{du}}{\text{dx}} \right)_{j}$$
 
 being approximated. In this case
 
-\[\varepsilon = \frac{1}{2}\left( \frac{d^{2}u}{\text{dx}^{2}} \right)\Delta x + \frac{1}{6}\left( \frac{\text{du}^{3}}{\text{dx}^{3}} \right)_{j}\]
+$$\varepsilon = \frac{1}{2}\left( \frac{d^{2}u}{\text{dx}^{2}} \right)\Delta x + \frac{1}{6}\left( \frac{\text{du}^{3}}{\text{dx}^{3}} \right)_{j}$$
 
 is called the truncation error of the approximation to the derivative.
 These are terms that were "truncated off" to form the approximation. The
@@ -289,7 +286,7 @@ This is the lowest power of Ax that appears in the truncation error.
 Thus, approximation (3.1) is of the first order of accuracy. We can
 write
 
-\[\varepsilon = 0(\Delta x)\]
+$$\varepsilon = 0(\Delta x)$$
 
 For an approximation to the derivative to be consistent it must,
 obviously, be at least first order accurate.
@@ -306,7 +303,7 @@ difference scheme.
 
 As an example, we shall use the linear advection equation
 
-{\[\frac{\partial u}{\partial t} +c\frac{\partial u}{\partial x } = 0; u =u(x,t)\]}
+$$\frac{\partial u}{\partial t} +c\frac{\partial u}{\partial x } = 0; u =u(x,t)$$}
 
 \emph{c} is a positive constant.
 
@@ -322,36 +319,36 @@ to variables, \(\xi,\) \emph{t} with the substitution \(\xi = x - ct\).
 
 Using the notation
 
-\[u^{(x,t)} = U (\xi, t)\]
+$$u^{(x,t)} = U (\xi, t)$$
 
 we obtain
 
-\[\frac{\partial u}{\partial t} = \frac{\partial U}{\partial\xi}\frac{\partial\xi}{\partial y} +
+$$\frac{\partial u}{\partial t} = \frac{\partial U}{\partial\xi}\frac{\partial\xi}{\partial y} +
 \frac{\partial U}{\partial t}\frac{\partial t}{\partial t} =-c\frac{\partial U}{\partial\xi}+
-\frac{\partial U}{\partial t}\]
+\frac{\partial U}{\partial t}$$
 
-\[\frac{\partial u}{\partial x} =\frac{\partial U}{\partial\xi}\frac{\partial\xi}{\partial X}
-+ \frac{\partial U}{\partial t}\frac{\partial t}{\partial x}\frac{\partial U}{\partial\xi}\]
+$$\frac{\partial u}{\partial x} =\frac{\partial U}{\partial\xi}\frac{\partial\xi}{\partial X}
++ \frac{\partial U}{\partial t}\frac{\partial t}{\partial x}\frac{\partial U}{\partial\xi}$$
 
 Substitution of these expressions into \texttt{g4.1} gives
 
-\[\frac{\partial}{\partial t}U(\xi,t) = 0\]
+$$\frac{\partial}{\partial t}U(\xi,t) = 0$$
 
 Thus, it is seen that U cannot be a function of t, but can be an
 arbitrary function of \(\xi\). A solution of \texttt{g4.1} is,
 therefore,
 
-{\[u = f(x - ct)\]}
+$$u = f(x - ct)$$}
 
 where \emph{f} is an arbitrary function. This, we see, is the general
 solution of the advection equation \texttt{g4.1}, since it can satisfy
 an arbitrary initial condition
 
-{\[u(x,0) = F(x)\]}
+$$u(x,0) = F(x)$$}
 
 Thus,
 
-{\[u = F \left( x - ct \right)\]}
+$$u = F \left( x - ct \right)$$}
 
 is the solution of \texttt{g4.1} satisfying the initial condition
 \texttt{g4.3}.
@@ -360,7 +357,7 @@ For a physical interpretation, it is often convenient to consider the
 solution in the \emph{x, t} plane. In the present case, we see that the
 solution takes constant values along the straight lines
 
-\[x - ct = const.\]
+$$x - ct = const.$$
 
 These lines are the \emph{characteristics} of the advection equaÂ­tion ;
 one of them is shown in \texttt{figg:1}. We can say that the solution
@@ -393,7 +390,7 @@ approximate equation by replacing the time derivative by a forward
 difference quotient, and the space derivative by a backward difference
 quotient. In this way we obtain the scheme
 
-{\[\frac{u_{j}^{n + 1} - u_{j}^{n}}{\Delta t} + c\frac{u_j^n - u_{j - 1}^n}{\Delta x} = 0\]}
+$$\frac{u_{j}^{n + 1} - u_{j}^{n}}{\Delta t} + c\frac{u_j^n - u_{j - 1}^n}{\Delta x} = 0$$}
 
 This scheme could be called a forward and upstream scheme, the latter
 word indicating the position of the point \(j - 1\) relative to the
@@ -414,7 +411,7 @@ solutions of the original differential equation, which we shall refer to
 as true solutions. The difference between the numerical and the true
 solution
 
-{\[u_{j}^{n}-u ( j\Delta x,n\Delta t )\]}
+$$u_{j}^{n}-u ( j\Delta x,n\Delta t )$$}
 
 is the error of the numerical solution.
 
@@ -427,10 +424,10 @@ equations exactly, we will have to add an additional term to keep the
 equation valid. Let us denote this term by \(\varepsilon\) . For
 example, in the case of scheme \texttt{g4.5} this procedure gives
 
-{\[\frac{u\left( j\Delta x,( n + 1 )\Delta t \right)
+$$\frac{u\left( j\Delta x,( n + 1 )\Delta t \right)
 - u\left( j\Delta x,\Delta\text{nt} \right)}{\Delta t} 
 + c\frac{u\left( j\Delta x,n\Delta t \right) 
-- u\left( \left( j - 1 \right)\Delta x,\Delta t \right)}{\Delta x} = \varepsilon\]}
+- u\left( \left( j - 1 \right)\Delta x,\Delta t \right)}{\Delta x} = \varepsilon$$}
 
 The term e we shall call the truncation error of the finite difference
 scheme. It shows how closely the true solution satisfies the equation of
@@ -442,11 +439,11 @@ the central space and time point. Using the original differential
 equation to eliminate the leading term we obtain the truncation error
 \texttt{g4.7} as
 
-{\[\varepsilon = \frac{1}{2}\frac{\partial^{2u}}{{\partial t}^{2}}\Delta t 
+$$\varepsilon = \frac{1}{2}\frac{\partial^{2u}}{{\partial t}^{2}}\Delta t 
 + \frac{1}{6}\frac{\partial^{3}u}{{\partial t}^{3}}\left( \Delta t \right)^{2} +\ldots-
 c(\frac{1}{2}\frac{\partial^{2}u}{{\partial x}^{2}}\Delta x -
 \frac{1}{6}\frac{\partial^{3}u}{{\partial t}^{3}}\left( \Delta x \right)^{2}
-+\ldots )\]}
++\ldots )$$}
 
 As before, these are the terms that were "truncated off" to make the
 differential equation reduce to our finite difference scheme.
@@ -456,11 +453,11 @@ accuracy of a finite difference scheme is the lowest power of Ax and At
 that appears in the truncation error. Thus, scheme \texttt{g4.5} is
 first order accurate. We can write
 
-\[\varepsilon = O \left( \Delta t \right) + O\left( \Delta x \right)\]
+$$\varepsilon = O \left( \Delta t \right) + O\left( \Delta x \right)$$
 
 or
 
-\[\varepsilon = O \left( \Delta x,\Delta t \right).\]
+$$\varepsilon = O \left( \Delta x,\Delta t \right).$$
 
 It is useful to make a distinction between orders of accuracy in space
 and in time, especially when the lowest powers of \(\Delta x\) and
@@ -476,7 +473,7 @@ small by a sufficient reduction of the increments \(\Delta x\) and
 result in a reduction of the error of the numerical solution. For that
 reason, we return to consideration of the error
 
-\[u_j^n-u\left( j\Delta x,n\Delta t \right).\]
+$$u_j^n-u\left( j\Delta x,n\Delta t \right).$$
 
 Following Richtmyer and Morton (1967) we ask two questions:
 
@@ -517,7 +514,7 @@ would not change. Thus, as long as the ratio of the steps \(\Delta x\)
 and \(\Delta t\) remains the same, refinement of the grid cannot bring
 about a reduction in the error of the numerical solution.
 
-\[x - ct = const\]
+$$x - ct = const$$
 
 \begin{figure}
 \centering
@@ -532,7 +529,7 @@ example, this will happen when the slope of the characteristics is
 greater than the slope of the dashed line bounding the domain of
 dependence, that is, when
 
-{\[c\Delta t \leq \Delta x\]}
+$$c\Delta t \leq \Delta x$$}
 
 Thus, this is a necessary condition for convergence of \texttt{g4.5}.
 
@@ -565,16 +562,16 @@ considering again the forward and upstream scheme \texttt{g4.5}).
 it suffices to test the boundedness of the numerÂ­ical solution. The
 scheme \texttt{g4.5} can be written as
 
-{\[u_{j}^{n + 1} = \left( 1 - \mu \right)u_{j}^{n}+ \mu u_{j - 1}^{n}\]}
+$$u_{j}^{n + 1} = \left( 1 - \mu \right)u_{j}^{n}+ \mu u_{j - 1}^{n}$$}
 
 where
 
-\[\mu \equiv C\Delta t/\Delta x.\]
+$$\mu \equiv C\Delta t/\Delta x.$$
 
 If \(1 - \mu \geq 0,\) which happens to be also the necessary condition
 for convergence, we will have
 
-{\[\left| u_{j}^{n + 1} \right| \leq \left( 1 - \mu \right)\left| u_{j}^{n} \right| + \mu\left| u_{j - 1}^{n} \right|.\]}
+$$\left| u_{j}^{n + 1} \right| \leq \left( 1 - \mu \right)\left| u_{j}^{n} \right| + \mu\left| u_{j - 1}^{n} \right|.$$}
 
 We can apply this at the point where at time level \emph{n + 1} ,
 \(\left| u_{j}^{n + 1} \right|\) is a maximum,
@@ -584,7 +581,7 @@ We can apply this at the point where at time level \emph{n + 1} ,
 maximum value at level n, \({Max}_{(j)} \left| u_{j}^{n} \right|\).The
 two terms on the right side can then be added, and we obtain
 
-\[{Max}_{(j)} \left| u_{j}^{n + 1} \right| \leq {Max}_{(j)}\left| u_{j}^{n} \right|\]
+$${Max}_{(j)} \left| u_{j}^{n + 1} \right| \leq {Max}_{(j)}\left| u_{j}^{n} \right|$$
 
 This proves the boundedness of the numerical solution. Hence,
 \(1 - \mu \geq 0\) is seen to be a sufficient condition for stability of
@@ -598,7 +595,7 @@ limited number of schemes.
 can be used even for nonlinear equations. If we know that the true
 solution is bounded, we test whether
 
-\[{\sum_{j}^{}\left( u_{j}^{n} \right)}^{2}\]
+$${\sum_{j}^{}\left( u_{j}^{n} \right)}^{2}$$
 
 is also bounded.
 
@@ -611,33 +608,33 @@ Of course, there are examples when this is not so.
 
 Squaring \texttt{g6.1} and summing over \emph{j} we obtain
 
-{\[{\sum_{j}^{}\left( u_{j}^{n + 1} \right)}^{2} =
+$${\sum_{j}^{}\left( u_{j}^{n + 1} \right)}^{2} =
 \sum_{j}^{}\left\lbrack \left( 1 - \mu \right)^{2}\left( u_{j}^{n} \right)^{2} + 
-2\mu\left( 1 - \mu \right)u_{j}^{n}u_{j - 1}^{n} + \mu^{2}\left( u_{j - 1}^{n} \right)^{2} \right\rbrack\]}
+2\mu\left( 1 - \mu \right)u_{j}^{n}u_{j - 1}^{n} + \mu^{2}\left( u_{j - 1}^{n} \right)^{2} \right\rbrack$$}
 
 We shall assume a cyclic boundary condition, for example
 \(u_{- 1} \equiv u_{j}\), then
 
-{\[{\sum_{j}^{}\left( u_{j - 1}^{n} \right)}^{2} =  {\sum_{j}^{}\left( u_{j}^{n} \right)}^{2}\]}
+$${\sum_{j}^{}\left( u_{j - 1}^{n} \right)}^{2} =  {\sum_{j}^{}\left( u_{j}^{n} \right)}^{2}$$}
 
 Now, using Schwarzâs inequality
 
-\[\sum_{}^{}{ab \leq \sqrt{\sum_{}^{}a^{2}}}\sqrt{\sum_{}^{}b^{2}}\]
+$$\sum_{}^{}{ab \leq \sqrt{\sum_{}^{}a^{2}}}\sqrt{\sum_{}^{}b^{2}}$$
 
 and \texttt{g6.4}, we can write
 
-{\[\sum_{j}^{}u_{j}^{n}u_{j - 1}^{n} \leq \sqrt{\sum_{j}^{}\left( u_{j}^{n} \right)^{2}}\sqrt{\sum_{j}^{}
-\left( u_{j - 1}^{n} \right)^{2}} =\sum_{j}^{}\left( u_{j}^{n} \right)^{2}\]}
+$$\sum_{j}^{}u_{j}^{n}u_{j - 1}^{n} \leq \sqrt{\sum_{j}^{}\left( u_{j}^{n} \right)^{2}}\sqrt{\sum_{j}^{}
+\left( u_{j - 1}^{n} \right)^{2}} =\sum_{j}^{}\left( u_{j}^{n} \right)^{2}$$}
 
 Using \texttt{g6.4} and \texttt{g6.5} we see that, if
 \(1 - \mu \geq 0\), \texttt{g6.3} gives the inequality
 
-\[{\sum_{j}^{}\left( u_{j}^{n + 1} \right)}^{2} \leq \left\lbrack \left( 1 + \mu \right)^{2} +
-2\mu\left( 1 - \mu \right) + \mu^{2} \right\rbrack\sum_{j}^{}\left( u_{j}^{n} \right)^{2}\]
+$${\sum_{j}^{}\left( u_{j}^{n + 1} \right)}^{2} \leq \left\lbrack \left( 1 + \mu \right)^{2} +
+2\mu\left( 1 - \mu \right) + \mu^{2} \right\rbrack\sum_{j}^{}\left( u_{j}^{n} \right)^{2}$$
 
 or
 
-\[{\sum_{j}^{}\left( u_{j}^{n + 1} \right)}^{2} \leq \sum_{}^{}\left( u_{j}^{n} \right)^{2}\]
+$${\sum_{j}^{}\left( u_{j}^{n + 1} \right)}^{2} \leq \sum_{}^{}\left( u_{j}^{n} \right)^{2}$$
 
 Thus, \( 1 - \mu \leq 0\), coupled with the cyclic boundary condiÂ­tion,
 is proved to be a sufficient condition for stability of \texttt{g6.1}.
@@ -657,27 +654,27 @@ condition for stability of the scheme.
 For an illustration of this method, it is useful first to obtain an
 analytic solution of the equation \texttt{g4.1}
 
-\[\frac{\partial u}{\partial t}+c \frac{\partial u}{\partial x}=0\]
+$$\frac{\partial u}{\partial t}+c \frac{\partial u}{\partial x}=0$$
 
 in the form of a single harmonic
 
-{\[u\left( x,t \right) = Re\left\lfloor U\left( t \right)e^{\text{ikx}} \right\rfloor\]}
+$$u\left( x,t \right) = Re\left\lfloor U\left( t \right)e^{\text{ikx}} \right\rfloor$$}
 
 Here \emph{U(t)} is the wave amplitude, and k the wave number.
 Substituting this into the preceding equation we obtain
 
-\[\frac{\text{dU}}{d t} +ikU = 0\]
+$$\frac{\text{dU}}{d t} +ikU = 0$$
 
 Thus, the problem of solving a partial differential equation has been
 reduced to that of solving this ordinary differenÂ­tial equation. Its
 solution is
 
-\[U(t) =U(0)e^{- ikct}\]
+$$U(t) =U(0)e^{- ikct}$$
 
 where U(0) is the initial value of the amplitude. Hence, the desired
 harmonic solution is
 
-{\[u\left( x,t \right) =Re \left\lbrack U\left( 0 \right)e^{\text{ik}\left( x - ct \right)} \right\rbrack\]}
+$$u\left( x,t \right) =Re \left\lbrack U\left( 0 \right)e^{\text{ik}\left( x - ct \right)} \right\rbrack$$}
 
 Each wave component is, thus, advected at a constant velocity c along
 the x axis with no change in amplitude.
@@ -686,12 +683,12 @@ Returning to the von Neumann method, we now look for an analogous
 solution of the finite difference equation \texttt{g6.1}. Into this
 equation we substitute a solution of the form
 
-{\[u_{j}^{n} = Re \left\lbrack U^{\left( u \right)}e^{ikj\Delta x} \right\rbrack\]}
+$$u_{j}^{n} = Re \left\lbrack U^{\left( u \right)}e^{ikj\Delta x} \right\rbrack$$}
 
 Here \(U^{\text{n }}\) is the amplitude at time level n. This
 substituÂ­tion shows that \texttt{g6.8} is a solution provided that
 
-{\[U^{n + 1} = \left( 1 - \mu \right)U^{\left( n \right)}  + \mu U^{\left( n \right)}e^{- ik\Delta x}\]}
+$$U^{n + 1} = \left( 1 - \mu \right)U^{\left( n \right)}  + \mu U^{\left( n \right)}e^{- ik\Delta x}$$}
 
 An equation of this kind enables analysis of the behavior of the
 amplitude \(U^{\text{n }}\) as n increases.
@@ -699,45 +696,45 @@ amplitude \(U^{\text{n }}\) as n increases.
 To this end we define an \emph{amplification factor}
 \(\left| \lambda \right|\) by
 
-{\[U^{n + 1} \equiv \lambda U^{n}\]}
+$$U^{n + 1} \equiv \lambda U^{n}$$}
 
 This gives
 
-\[|U^{n + 1}| = |\lambda | | U^{(n)} |.\]
+$$|U^{n + 1}| = |\lambda | | U^{(n)} |.$$
 
 For each harmonic solution \texttt{g6.8} to be stable it is required
 that
 
-\[|U^{n}| =|\lambda |^n | U^{(0)} | \leq B\]
+$$|U^{n}| =|\lambda |^n | U^{(0)} | \leq B$$
 
 where B is a finite number. This gives
 
-\[n\log |\lambda | \leq \log \frac{B}{U^0} \equiv B'\]
+$$n\log |\lambda | \leq \log \frac{B}{U^0} \equiv B'$$
 
 where \emph{B\textquotesingle{}} is a new constant. Since
 \(n = \frac{t}{\Delta t}\), the necessary condition for stability
 becomes
 
-{\[\log |\lambda | \leq \frac{B'}{t} \Delta t\]}
+$$\log |\lambda | \leq \frac{B'}{t} \Delta t$$}
 
 Now, suppose that we require boundedness of the solution for a finite
 time \emph{t}. Condition \texttt{g6.11} can then be written as
 
-\[\log|\lambda| \leq 0( \Delta t )\]
+$$\log|\lambda| \leq 0( \Delta t )$$
 
 If we now define
 
-\[\left| \lambda \right| \equiv 1 + \delta\]
+$$\left| \lambda \right| \equiv 1 + \delta$$
 
 we see, in view of the power series expansion of
 \(\log\left( 1 + \delta \right)\), that the stability condition obtained
 is equivalent to
 
-\[\delta \leq 0\left( \Delta t \right)\]
+$$\delta \leq 0\left( \Delta t \right)$$
 
 or
 
-{\[|\lambda| \leq 1 + O (\Delta t)\]}
+$$|\lambda| \leq 1 + O (\Delta t)$$}
 
 This is the \emph{von Neumann necessary condition for stability}.
 
@@ -747,17 +744,17 @@ true solution grows exponentially. However, when we know that the true
 solution does not grow, as in our example \texttt{g6.7}, it is customary
 to replace \texttt{g6.12} by a sufficient condition
 
-{\[|\lambda| \leq 1\]}
+$$|\lambda| \leq 1$$}
 
 This condition is much less generous than that required by the original
 definition of stability. Returning to our example, substitution of
 \texttt{g6.10} into \texttt{g6.9} gives
 
-{\[\lambda = 1 - \mu + \mu e^{-ik\Delta x}\]}
+$$\lambda = 1 - \mu + \mu e^{-ik\Delta x}$$}
 
 From this we obtain
 
-{\[\lambda^{2} =1 - 2\mu\left( 1 - \mu \right)\left( 1 - \cos{k\Delta x} \right)\]}
+$$\lambda^{2} =1 - 2\mu\left( 1 - \mu \right)\left( 1 - \cos{k\Delta x} \right)$$}
 
 and, therefore, \(1 - \mu \geq 0 \) is again found to be a sufficient
 condition for stability of \texttt{g6.1}.
@@ -778,7 +775,7 @@ of this value,
 
 The first derivative
 
-\[\frac{d|\lambda|^2}{d\mu} = - 2( 1 - 2\mu)( 1 - \cos{k \Delta x} )\]
+$$\frac{d|\lambda|^2}{d\mu} = - 2( 1 - 2\mu)( 1 - \cos{k \Delta x} )$$
 
 shows that all the \(|\lambda|^{2}\) curves have minima at
 \(\mu = \frac{1}{2}\). This information, in addition to calculation of
@@ -893,7 +890,7 @@ consideration in choosing a scheme.
 
 To define some schemes, we consider the equation
 
-{\[\frac{\text{dU}}{\text{dt}} = f( U,t) \quad  U = U(t)\]}
+$$\frac{\text{dU}}{\text{dt}} = f( U,t) \quad  U = U(t)$$}
 
 The independent variable t is here called time. We divide the time axis
 into segments of equal length \(\Delta t\). We shall denote by
@@ -912,7 +909,7 @@ advance an integration over the first time step, when just a single
 initial condition is available. With such a scheme we want to
 approximate the exact formula
 
-{\[U^{( n + 1 )} = U^{\left( n \right)} + \int_{n\Delta t}^{(n+1)\Delta t}f\left( U,t \right)\text{dt}\]}
+$$U^{( n + 1 )} = U^{\left( n \right)} + \int_{n\Delta t}^{(n+1)\Delta t}f\left( U,t \right)\text{dt}$$}
 
 We shall first list several schemes which do not use an iterative
 procedure.
@@ -922,11 +919,11 @@ scheme}}{Euler (or forward) scheme}}\label{euler-or-forward-scheme}
 
 This is the scheme
 
-{\[U^{\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t \bullet f^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t \bullet f^{\left( n \right)}$$}
 
 where
 
-\[f^{\left( n \right)} \equiv f\left( U^{\left( n \right)},n\Delta t \right)\]
+$$f^{\left( n \right)} \equiv f\left( U^{\left( n \right)},n\Delta t \right)$$
 
 The truncation error of this scheme is \(O\left( \Delta t \right)\).
 Thus, this is a first order accurate scheme. For the integrand in
@@ -942,7 +939,7 @@ scheme}}{Backward scheme}}\label{backward-scheme}
 We can also take a constant value of \(f\) equal to that at the upper
 boundary of the time interval. We then obtain
 
-{\[U^{( n + 1 )} = U^{( n )} + \Delta t  f^{\left( n + 1 \right)}\]}
+$$U^{( n + 1 )} = U^{( n )} + \Delta t  f^{\left( n + 1 \right)}$$}
 
 If, as here, a value of \(f\) depending on \(U^{\left( n + 1 \right)}\)
 appears in the difference equation, the scheme is called implicit. For
@@ -962,7 +959,7 @@ If we approximate \(f\) in \texttt{h1.2} by an average of the values at
 the beginning and the end of the time interval, we obtain the
 trapezoidal scheme
 
-{\[U^{( n + 1 )} = U^{( n )} + \frac{1}{2}\Delta t\left( f^{( n )} + f^{( n + 1 )} \right)\]}
+$$U^{( n + 1 )} = U^{( n )} + \frac{1}{2}\Delta t\left( f^{( n )} + f^{( n + 1 )} \right)$$}
 
 This is also an implicit scheme. Its truncation error, however, is
 \(O\left[ \left( {\Delta t}^{2} \right) \right]\).
@@ -980,11 +977,11 @@ of U obtained for time level n + 1 is then used for an approximation to
 \(f^{\left( n + 1 \right)}\), and this approximate value
 \(f^{*\left( n + 1 \right)}\) is used to make a backward step. Thus,
 
-{\[U^{*\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t  f^{\left( n \right)}\]\[U^{n + 1} = U^{\left( n \right)} + \Delta t  {f^{*\left( n + 1 \right)}}\]}
+$$U^{*\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t  f^{\left( n \right)}$$$$U^{n + 1} = U^{\left( n \right)} + \Delta t  {f^{*\left( n + 1 \right)}}$$}
 
 where
 
-\[{f^{*\left( n + 1 \right)}} \equiv f\left( U^{*\left( n + 1 \right)}, \left( n + 1 \right)\Delta t \right)\]
+$${f^{*\left( n + 1 \right)}} \equiv f\left( U^{*\left( n + 1 \right)}, \left( n + 1 \right)\Delta t \right)$$
 
 This is an explicit scheme, of the first order of accuracy.
 
@@ -994,9 +991,9 @@ scheme}}{Heun scheme}}\label{heun-scheme}
 Here, in much the same way, an approximation is constructed to the
 trapezoidal scheme. Thus,
 
-{\[U^{*\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t  f^{\left( n \right)}\]}
+$$U^{*\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t  f^{\left( n \right)}$$}
 
-\[U^{\left( n + 1 \right)} = U^{\left( n \right)} + \frac{1}{2}\Delta t\left( f^{\left( n \right)} + f^{*\left( n + 1 \right)} \right)\]
+$$U^{\left( n + 1 \right)} = U^{\left( n \right)} + \frac{1}{2}\Delta t\left( f^{\left( n \right)} + f^{*\left( n + 1 \right)} \right)$$
 
 Thus, this is also an explicit scheme. It is of the second order of
 accuracy.
@@ -1010,7 +1007,7 @@ this additional information.
 
 These are three level schemes. They may approximate the formula
 
-{\[U^{( n + 1 )} = U^{( n - 1 )} + \int_{( n - 1 )\Delta t}^{( n + 1 )\Delta t}f\left( U,t \right)\text{dt}\]}
+$$U^{( n + 1 )} = U^{( n - 1 )} + \int_{( n - 1 )\Delta t}^{( n + 1 )\Delta t}f\left( U,t \right)\text{dt}$$}
 
 or, they can use the additional value \(U^{\left( n - 1 \right)}\) to
 make a better approximation to \(f\) in \texttt{h1.2}.
@@ -1021,7 +1018,7 @@ The simplest way of making a centered evaluation of the integral in
 \texttt{h1.8} is to take for \(f\) a constant value equal to that at the
 middle of the interval \(2\Delta t\). This gives the leapfrog scheme
 
-{\[U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} + 2\Delta t \bullet f^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} + 2\Delta t \bullet f^{\left( n \right)}$$}
 
 Its truncation error is
 \( O\left\lbrack \left( {\Delta t}^{2} \right) \right\rbrack\). This is
@@ -1038,7 +1035,7 @@ approximated by a value obtained at the centre of the interval
 \(\Delta t\) by a linear extrapolation using values
 \(f^{\left( n - 1 \right)}\) and \(f^{\left( n \right)}\). This gives
 
-{\[U^{\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t\left( \frac{3}{2}f^{\left( n \right)} - \frac{1}{2}f^{\left( n - 1 \right)} \right)\]}
+$$U^{\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t\left( \frac{3}{2}f^{\left( n \right)} - \frac{1}{2}f^{\left( n - 1 \right)} \right)$$}
 
 This also is a second order accurate scheme.
 
@@ -1068,11 +1065,11 @@ function \(f\left( U,t \right)\). Thus, in order to discuss these
 properties we have to prescribe this function. For applications in
 atmospheric models it is of particular interest to consider the case
 
-\[f \equiv i\omega U\]
+$$f \equiv i\omega U$$
 
 that is, the equation
 
-{\[\frac{dU}{dt} = i\omega U, U = U\left( T \right)\]}
+$$\frac{dU}{dt} = i\omega U, U = U\left( T \right)$$}
 
 Equation \texttt{h2.1} we shall call the oscillation equation. The word
 frequency equation is also used. We allow U to be complex; then
@@ -1088,11 +1085,11 @@ It is easy to give some justification for our interest in the equation
 
 is a solution of the linear wave equation
 
-\[\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial t} = 0\]\[c = const.\]
+$$\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial t} = 0$$$$c = const.$$
 
 provided that
 
-\[\frac{\text{dU}}{\text{dT}} + ikcU = 0\]
+$$\frac{\text{dU}}{\text{dT}} + ikcU = 0$$
 
 This ordinary differential equation reduces to \texttt{h2.1} if we
 substitute \(\omega = - kc\)
@@ -1101,15 +1098,15 @@ As another simple example we can consider the accelÂ­eration and Coriolis
 terms of the horizontal component of the equation of motion of the
 atmosphere, that is
 
-\[\frac{\text{du}}{\text{dt}} = fv,\frac{\text{dv}}{\text{dt}} = - fu\]
+$$\frac{\text{du}}{\text{dt}} = fv,\frac{\text{dv}}{\text{dt}} = - fu$$
 
 If we define
 
-\[U \equiv u + iv\]
+$$U \equiv u + iv$$
 
 we can write these two equations as
 
-\[\frac{\text{dU}}{\text{dt}} = - ifU\]
+$$\frac{\text{dU}}{\text{dt}} = - ifU$$
 
 This again reduces to \texttt{h2.1}, this time if we substitute
 \(\omega = - f\).
@@ -1127,7 +1124,7 @@ The general solution of \texttt{h2.1} is
 
 or, for discrete values \(t = n\Delta t\)
 
-{\[U( n \Delta t ) = U( 0 )e^{i n \omega \Delta t}\]}
+$$U( n \Delta t ) = U( 0 )e^{i n \omega \Delta t}$$}
 
 Thus, considering the solution in a complex plane, its argument rotates
 by \(\omega\Delta t\) in each time step and \(\Delta t\) there is no
@@ -1137,15 +1134,15 @@ The properties of various schemes when applied to \texttt{h2.1} are
 conveniently analyzed using the von Neumann method. This method, as we
 have seen, involves defining a variable \(\lambda\) by
 
-{\[U^{n + 1} \equiv \lambda U^{\left( n \right)}\]}
+$$U^{n + 1} \equiv \lambda U^{\left( n \right)}$$}
 
 We also write
 
-{\[\lambda \equiv | \lambda |e^{i\theta}\]}
+$$\lambda \equiv | \lambda |e^{i\theta}$$}
 
 Thus, the numerical solution can formally be written as
 
-{\[U^{( n )} = | \lambda |^{n}U^{( 0 )}e^{i n \theta}\]}
+$$U^{( n )} = | \lambda |^{n}U^{( 0 )}e^{i n \theta}$$}
 
 We see that \(\theta\) represents the change in argument (or phase
 change) of the numerical solution in each time step.
@@ -1200,11 +1197,11 @@ defined in the preceding section.
 The three non-iterative two level schemes can be described by a single
 finite difference equation
 
-{\[U^{( n + 1 )} = U^{\left( n \right)} + \Delta t\left( \alpha f^{n} + \beta f^{\left( n + 1 \right)} \right)\]}
+$$U^{( n + 1 )} = U^{\left( n \right)} + \Delta t\left( \alpha f^{n} + \beta f^{\left( n + 1 \right)} \right)$$}
 
 with a consistency requirement
 
-\[\alpha + \beta = 1\]
+$$\alpha + \beta = 1$$
 
 Obviously, \(\alpha = 1\), \(\beta = 1\) for the Euler scheme,
 \(\alpha = 0\), \(\beta = 1\) for the backward scheme, and
@@ -1213,52 +1210,52 @@ scheme.
 
 Applied to the oscillation equation \texttt{h2.6} gives
 
-{\[U^{\left( n + 1 \right)} = U^{(n)} + i\omega\Delta t \left( \alpha U^n  + \beta U^{( n + 1 )}\right)\]}
+$$U^{\left( n + 1 \right)} = U^{(n)} + i\omega\Delta t \left( \alpha U^n  + \beta U^{( n + 1 )}\right)$$}
 
 \begin{description}
 \item[In order to evaluate \(\lambda\).we must solve this equation for]
 \(U^{\left( n + 1 \right)}\) Denoting, for brevity,
 \end{description}
 
-{\[p \equiv \omega\Delta t\]}
+$$p \equiv \omega\Delta t$$}
 
 we obtain
 
-{\[U^{\left( n + 1 \right)} = \frac{1 + i\alpha p}{1 - i\beta p}U^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = \frac{1 + i\alpha p}{1 - i\beta p}U^{\left( n \right)}$$}
 
 Therefore,
 
-{\[\lambda = \frac{1 + i\alpha p}{1 - i\beta p}\]}
+$$\lambda = \frac{1 + i\alpha p}{1 - i\beta p}$$}
 
 or,
 
-\[\lambda = \frac{1}{1 + \beta^2 p^2}( 1 - \alpha\beta p^{2} + ip )\]
+$$\lambda = \frac{1}{1 + \beta^2 p^2}( 1 - \alpha\beta p^{2} + ip )$$
 
 Substituting for \(\alpha\) and \(\beta\) allows us to investigate the
 effect of particular schemes. For the Euler scheme we have
 
-{\[\lambda = 1 + ip\]}
+$$\lambda = 1 + ip$$}
 
 for the backward scheme
 
-{\[\lambda = \frac{1}{1 + p^{2}}\left( 1 + ip \right)\]}
+$$\lambda = \frac{1}{1 + p^{2}}\left( 1 + ip \right)$$}
 
 and, for the trapezoidal scheme,
 
-{\[\lambda = \frac{1}{1 + \frac{1}{4}p^{2}}\left( 1 - \frac{1}{4}p^{2} + ip \right)\]}
+$$\lambda = \frac{1}{1 + \frac{1}{4}p^{2}}\left( 1 - \frac{1}{4}p^{2} + ip \right)$$}
 
 To test for stability we need to know \(| \lambda |\). Since the modulus
 of a ratio of two complex numbers is equaf to the ratio of their moduli,
 we can obtain the values of \(| \lambda |\) directly from
 \texttt{h2.10}. For the Euler scheme we have
 
-{\[| \lambda | = \left( 1 + p^{2} \right)^{\frac{1}{2}}\]}
+$$| \lambda | = \left( 1 + p^{2} \right)^{\frac{1}{2}}$$}
 
 The Euler scheme is, thus, always unstable. It is interestÂ­ing to note
 that, if \(\Delta t\) is chosen so as to make \(p\) relatively small, we
 have
 
-{\[| \lambda | = 1 + \frac{1}{2}p^{2} + \ldots\]}
+$$| \lambda | = 1 + \frac{1}{2}p^{2} + \ldots$$}
 
 This shows that
 \(| \lambda | = 1 + O\left\lbrack \left( \Delta t \right)^{2} \right\rbrack\)
@@ -1270,7 +1267,7 @@ quite unacceptable rate.
 
 For the backward scheme we obtain
 
-{\[| \lambda |  = \left( 1 + p^{2} \right)^{-\frac{ 1}{2}}\]}
+$$| \lambda |  = \left( 1 + p^{2} \right)^{-\frac{ 1}{2}}$$}
 
 The backward scheme is, thus, stable no matter what value of is
 \(\Delta t\) chosen. Thus, it is an unconditionally stable scheme. We
@@ -1291,7 +1288,7 @@ filter out undesirable high frequency motions.
 
 For the trapezoidal scheme we find
 
-{\[| \lambda | = 1\]}
+$$| \lambda | = 1$$}
 
 The trapezoidal scheme is, thus, always neutral. The amplitude of the
 numerical solution remains constant, just as does that of the true
@@ -1301,62 +1298,62 @@ here were stable no matter how large a value of \(\Delta t\) was chosen.
 The iterative two level schemes can also be described by a single
 equation in the same way as \texttt{h2.6}. Thus, we write
 
-\[U^{\left( n + 1 \right)^{*}} = U^{\left( n \right)} + U^{\left( n \right)} + \Delta t{ f}^{\left( n \right)}\]
+$$U^{\left( n + 1 \right)^{*}} = U^{\left( n \right)} + U^{\left( n \right)} + \Delta t{ f}^{\left( n \right)}$$
 
-{\[U^{\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t\left( \alpha f^{\left( n \right)} + \beta f^{*\left( n + 1 \right)} \right)\]}
+$$U^{\left( n + 1 \right)} = U^{\left( n \right)} + \Delta t\left( \alpha f^{\left( n \right)} + \beta f^{*\left( n + 1 \right)} \right)$$}
 
-\[\alpha + \beta = 1\]
+$$\alpha + \beta = 1$$
 
 Now, \(a = 1\), \(\beta = 1\) for the Matsuno scheme, and,
 \(a = \frac{1}{2}\), \(\beta = \frac{1}{2}\) for the Heun scheme.
 
 Applied to the oscillation equation \texttt{h2.18} gives
 
-{\[U^{\left( n + 1 \right)^{*}} = U^{\left( n \right)} + i\omega \Delta t U^n\]}
+$$U^{\left( n + 1 \right)^{*}} = U^{\left( n \right)} + i\omega \Delta t U^n$$}
 
-\[U^{n + 1} = U^{\left( n \right)} + i\omega\Delta t\left( \alpha U^{\left( n \right)} + \beta U^{\left( n + 1 \right)^{*}} \right)\]
+$$U^{n + 1} = U^{\left( n \right)} + i\omega\Delta t\left( \alpha U^{\left( n \right)} + \beta U^{\left( n + 1 \right)^{*}} \right)$$
 
 Eliminating \(U^{\left( n + 1 \right)^{*}}\) we obtain, again using
 \texttt{h2.8},
 
-\[U^{n + 1} = \left( 1 - \beta p^{2} + ip \right)U^{\left( n \right)}\]
+$$U^{n + 1} = \left( 1 - \beta p^{2} + ip \right)U^{\left( n \right)}$$
 
 Thus,
 
-{\[\lambda = 1 - \beta p^{2} + ip\]}
+$$\lambda = 1 - \beta p^{2} + ip$$}
 
 Substituting the appropriate values of \(\beta\) we now obtain the
 values of \(\lambda\), for the two schemes. Hence, for the Matsuno
 scheme
 
-{\[\lambda = 1 - p^{2} + ip\]}
+$$\lambda = 1 - p^{2} + ip$$}
 
 and for the Heun scheme
 
-{\[\lambda = 1 - \frac{1}{2}p^{2} + i p\]}
+$$\lambda = 1 - \frac{1}{2}p^{2} + i p$$}
 
 To test for stability we evaluate \(| \lambda |\). For the Matsuno
 scheme we obtain
 
-{\[| \lambda | = \left( 1 - p^{2} + p^{4} \right)^{\frac{1}{2}}\]}
+$$| \lambda | = \left( 1 - p^{2} + p^{4} \right)^{\frac{1}{2}}$$}
 
 Thus, the Matsuno scheme is stable if
 
-\[| p | \leq 1\]
+$$| p | \leq 1$$
 
 \begin{description}
 \item[In other words, to achieve stability we have to choose]
 \(\Delta t\) sufficiently small so that
 \end{description}
 
-{\[\Delta t \leq \frac{1}{| \omega |}\]}
+$$\Delta t \leq \frac{1}{| \omega |}$$}
 
 The Matsuno scheme, thus, is conditionally stable. The higher the
 frequency, the more restrictive is the stability condition.
 
 Differentiating \texttt{h2.23} we find that
 
-{\[\frac{d |\lambda|}{d p} = \frac{p}{( 1 - p^2 + p^4 )^{\frac{1}{2}} } ( 1 - 2 p^2 )\]}
+$$\frac{d |\lambda|}{d p} = \frac{p}{( 1 - p^2 + p^4 )^{\frac{1}{2}} } ( 1 - 2 p^2 )$$}
 
 Hence, the amplification factor of the Matsuno scheme has a minimum for
 \(p = 1/\sqrt{2}\). Therefore, as pointed out by Matsuno (1966a) when
@@ -1372,13 +1369,13 @@ characteristics can be conÂ­structed.
 
 For the Heun scheme \texttt{h2.22} gives
 
-{\[| \lambda | = \left( 1 + \frac{1}{4}p^{4} \right)^{\frac{1}{2}}\]}
+$$| \lambda | = \left( 1 + \frac{1}{4}p^{4} \right)^{\frac{1}{2}}$$}
 
 This is always greater than unity. Thus, the Heun scheme is always
 unstable, like the Euler scheme. However, instead of :eq:2.15, for small
 \(p\) we now have Â­
 
-{\[| \lambda | = 1 + \frac{1}{8}p^{4} + \ldots\]}
+$$| \lambda | = 1 + \frac{1}{8}p^{4} + \ldots$$}
 
 that is,
 \(\left| \text{Î»} \right| = 1 + 0\left\lbrack \left( \Delta t \right)^{4} \right\rbrack\).
@@ -1404,20 +1401,20 @@ It is also of interest to consider the phase change per time step,
 
 Using the notation
 
-{\[\lambda \equiv \lambda_{\text{re}} + i\lambda_{im}\]}
+$$\lambda \equiv \lambda_{\text{re}} + i\lambda_{im}$$}
 
 we have, using \texttt{h2.4},
 
-{\[\theta = \arctan\frac{\lambda_{\text{im}}}{\lambda_{\text{re}}}\]}
+$$\theta = \arctan\frac{\lambda_{\text{im}}}{\lambda_{\text{re}}}$$}
 
 or
 
-{\[\frac{\theta}{p} = \frac{1}{p}\arctan\frac{\lambda_{\text{im}}}{\lambda_{\text{re}}}\]}
+$$\frac{\theta}{p} = \frac{1}{p}\arctan\frac{\lambda_{\text{im}}}{\lambda_{\text{re}}}$$}
 
 For the Euler and the backward schemes, using \texttt{h2.11} and
 \texttt{h2.12} we obtain
 
-{\[\frac{\theta}{p} = \frac{1}{p}\arctan\text{p}\]}
+$$\frac{\theta}{p} = \frac{1}{p}\arctan\text{p}$$}
 
 Since the right-hand side is always less than unity, we can see that
 these two schemes are decelerating. For \(p = 1\) we have
@@ -1426,7 +1423,7 @@ these two schemes are decelerating. For \(p = 1\) we have
 In other cases the effect may not be so obvious. For the Matsuno scheme,
 for example, \texttt{h2.21} gives
 
-{\[\frac{\theta}{p} = \frac{1}{p}\arctan\frac{p}{1 - p^{2}}\]}
+$$\frac{\theta}{p} = \frac{1}{p}\arctan\frac{p}{1 - p^{2}}$$}
 
 It is not obvious whether the right-hand side here is greater or less
 than unity. However, the behaviour of \texttt{h2.31} for all \(p\) is of
@@ -1435,7 +1432,7 @@ less than unity in order to ensure stability, and rather small for
 frequencies for which we want the integration errors to be small. Thus,
 we need only consider :eq:`h2.31\) for small \(p\); we obtain
 
-\[\frac{\theta}{p} = 1 + \frac{2}{3}p^{2} + \ldots\]
+$$\frac{\theta}{p} = 1 + \frac{2}{3}p^{2} + \ldots$$
 
 The Matsuno scheme, therefore, is seen to be accelerating. For the
 special value \(p = 1\) this can be seen directly from \texttt{h2.13},
@@ -1455,7 +1452,7 @@ modes}\label{three-level-schemes-and-computational-modes}
 We consider first the leapfrog scheme \texttt{h1.9}. Applied to the
 oscillation equation it gives
 
-{\[U^{n + 1} = U^{( n + 1 )} + i 2\omega\Delta U^{\left( n \right)}\]}
+$$U^{n + 1} = U^{( n + 1 )} + i 2\omega\Delta U^{\left( n \right)}$$}
 
 A problem with all three or more level schemes includÂ­ing this is that
 they require more than one initial condition to start the computation.
@@ -1468,16 +1465,16 @@ usually have to be obtained using one of the two level schemes.
 
 According to \texttt{h2.3} we also have
 
-{\[U^{\left( n \right)} = \lambda U^{\left( n - 1 \right)},
-U^{\left( n + 1 \right)} = \lambda^{2}U^{\left( n - 1 \right)}\]}
+$$U^{\left( n \right)} = \lambda U^{\left( n - 1 \right)},
+U^{\left( n + 1 \right)} = \lambda^{2}U^{\left( n - 1 \right)}$$}
 
 When these relations are substituted into \texttt{h2.32} we obtain
 
-\[\lambda^{2} - i2p\lambda - 1 = 0\]
+$$\lambda^{2} - i2p\lambda - 1 = 0$$
 
 a second degree equation for \(\lambda\). It has solutions
 
-{\[\lambda_{1} &= \sqrt{1 + p^{2}} + i p\]\[\lambda_{2} &= - \sqrt{1 - p^{2}} + i p\]}
+$$\lambda_{1} &= \sqrt{1 + p^{2}} + i p$$$$\lambda_{2} &= - \sqrt{1 - p^{2}} + i p$$}
 
 Thus, there are \emph{two solutions} of the form
 \(U^{n + 1} = \lambda U^{( n )}\). This necessarily follows from the
@@ -1503,15 +1500,15 @@ solution, and are called \emph{computational modes}.
 To clarify this situation we consider the simple case \(\omega = 0\),
 that is, the equation
 
-{\[\frac{d U}{d t} = 0\]}
+$$\frac{d U}{d t} = 0$$}
 
 with the true solution
 
-{\[U = const\]}
+$$U = const$$}
 
 The leapfrog scheme, applied to \texttt{h2.35}, gives
 
-{\[U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)}\]}
+$$U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)}$$}
 
 For a given physical initial condition \(U^{\left( 0 \right)}\), we
 consider two special choices of \(U^{\left( 1 \right)}\).
@@ -1520,11 +1517,11 @@ A. Suppose calculating of \(U^{\left( 1 \right)}\) happened to give the
 true value \(\text{U}^{\left( 0 \right)}\), \texttt{h2.37} then gives,
 for all n,
 
-\[U^{\left( n + 1 \right)} = U^{\left( n \right)}\]
+$$U^{\left( n + 1 \right)} = U^{\left( n \right)}$$
 
 or, since p = 0,
 
-\[U^{\left( n + 1 \right)} = \lambda_{1}U^{\left( n \right)}\]
+$$U^{\left( n + 1 \right)} = \lambda_{1}U^{\left( n \right)}$$
 
 Thus, we obtain a numerical solution that is equal to the true solution
 \texttt{h2.36}, and consists of the physical mode only.
@@ -1534,11 +1531,11 @@ B. Suppose calculating \(U^{\left( 1 \right)}\) gives
 
 Then we obtain, for all n,
 
-\[U^{\left( n + 1 \right)} = - U^{\left( n \right)}\]
+$$U^{\left( n + 1 \right)} = - U^{\left( n \right)}$$
 
 or
 
-\[U^{\left( n + 1 \right)} = \lambda_{2}U^{\left( n \right)}\]
+$$U^{\left( n + 1 \right)} = \lambda_{2}U^{\left( n \right)}$$
 
 The numerical solution now consists entirely of the computational mode.
 Hence, it would appear that a good choice of the computational initial
@@ -1548,16 +1545,16 @@ solution.
 In general, since \texttt{h2.31} is a linear equation, its solution will
 be a linear combination of the two solutions
 
-\[U_{1}^{\left( n \right)} &= \lambda_{1}^{n}U_{1}^{\left( 0 \right)}\]\[U_{2}^{\left( n \right)} &= \lambda_{2}^{n}U_{2}^{\left( 0 \right)}\]
+$$U_{1}^{\left( n \right)} &= \lambda_{1}^{n}U_{1}^{\left( 0 \right)}$$$$U_{2}^{\left( n \right)} &= \lambda_{2}^{n}U_{2}^{\left( 0 \right)}$$
 
 Therefore, we can write
 
-{\[U^{\left( n \right)} = a\lambda_{1}^{n}U_{1}^{\left| 0 \right|} + b\lambda_{2}^{n}U_{2}^{\left( 0 \right)}\]}
+$$U^{\left( n \right)} = a\lambda_{1}^{n}U_{1}^{\left| 0 \right|} + b\lambda_{2}^{n}U_{2}^{\left( 0 \right)}$$}
 
 where a and b are constants. Now this has to satisfy the physical and
 the computational initial condition; we obtain
 
-\[U^{\left( 0 \right)} = a U_{1}^{\left| 0 \right|} + b U_{2}^{\left( 0 \right)}\]\[U^{\left( 1 \right)} = a\lambda_{1}U_{1}^{\left( 0 \right)} + b U_{2}^{\left( 0 \right)}\]
+$$U^{\left( 0 \right)} = a U_{1}^{\left| 0 \right|} + b U_{2}^{\left( 0 \right)}$$$$U^{\left( 1 \right)} = a\lambda_{1}U_{1}^{\left( 0 \right)} + b U_{2}^{\left( 0 \right)}$$
 
 These equations can be solved for a \(U_{1}^{\left( 0 \right)}\) and
 \(bU_{2}^{\left( 0 \right)}\), and the results substituted into
@@ -1565,13 +1562,13 @@ These equations can be solved for a \(U_{1}^{\left( 0 \right)}\) and
 
 In this way we find
 
-{\[U^{(n)} = \frac{1}{\lambda_1 - \lambda_2} \left[ \lambda_1^n\left( U^{(1)}
- - \lambda_{2}U^{(0)} \right) - \lambda_2^n\left( U^1 - \lambda_{1}U^{(0)} \right) \right]\]}
+$$U^{(n)} = \frac{1}{\lambda_1 - \lambda_2} \left[ \lambda_1^n\left( U^{(1)}
+ - \lambda_{2}U^{(0)} \right) - \lambda_2^n\left( U^1 - \lambda_{1}U^{(0)} \right) \right]$$}
 
 Therefore, the amplitudes of the physical and of the computational modes
 are seen to be proportional to, respectively,
 
-\[|U^{(1)} - \lambda_2 U^{(0)}| \quad   and   \quad | U^{(1)} - \lambda_1 U^{(0)} |\]
+$$|U^{(1)} - \lambda_2 U^{(0)}| \quad   and   \quad | U^{(1)} - \lambda_1 U^{(0)} |$$
 
 These are seen to depend on \(U^{\left( 1 \right)}\). If, for example,
 we are able to choose
@@ -1626,9 +1623,9 @@ In \texttt{h2.34} \(1 - p^{2}\) is positive, and we obtain
 Thus, in this case both modes are stable and neutral. For the phase
 change, using \texttt{h2.28}
 
-{\[\theta_{1} = arctan\left( \frac{p}{\sqrt{1 - p^{2}}} \right)\]}
+$$\theta_{1} = arctan\left( \frac{p}{\sqrt{1 - p^{2}}} \right)$$}
 
-\[\theta_{2} = arctan\left( \frac{- p}{\sqrt{1 - p^{2}}} \right)\]
+$$\theta_{2} = arctan\left( \frac{- p}{\sqrt{1 - p^{2}}} \right)$$
 
 It is instructive to consider the behaviour of \(\theta\), as a function
 of \(p\), especially as \(p \rightarrow 0.\) We consider first the case
@@ -1647,7 +1644,7 @@ plotted in \texttt{figg:6}. We see that, for all \(p\),
 \caption{}
 \end{figure}
 
-\[\theta_{2} = \pi - \theta_{1}\]
+$$\theta_{2} = \pi - \theta_{1}$$
 
 Specifically, as \(p \rightarrow 0, \theta_{1} \rightarrow p\) while
 \(\theta_{2} \rightarrow \pi - p\)
@@ -1656,17 +1653,17 @@ Thus, for small \(\Delta t\) the physical mode is seen to approximate
 the true solution, while the behaviour of the computaÂ­tional mode is
 quite different. For the case \(p < 0\), we obtain in the same way
 
-\[\pm \theta_{2} = - \pi - \theta_{1}\]
+$$\pm \theta_{2} = - \pi - \theta_{1}$$
 
 Thus, for \(p \gtrless 0\)
 
-{\[\theta_{2} = \pm \pi - \theta_{1}\]}
+$$\theta_{2} = \pm \pi - \theta_{1}$$}
 
 For accuracy of the physical mode, \(\theta_{1}\) should closely
 approximate the phase change of the true solution, \emph{p}. For small
 \emph{p} \texttt{h2.41} gives
 
-\[\theta_{1} = p + \frac{1}{6}p^{3} + \ldots\]
+$$\theta_{1} = p + \frac{1}{6}p^{3} + \ldots$$
 
 Thus, the leapfrog scheme is accelerating. The acceleraÂ­tion, though, is
 four times less than that of the Matsuno scheme. It is instructive to
@@ -1676,7 +1673,7 @@ amplification factors or the phase changes.
 
 Differentiating the first equation in \texttt{h2.41} we find
 
-\[\frac{d\theta_{1}}{\text{dp}} = \frac{1}{\sqrt{1 - p^{2}}}\]
+$$\frac{d\theta_{1}}{\text{dp}} = \frac{1}{\sqrt{1 - p^{2}}}$$
 
 The phase error, thus, is seen to increase sharply as
 \(p \rightarrow 1.\), when
@@ -1684,7 +1681,7 @@ The phase error, thus, is seen to increase sharply as
 
 It may be useful to illustrate the behavior of the two modes obtained
 
-{\[U_{1}^{\left( n \right)} &= U_{1}^{\left( 0 \right)}e^{in\theta 1}\]\[U_{2}^{\left( n \right)} &= U_{2}^{\left| 0 \right|}e^{\text{in}\left( \pm \pi - \theta_{1} \right)}\]}
+$$U_{1}^{\left( n \right)} &= U_{1}^{\left( 0 \right)}e^{in\theta 1}$$$$U_{2}^{\left( n \right)} &= U_{2}^{\left| 0 \right|}e^{\text{in}\left( \pm \pi - \theta_{1} \right)}$$}
 
 in the complex plane. For simplicity, we consider the case
 \(\theta_{1} = \frac{\pi}{8}\) and assume that the imaginary part of the
@@ -1707,7 +1704,7 @@ we plot the real and imaginary parts of the computational mode as
 functions of time. This can be done by using an alternative form of the
 second equation in \texttt{h2.43}
 
-\[U_{2}^{\left( n \right)} = {\left( - 1 \right)^{n}U}_{2}^{\left( 0 \right)}\left( \cos{n\theta_{1}} - i\sin{n\theta_{2}} \right)\]
+$$U_{2}^{\left( n \right)} = {\left( - 1 \right)^{n}U}_{2}^{\left( 0 \right)}\left( \cos{n\theta_{1}} - i\sin{n\theta_{2}} \right)$$
 
 or directly from \texttt{figg:7}. We obtain diagrams as shown in
 \texttt{figg:8}. Because of the factor (â1)", both real and imaginary
@@ -1725,20 +1722,20 @@ This is a limiting case of the solutions considered for
 \(\left| \text{p} \right| < 1\). \texttt{h2.34} shows that the values of
 \(\lambda\). are now equal,
 
-{\[\lambda_{1} = 2 = ip\]}
+$$\lambda_{1} = 2 = ip$$}
 
 Therefore
 
-\[\left| \lambda_{1} \right| = \left| \lambda_{2} \right| = 1\]
+$$\left| \lambda_{1} \right| = \left| \lambda_{2} \right| = 1$$
 
 Thus, both modes are still neutral. Since neither of them has a real
 part, we obtain, for p = Â± 1,
 
-{\[\theta_{1} = \theta_{2} = \pm \frac{\pi}{2}\]}
+$$\theta_{1} = \theta_{2} = \pm \frac{\pi}{2}$$}
 
 Therefore, the two modes can be written in the form
 
-{\[U^{\left( n \right)} = U^{\left( 0 \right)}e^{\pm i n\frac{\pi}{2}}\]}
+$$U^{\left( n \right)} = U^{\left( 0 \right)}e^{\pm i n\frac{\pi}{2}}$$}
 
 In a complex plane, they rotate by an angle of \(\frac{\pm \pi}{2}\) in
 each time step, while the true solution rotates by an angle of Â± 1
@@ -1749,11 +1746,11 @@ only. The phase error, thus, is large.
 Both values of \(\lambda\) in \texttt{h2.34} still have imaginary parts
 only, so that
 
-\[\lambda_{1} &= i\left( p + \sqrt{p^{2}} - 1 \right)\]\[\lambda_{2} &= i\left( p - \sqrt{p^{2} - 1} \right)\]
+$$\lambda_{1} &= i\left( p + \sqrt{p^{2}} - 1 \right)$$$$\lambda_{2} &= i\left( p - \sqrt{p^{2} - 1} \right)$$
 
 where the expressions in parentheses are real. Therefore,
 
-{\[\left| \lambda_{1} \right| = \left| p + \sqrt{p^{2}} - 1 \right|\]\[\left| \lambda_{2} \right| = \left| p - \sqrt{p^{2}} - 1 \right|\]}
+$$\left| \lambda_{1} \right| = \left| p + \sqrt{p^{2}} - 1 \right|$$$$\left| \lambda_{2} \right| = \left| p - \sqrt{p^{2}} - 1 \right|$$}
 
 Thus, for \emph{p \textgreater{} 1} we have
 \(\left| \lambda_{1} \right| > 1\), and for \emph{p \textless{} â 1}
@@ -1763,18 +1760,18 @@ instability increases sharply as \(\left| \text{p} \right|\) increases
 beyond 1 ; we can see this, for example for \emph{p \textgreater{} 1},
 because
 
-\[\frac{d\left| \lambda \right|_{1}}{\text{dp}} = 1 + \frac{p}{\sqrt{p^{2}} - 1}\]
+$$\frac{d\left| \lambda \right|_{1}}{\text{dp}} = 1 + \frac{p}{\sqrt{p^{2}} - 1}$$
 
 which is unbounded as \(p \rightarrow 1\)
 
 Since the two values of \(\lambda\) still have no real parts, we again
 have
 
-{\[\theta_{1} = \theta_{2} = \pm \frac{\pi}{2}\]}
+$$\theta_{1} = \theta_{2} = \pm \frac{\pi}{2}$$}
 
 The two modes for \(p \gtrless 1\), can thus be written as
 
-{\[U_{1}^{\left( n \right)} &= \left| p + \sqrt{p^{2} - 1} \right|^{n}U_{1}^{\left( 0 \right)}e^{\pm in\frac{\pi}{2}}\]\[U_{2}^{\left( n \right)} &= \left| p - \sqrt{p^{2} - 1} \right|^{n}U_{2}^{\left( 0 \right)}e^{\pm in\frac{\pi}{2}}\]}
+$$U_{1}^{\left( n \right)} &= \left| p + \sqrt{p^{2} - 1} \right|^{n}U_{1}^{\left( 0 \right)}e^{\pm in\frac{\pi}{2}}$$$$U_{2}^{\left( n \right)} &= \left| p - \sqrt{p^{2} - 1} \right|^{n}U_{2}^{\left( 0 \right)}e^{\pm in\frac{\pi}{2}}$$}
 
 In the complex plane, both modes again rotate by an angle of
 \(\frac{\pm \pi}{2}\) in each time step. However, this time the
@@ -1817,18 +1814,18 @@ We consider, finally, stability and other properties of the
 Adams-Bashforth scheme \texttt{h1.10}. Applied to the oscillation
 equation it gives
 
-{\[U^{( n + 1 )} = U^{(n)} + i\omega\Delta t \left( \frac{3}{2}U^{( n )} - \frac{1}{2}U^{\left( n - 1 \right)} \right)\]}
+$$U^{( n + 1 )} = U^{(n)} + i\omega\Delta t \left( \frac{3}{2}U^{( n )} - \frac{1}{2}U^{\left( n - 1 \right)} \right)$$}
 
 Substituting the relations \texttt{h2.33} we find
 
-\[\lambda^{2} - \left( 1 + i\frac{3}{2}p \right)\lambda + i\frac{1}{2}p = 0\]
+$$\lambda^{2} - \left( 1 + i\frac{3}{2}p \right)\lambda + i\frac{1}{2}p = 0$$
 
 We have, of course, again obtained a second degree equation for
 \(\lambda\).
 
 It has the solutions
 
-{\[\lambda_{1} = \frac{1}{2}\left( 1 + i\frac{3}{2}p + \sqrt{1 - \frac{9}{4}p^{2} + ip} \right)\]\[\lambda_{2} = \frac{1}{2}\left( 1 + i\frac{3}{2}p - \sqrt{1 - \frac{9}{4}}p^{2} + ip \right)\]}
+$$\lambda_{1} = \frac{1}{2}\left( 1 + i\frac{3}{2}p + \sqrt{1 - \frac{9}{4}p^{2} + ip} \right)$$$$\lambda_{2} = \frac{1}{2}\left( 1 + i\frac{3}{2}p - \sqrt{1 - \frac{9}{4}}p^{2} + ip \right)$$}
 
 Thus, as \(p \rightarrow 0\), \(\lambda_{1} \rightarrow 1 \) while
 \(\lambda_{2} \rightarrow 0\). We see that the solution associated with
@@ -1846,19 +1843,19 @@ of p in any case, it will suffice to consider amplification factors for
 small values of p only. The power series expansion of \texttt{h2.51}
 then gives
 
-\[\lambda_{1} = 1 + ip - \frac{1}{2}p^{2} + i\frac{1}{4}p^{3} - \frac{1}{8}p^{4} + \ldots\]\[\lambda_{2} = i\frac{1}{2}p^{2} + i\frac{1}{2}p^{2} - \frac{1}{4}p^{3} + \frac{1}{8}p^{4}\ldots\]
+$$\lambda_{1} = 1 + ip - \frac{1}{2}p^{2} + i\frac{1}{4}p^{3} - \frac{1}{8}p^{4} + \ldots$$$$\lambda_{2} = i\frac{1}{2}p^{2} + i\frac{1}{2}p^{2} - \frac{1}{4}p^{3} + \frac{1}{8}p^{4}\ldots$$
 
 Now, after rearranging the terms these series can be written as
 
-\[\lambda_{1} = \left( 1 - \frac{1}{2}p^{2} - \frac{1}{8}p^{4} - \ldots \right) + i\left( p + \frac{1}{4}p^{3} + \ldots \right)\]\[\lambda_{2} = \left( \frac{1}{2}p^{2} + \frac{1}{8}p^{4} + \ldots \right) + i\left( \frac{1}{2}p - \frac{1}{4}p^{3} - \ldots \right)\]
+$$\lambda_{1} = \left( 1 - \frac{1}{2}p^{2} - \frac{1}{8}p^{4} - \ldots \right) + i\left( p + \frac{1}{4}p^{3} + \ldots \right)$$$$\lambda_{2} = \left( \frac{1}{2}p^{2} + \frac{1}{8}p^{4} + \ldots \right) + i\left( \frac{1}{2}p - \frac{1}{4}p^{3} - \ldots \right)$$
 
 which can be used to obtain the amplification factors
 
-{\[\left| \lambda_{1} \right| &= \left( 1 + \frac{1}{2}p^{4} + \ldots \right)^{\frac{1}{2}}\]\[\left| \lambda_{2} \right| &= \left( \frac{1}{4}p^{2} + \ldots \right)^{\frac{1}{2}}\]}
+$$\left| \lambda_{1} \right| &= \left( 1 + \frac{1}{2}p^{4} + \ldots \right)^{\frac{1}{2}}$$$$\left| \lambda_{2} \right| &= \left( \frac{1}{4}p^{2} + \ldots \right)^{\frac{1}{2}}$$}
 
 The higher order terms have been omitted. A final expansion gives
 
-{\[\left| \lambda_{1} \right| &= 1 + \frac{1}{4}p^{4} + \ldots\]\[\left| \lambda_{2} \right| &= \frac{1}{2}p + \ldots\]}
+$$\left| \lambda_{1} \right| &= 1 + \frac{1}{4}p^{4} + \ldots$$$$\left| \lambda_{2} \right| &= \frac{1}{2}p + \ldots$$}
 
 Expressions \texttt{h2.52} and/or \texttt{h2.53} show that the physical
 mode of the Adams-Bashforth scheme is always unstable. However, as for
@@ -1901,7 +1898,7 @@ equation}}{Properties of schemes applied to the friction equation}}\label{proper
 We shall now consider the properties of schemes when applied to the
 equation
 
-{\[\frac{d U}{d t} = - \kappa U, \qquad U = U\left( t \right), \qquad \kappa > 0\]}
+$$\frac{d U}{d t} = - \kappa U, \qquad U = U\left( t \right), \qquad \kappa > 0$$}
 
 We shall call this equation the friction equation.
 
@@ -1911,15 +1908,15 @@ proportional to the velocity vector, as is often assumed for motions
 near the ground. As another example, note that when seeking a solution
 of the heat transfer, or Fick\textquotesingle s diffusion equation
 
-\[\frac{\partial u}{\partial t} = \sigma\frac{\partial^{2} u }{{\partial x}^{2}}, \qquad \sigma > 0\]
+$$\frac{\partial u}{\partial t} = \sigma\frac{\partial^{2} u }{{\partial x}^{2}}, \qquad \sigma > 0$$
 
 in the form of a single harmonic component
 
-\[u\left( x,t \right) = Re\left\lbrack \left( U\left( t \right)e^{\text{ikx}} \right) \right\rbrack\]
+$$u\left( x,t \right) = Re\left\lbrack \left( U\left( t \right)e^{\text{ikx}} \right) \right\rbrack$$
 
 we obtain
 
-\[\frac{\text{dU}}{\text{dt}} = - \sigma k^{2}U\]
+$$\frac{\text{dU}}{\text{dt}} = - \sigma k^{2}U$$
 
 \begin{description}
 \item[This is equivalent to \texttt{k3.1} if we substitute]
@@ -1928,7 +1925,7 @@ we obtain
 
 The general solution of \texttt{k3.1} is
 
-{\[U\left( t \right) = U\left( 0 \right)e^{- \kappa t}\]}
+$$U\left( t \right) = U\left( 0 \right)e^{- \kappa t}$$}
 
 Thus, both the real and the imaginary part decrease exponentially with
 time.
@@ -1938,21 +1935,21 @@ analyzed using the von Neumann method. As in the previous section, we
 consider first the non-iterative two level scheme \texttt{h2.6}. Applied
 to the friction equation, \texttt{h2.6} gives
 
-{\[U^{(n + 1)} = U^{n} - \kappa\Delta t \left( \alpha U^{( n )} + \beta U^{\left( n + 1 \right)} \right)\]}
+$$U^{(n + 1)} = U^{n} - \kappa\Delta t \left( \alpha U^{( n )} + \beta U^{\left( n + 1 \right)} \right)$$}
 
 Writing
 
-{\[K \equiv \kappa \Delta t\]}
+$$K \equiv \kappa \Delta t$$}
 
 we obtain, rearranging the terms in \texttt{k3.3},
 
-{\[U^{\left( n + 1 \right)} = \frac{1 - \alpha K}{1 + \beta K}U^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = \frac{1 - \alpha K}{1 + \beta K}U^{\left( n \right)}$$}
 
 For the Euler scheme \(\alpha = 1`and :math:\)beta = 0`; thus,
 \texttt{k3.5} shows that the Euler scheme is now stable if
 \(\left| 1 - K \leq 1 \right|\), that is, if
 
-{\[0 < K \leq 2\]}
+$$0 < K \leq 2$$}
 
 Thus we see that the stability criteria of particular schemes do not
 have to be the same when they are applied to different equations. In the
@@ -1972,7 +1969,7 @@ For the trapezoidal scheme \(\alpha = \frac{1}{2}`and
 
 Considering the iterative two level scheme \texttt{h2.18} we obtain
 
-{\[U^{\left( n + 1 \right)} = \left( 1 - K + \beta K^{2} \right)U^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = \left( 1 - K + \beta K^{2} \right)U^{\left( n \right)}$$}
 
 Therefore, both the Matsuno and the Heun scheme are stable for
 sufficiently small values of \emph{K}.
@@ -1981,15 +1978,15 @@ It is instructive to consider in some detail the behaviour of the
 numerical solution obtained using the leapfrog scheme. Applied to
 \texttt{k3.1} it gives
 
-{\[U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} - 2\Delta t U^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} - 2\Delta t U^{\left( n \right)}$$}
 
 The equation for the amplification factor is
 
-\[\lambda^{2} + 2K\lambda - 1 = 0\]
+$$\lambda^{2} + 2K\lambda - 1 = 0$$
 
 giving the solutions
 
-{\[\lambda_{1} = - K + \sqrt{1 + K^{2}}\]\[\lambda_{2} = - K - \sqrt{1 + K^{2}}\]}
+$$\lambda_{1} = - K + \sqrt{1 + K^{2}}$$$$\lambda_{2} = - K - \sqrt{1 + K^{2}}$$}
 
 As \(k \rightarrow 0, \quad \lambda \rightarrow 1,\) while
 \(\lambda_{2} \rightarrow - 1\) thus, the solution associated with
@@ -2028,7 +2025,7 @@ to zero initially.
 
 Finally, for the Adams-Bashforth scheme we obtain
 
-{\[\lambda = \frac{1}{2}\left( 1 - \frac{3}{2}K \pm \sqrt{1 - K\frac{9}{4}K^{2}} \right)\]}
+$$\lambda = \frac{1}{2}\left( 1 - \frac{3}{2}K \pm \sqrt{1 - K\frac{9}{4}K^{2}} \right)$$}
 
 The Adams-Bashforth scheme, thus, is stable for suffiÂ­ciently small
 values of K. The computational mode is damped.
@@ -2040,7 +2037,7 @@ A natural question to ask at this point is what can we do if, for
 example, the equation contains both the oscillaÂ­tion and the friction
 term, that is
 
-{\[\frac{\text{dU}}{\text{Dt}} = i\omega U - \kappa U\]}
+$$\frac{\text{dU}}{\text{Dt}} = i\omega U - \kappa U$$}
 
 Here we might like to use the leapfrog scheme because of the oscillation
 term \(i\omega U\), but we know that it cannot be used for the friction
@@ -2049,7 +2046,7 @@ schemes for the different terms; for example, we might use the leapfrog
 scheme for the oscillation term and the forward scheme for the friction
 term. We then obtain
 
-\[U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} + 2\Delta t\left( i\omega U^{\left( n \right)} - \kappa U^{\left( n - 1 \right)} \right)\]
+$$U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} + 2\Delta t\left( i\omega U^{\left( n \right)} - \kappa U^{\left( n - 1 \right)} \right)$$
 
 Other combinations, of course, are also possible.
 
@@ -2075,14 +2072,14 @@ differencing}}{Schemes with centered second-order space differencing}}\label{Sec
 
 We shall first consider the equation
 
-{\[\frac{\partial u}{\partial t}  +c\frac{\partial u}{\partial x} = 0\]\[c = const.\]}
+$$\frac{\partial u}{\partial t}  +c\frac{\partial u}{\partial x} = 0$$$$c = const.$$}
 
 Here \(u = u\left( x,t \right)\) is a function of two independent
 variaÂ­bles : the independent variable \(x\) will represent a space
 variable, and, thus, \texttt{a1.1} will be called the one-dimenÂ­sional
 linear advection equation. As seen earlier, its general solution is
 
-{\[u = f\left( x - ct \right)\]}
+$$u = f\left( x - ct \right)$$}
 
 where \(f\) is an arbitrary function. The name \emph{advection equation}
 was suggested by Phillips (1960).
@@ -2095,7 +2092,7 @@ If the space derivative in \texttt{a1.1} is approximated by a centered
 finite difference quotient using values at the two nearest points, we
 obtain for the time derivative
 
-{\[\frac{\partial u_{j}}{\partial t} = - c\frac{u_{j + 1} - u_{j - 1}}{2\Delta x}\]}
+$$\frac{\partial u_{j}}{\partial t} = - c\frac{u_{j + 1} - u_{j - 1}}{2\Delta x}$$}
 
 The subscript here, as before, denotes the distance from the origin in
 space increments; that is, \(x = j\Delta x\). A number of schemes for
@@ -2104,7 +2101,7 @@ we can approximate the time derivative in \texttt{a1.3} by one of the
 methods studied in the preceding chapter. For example, when the time
 derivative is approximated using the leapfrog scheme, we obtain
 
-{\[\frac{u_{j}^{n + 1} - u_{j}^{n - 1}}{2\Delta t} = - c\frac{u_{j + 1}^n - u_{j - 1}^n}{2\Delta x}\]}
+$$\frac{u_{j}^{n + 1} - u_{j}^{n - 1}}{2\Delta t} = - c\frac{u_{j + 1}^n - u_{j - 1}^n}{2\Delta x}$$}
 
 as one of many possible consistent schemes for the numerical solution of
 \texttt{a1.1}.
@@ -2114,15 +2111,15 @@ the known properties of time differencing schemes applied to the
 oscillation equation. To see this, we substitute into \texttt{a1.3} a
 tentative solution in form of the single harmonic component
 
-{\[u_{j} = Re\left\lbrack U\left( t \right)e^{ikj\Delta x} \right\rbrack\]}
+$$u_{j} = Re\left\lbrack U\left( t \right)e^{ikj\Delta x} \right\rbrack$$}
 
 After some rearrangement, this gives
 
-{\[\frac{\text{dU}}{\text{dt}} = i\left( - \frac{c}{\Delta t}\sin{k\Delta x} \right)U\]}
+$$\frac{\text{dU}}{\text{dt}} = i\left( - \frac{c}{\Delta t}\sin{k\Delta x} \right)U$$}
 
 If we denote
 
-{\[\omega \equiv - \frac{C}{\Delta x}\sin{k\Delta x}\]}
+$$\omega \equiv - \frac{C}{\Delta x}\sin{k\Delta x}$$}
 
 this is equivalent to the oscillation equation of the previous chapter.
 Now, if we approximate \texttt{a1.6} using one of the time differencing
@@ -2136,11 +2133,11 @@ by \texttt{a1.7}.
 As an example, if \texttt{a1.6} is approximated using the leapfrog
 scheme, we obtain
 
-{\[U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} + 2\left( - c\frac{\Delta t}{\Delta x}\sin{k\Delta x} \right)U^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} + 2\left( - c\frac{\Delta t}{\Delta x}\sin{k\Delta x} \right)U^{\left( n \right)}$$}
 
 Using the notation of chapter \texttt{Chapter2}, we write
 
-{\[p = - c\frac{\Delta t}{\Delta x}\sin{k\Delta x}\]}
+$$p = - c\frac{\Delta t}{\Delta x}\sin{k\Delta x}$$}
 
 We obtain the same finite difference equation \texttt{a1.8} by first
 applying the leapfrog scheme to \texttt{a1.3} giving \texttt{a1.4} and
@@ -2153,13 +2150,13 @@ of the leapfrog scheme it was required that the condition
 \(\left| p \right| \leq 1 \) â be satisfied for all values of \(\omega\)
 occuring. Thus, we have to satisfy
 
-\[\left| c\frac{\Delta t}{\Delta x}\sin{k\Delta x } \right| \leq 1\]
+$$\left| c\frac{\Delta t}{\Delta x}\sin{k\Delta x } \right| \leq 1$$
 
 for any admissible k. Since \(\left| \sin{k\Delta x} \right|\) does
 reach the maximum value of unity in the admissible range of k, we obtain
 the stability condition
 
-{\[\left| c \right|\frac{\Delta t}{\Delta x} \leq 1\]}
+$$\left| c \right|\frac{\Delta t}{\Delta x} \leq 1$$}
 
 This criterion, obtained already in the Chapter \texttt{Chapter1}, shows
 that stability cannot simply be achieved by reduction of the time and
@@ -2179,34 +2176,34 @@ We can also use other results of the previous analysis. There are two
 solutions for \(U^{\left( n \right)}\), the physical and the
 computational mode
 
-{\[U_{1}^{\left( n \right)} = \lambda_{1}^{n}U_{1}^{\left( 0 \right)}U_{2}^{\left( n \right)} 
-= \lambda_{2}^{\left( n \right)}U_{2}^{\left( 0 \right)}\]}
+$$U_{1}^{\left( n \right)} = \lambda_{1}^{n}U_{1}^{\left( 0 \right)}U_{2}^{\left( n \right)} 
+= \lambda_{2}^{\left( n \right)}U_{2}^{\left( 0 \right)}$$}
 
 \(\lambda_{1}\) and \(\lambda_{2 }\) are given here by Eqs.
 \texttt{h2.34} of Chapter \texttt{Chapter2}. In the stable case, we
 have, for \(p \gtrless 0\)
 
-{\[\lambda_{1} = c^{i\theta}, \qquad \theta = arctan\left( \frac{p}{\sqrt{1 - p^{2}}} \right)\]}
+$$\lambda_{1} = c^{i\theta}, \qquad \theta = arctan\left( \frac{p}{\sqrt{1 - p^{2}}} \right)$$}
 
-\[\lambda_{1} = e^{i\left( \pm\pi-\theta\right)} = - e^{- i\theta}\]
+$$\lambda_{1} = e^{i\left( \pm\pi-\theta\right)} = - e^{- i\theta}$$
 
 Using \texttt{a1.5}, it is seen that the approximation u{]} also has a
 physical and a computational mode. For the physical mode
 
-{\[u_{j}^{n} = Re\left\lbrack U_{1}^{\left( 0 \right)}e^{\left( j\Delta x 
-+ \frac{\theta}{k\Delta t}n\Delta t \right)} \right\rbrack\]}
+$$u_{j}^{n} = Re\left\lbrack U_{1}^{\left( 0 \right)}e^{\left( j\Delta x 
++ \frac{\theta}{k\Delta t}n\Delta t \right)} \right\rbrack$$}
 
 For the computational mode, on the other hand, we obtain
 
-{\[u_{j}^{n} = Re\left\lbrack \left( - 1 \right)^{n}U_{2}^{\left( 0 \right)}
-e^{\text{ik}\left( j\Delta x - \frac{\theta}{k\Delta t} \right)} \right\rbrack\]}
+$$u_{j}^{n} = Re\left\lbrack \left( - 1 \right)^{n}U_{2}^{\left( 0 \right)}
+e^{\text{ik}\left( j\Delta x - \frac{\theta}{k\Delta t} \right)} \right\rbrack$$}
 
 These expression can be compared with the true solution of \texttt{a1.1}
 in the form of a single harmonic component, as given in chapter
 \texttt{Chapter1},
 
-{\[u\left( x,t \right) = Re\left\lbrack U\left( 0 \right)e^{\text{ik}
-\left( x - c t \right)} \right\rbrack\]}
+$$u\left( x,t \right) = Re\left\lbrack U\left( 0 \right)e^{\text{ik}
+\left( x - c t \right)} \right\rbrack$$}
 
 We find that the phase speed of the physical mode, \(c_{1}\) is equal to
 \(- \frac{\theta}{k\Delta t}\), and the phase speed of the
@@ -2227,23 +2224,23 @@ approximate the time derivative in \texttt{a1.3}, the Matsuno scheme.
 First the approximate values \(u_{j}^{\left( n + 1 \right)^{*}}\) using
 the forward scheme, that is,
 
-{\[\frac{u_{j}^{\left( n + 1 \right)^{*}} - u_{j}^{n}}{\Delta t} 
-= - c\frac{u_{j + 1}^{n} - u_{j - 1}^{n}}{2\Delta x}\]}
+$$\frac{u_{j}^{\left( n + 1 \right)^{*}} - u_{j}^{n}}{\Delta t} 
+= - c\frac{u_{j + 1}^{n} - u_{j - 1}^{n}}{2\Delta x}$$}
 
 Then, these approximate values are used in the backward scheme, that is
 
-{\[\frac{u_{j}^{n + 1} - u_{j}^{n}}{\Delta t} =
-- c\frac{u_{j + 1}^{\left( n + 1 \right)^{*}} - u_{j - 1}^{\left( n + 1 \right)^{*}}}{2\Delta x}\]}
+$$\frac{u_{j}^{n + 1} - u_{j}^{n}}{\Delta t} =
+- c\frac{u_{j + 1}^{\left( n + 1 \right)^{*}} - u_{j - 1}^{\left( n + 1 \right)^{*}}}{2\Delta x}$$}
 
 It is instructive to eliminate the approximate values
 \(u^{\left( n + 1 \right)^{*}}\) from this equation, by substituting
 values given by \texttt{a1.16}, with the subscript \(j\) replaced by
 \(j + 1\) and then by \( j - 1\). In this way we obtain
 
-{\[\frac{u_{j}^{n + 1} - u_{j}^{n}}{\Delta t} =
+$$\frac{u_{j}^{n + 1} - u_{j}^{n}}{\Delta t} =
 - c\frac{u_{j + 1}^{n} - u_{j - 1}^{n}}{2\Delta x} +
 c^{2}\Delta t\frac{u_{j + 2}^{n} - 
-{2u}_{j}^{n} + u_{j - 2}^{n}}{\left( 2\Delta x \right)^{2}}\]}
+{2u}_{j}^{n} + u_{j - 2}^{n}}{\left( 2\Delta x \right)^{2}}$$}
 
 Without the last term, this represents the finite difference equation
 obtained when the forward scheme is used for the time derivative in
@@ -2274,11 +2271,11 @@ test the stability of a group of schemes that can be used for solving
 A fairly wide class of schemes for solving \texttt{a1.3} can be written
 as
 
-{\[u_{j}^{n + 1} - u_{j}^{n} = - \frac{1}{2}\mu\left( {u^{*}}_{j + 1} - {u^{*}}_{j - 1} \right)\]}
+$$u_{j}^{n + 1} - u_{j}^{n} = - \frac{1}{2}\mu\left( {u^{*}}_{j + 1} - {u^{*}}_{j - 1} \right)$$}
 
 where
 
-{\[\mu \equiv \frac{c\Delta t}{\Delta x}\]}
+$$\mu \equiv \frac{c\Delta t}{\Delta x}$$}
 
 \begin{description}
 \item[and \({u^{*}}_{j}\) is a linear function of a number of values]
@@ -2287,30 +2284,30 @@ where
 
 For example, to obtain the non-iterative two level schemes we write
 
-{\[{u^{*}}_{j} = \alpha u_{j}^{n} + \beta u_{j}^{n + 1}\]}
+$${u^{*}}_{j} = \alpha u_{j}^{n} + \beta u_{j}^{n + 1}$$}
 
 For the interative two level shemes write
 
-{\[{u^{*}}_{j} = u_{j}^{n} - \frac{\beta}{2}\mu\left( u_{j + 1}^{n} - u_{j - 1}^{n} \right)\]}
+$${u^{*}}_{j} = u_{j}^{n} - \frac{\beta}{2}\mu\left( u_{j + 1}^{n} - u_{j - 1}^{n} \right)$$}
 
 Finally, for the Adams-Bashforthsheme
 
-{\[{u^{*}}_{j} = \frac{3}{2}u_{j}^{n} - \frac{1}{2}u_{j}^{n - 1}\]}
+$${u^{*}}_{j} = \frac{3}{2}u_{j}^{n} - \frac{1}{2}u_{j}^{n - 1}$$}
 
 Here we shall analyze the stability of the non-iterative two level
 schemes. It is convenient first to multiply (1.19) by \(u_{j}\) and sum
 for all \(j\); we obtain
 
-\[\sum_{j}{u^{*}}_{j}\left( u_{j}^{n + 1} - u_{j}^{n} \right) = - \frac{1}{2}\mu\sum_{j}u^{*}_{j}\left( u^{*}_{j+1} - u^{*}_{j - 1} \right)\]
+$$\sum_{j}{u^{*}}_{j}\left( u_{j}^{n + 1} - u_{j}^{n} \right) = - \frac{1}{2}\mu\sum_{j}u^{*}_{j}\left( u^{*}_{j+1} - u^{*}_{j - 1} \right)$$
 
 The right hand side vanished if cycle boundary conditions are assumed ;
 we then have
 
-\[\sum_{j}u^{*}_{j}\left( u_{j}^{n + 1} - u_{j}^{n} \right) = 0\]
+$$\sum_{j}u^{*}_{j}\left( u_{j}^{n + 1} - u_{j}^{n} \right) = 0$$
 
 Adding this to the relation gives
 
-\[\sum_{j}\frac{1}{2}\left\lbrack \left( u_{j}^{n + 1} \right)^{2} - \left( u_{j}^{n} \right)^{2} \right\rbrack = \sum_{j}\frac{1}{2}\left( u_{j}^{n + 1} + u_{j}^{n} \right)\left( u_{j}^{n + 1} - u_{j}^{n} \right)\]
+$$\sum_{j}\frac{1}{2}\left\lbrack \left( u_{j}^{n + 1} \right)^{2} - \left( u_{j}^{n} \right)^{2} \right\rbrack = \sum_{j}\frac{1}{2}\left( u_{j}^{n + 1} + u_{j}^{n} \right)\left( u_{j}^{n + 1} - u_{j}^{n} \right)$$
 
 \begin{description}
 \item[Substituting \texttt{a1.21}, and eliminating \(\beta\) using]
@@ -2319,9 +2316,9 @@ Adding this to the relation gives
 
 We obtain, after some rearrangement
 
-{\[\sum_{j}\frac{1}{2}\left\lbrack 
+$$\sum_{j}\frac{1}{2}\left\lbrack 
 \left( u_{j}^{n + 1} \right)^{2} - \left( u_{j}^{n} \right)^{2} \right\rbrack 
-= \left( \alpha - \frac{1}{2} \right)\sum_{j}\left( u_{j}^{n + 1} - u_{j}^{n} \right)^{2}\]}
+= \left( \alpha - \frac{1}{2} \right)\sum_{j}\left( u_{j}^{n + 1} - u_{j}^{n} \right)^{2}$$}
 
 Thus, if \(\alpha > \frac{1}{2}\) we have anunstablescheme ; if
 \(\alpha > \frac{1}{2}\) a stable and neutral scheme, and if
@@ -2351,22 +2348,22 @@ using centered space and forÂ­ward time differencing, taking for
 averages of the values \(u_{j}^{n}\) at the two nearest grid points.
 Therefore,
 
-{\[\frac{u_{j + \frac{1}{2}}^{n + \frac{1}{2}} - \frac{1}{2}\left( u_{j + 1}^{n} + u_{j}^{n} \right)}
-{\frac{1}{2}\Delta t} = - c \frac{u_{j + 1}^{n}{+ u}_{j}^{n}}{\Delta x}\]\[\frac{u_{j - \frac{1}{2}}^{n + \frac{1}{2}} - \frac{1}{2}\left( u_{j}^{n} + u_{j - 1}^{n} \right)}{\frac{1}{2}\Delta t} = - c \frac{u_{j}^{n}{- u}_{j - 1}^{n}}{\Delta t}\]}
+$$\frac{u_{j + \frac{1}{2}}^{n + \frac{1}{2}} - \frac{1}{2}\left( u_{j + 1}^{n} + u_{j}^{n} \right)}
+{\frac{1}{2}\Delta t} = - c \frac{u_{j + 1}^{n}{+ u}_{j}^{n}}{\Delta x}$$$$\frac{u_{j - \frac{1}{2}}^{n + \frac{1}{2}} - \frac{1}{2}\left( u_{j}^{n} + u_{j - 1}^{n} \right)}{\frac{1}{2}\Delta t} = - c \frac{u_{j}^{n}{- u}_{j - 1}^{n}}{\Delta t}$$}
 
 Using these provisional values another step is made, centered in both
 space and time; thus
 
-{\[\frac{u_{j}^{n + 1}{- u}_{j}^{n}}{\Delta t} =
- - c \frac{u_{j + \frac{1}{2}}^{n + \frac{1}{2}} - u_{j - \frac{1}{2}}^{n + \frac{1}{2}}}{\Delta x}\]}
+$$\frac{u_{j}^{n + 1}{- u}_{j}^{n}}{\Delta t} =
+ - c \frac{u_{j + \frac{1}{2}}^{n + \frac{1}{2}} - u_{j - \frac{1}{2}}^{n + \frac{1}{2}}}{\Delta x}$$}
 
 Substitution of the provisional values from \texttt{a1.25} into this
 equation gives
 
-{\[\frac{u_{j}^{n + 1}{- u}_{j}^{n}}{\Delta t} =
+$$\frac{u_{j}^{n + 1}{- u}_{j}^{n}}{\Delta t} =
  - c\frac{u_{j + 1}^{n} + u_{j - 1}^{n}}{2\Delta x} +
   \frac{1}{2}c^{2}\Delta t\frac{u_{j + 1}^{n} - 2u_{j}^{n} + u_{j - 1}^{n}}
-  {\left( 2\Delta x \right)^{2}}\]}
+  {\left( 2\Delta x \right)^{2}}$$}
 
 It is interesting to note that this finite difference equaÂ­tion is very
 similar to \texttt{a1.18}, that is, to the scheme obtained using simple
@@ -2396,58 +2393,58 @@ thus, it is of second order accuracy in both space and time.
 
 To test the stability of the Lax-Wendroff scheme, we substitute
 
-{\[u_{j}^{n} = Re\left\lbrack U^{\left( n \right)}e^{i  k  j \Delta x} \right\rbrack\]}
+$$u_{j}^{n} = Re\left\lbrack U^{\left( n \right)}e^{i  k  j \Delta x} \right\rbrack$$}
 
 Into \texttt{a1.27}. This gives
 
-{\[U^{\left( n + 1 \right)} = \left\lbrack 1 + \mu^{2}\left( \cos{k\Delta x - 1} \right) -
-i\mu\sin{k\Delta x} \right\rbrack U^{\left( n \right)}\]}
+$$U^{\left( n + 1 \right)} = \left\lbrack 1 + \mu^{2}\left( \cos{k\Delta x - 1} \right) -
+i\mu\sin{k\Delta x} \right\rbrack U^{\left( n \right)}$$}
 
 Therefore
 
-{\[\lambda = 1 + \mu^{2}\left( \cos{k\Delta x - 1} \right) - i\mu\sin{k\Delta x}\]}
+$$\lambda = 1 + \mu^{2}\left( \cos{k\Delta x - 1} \right) - i\mu\sin{k\Delta x}$$}
 
 Since
 
-\[\cos{k\Delta x - 1} = - 2\sin^{2}\frac{k\Delta x}{2}\]\[\sin{k\Delta x} = 2\sin\frac{k\Delta x}{2}\cos\frac{k\Delta x}{2}\]
+$$\cos{k\Delta x - 1} = - 2\sin^{2}\frac{k\Delta x}{2}$$$$\sin{k\Delta x} = 2\sin\frac{k\Delta x}{2}\cos\frac{k\Delta x}{2}$$
 
 we finally obtain
 
-{\[|\lambda| = \left\lbrack  1 - 4\mu^{2}( 1 - \mu^{2} )\sin^{4}\frac{k\Delta x}{2} \right\rbrack^{1/2}\]}
+$$|\lambda| = \left\lbrack  1 - 4\mu^{2}( 1 - \mu^{2} )\sin^{4}\frac{k\Delta x}{2} \right\rbrack^{1/2}$$}
 
 The expression within the bracket is a sum of two squares and never
 negative. Thus, the Lax-Wendroff scheme is stable for
 \(1 - \mu^{2} \geq 0\) or, for
 
-\[\left| c \right|\frac{\Delta t}{\Delta x} \leq 1\]
+$$\left| c \right|\frac{\Delta t}{\Delta x} \leq 1$$
 
 This is again the Courant-Friedrichs-Lewy stability criterion
 \texttt{a1.10}. The scheme is damping for
 
-\[\left| c  \right|\frac{\Delta t}{\Delta x} < 1\]
+$$\left| c  \right|\frac{\Delta t}{\Delta x} < 1$$
 
 It is instructive to analyze in some detail the dependence of the
 damping wave length and on \(\mu\). For the shortest resolvable wave
 length of \(2\Delta x\) we have \(k\delta x = \pi\) , and, therefore,
 
-{\[|\lambda|  = \left( 1 - 4\mu^{2} + 4\mu^{4} \right)^{\frac{1}{2}} = \left| 1 - 2\mu^{2} \right|\]}
+$$|\lambda|  = \left( 1 - 4\mu^{2} + 4\mu^{4} \right)^{\frac{1}{2}} = \left| 1 - 2\mu^{2} \right|$$}
 
 For waves of twice the wave length,
 \(4\Delta x,k\Delta x = \frac{\pi}{2}\),
 
 and
 
-{\[|\lambda| = \left( 1 - \mu^{2} + \mu^{4} \right)^{\frac{1}{2}}\]}
+$$|\lambda| = \left( 1 - \mu^{2} + \mu^{4} \right)^{\frac{1}{2}}$$}
 
 In general, since
 
-\[\frac{d|\lambda|}{\text{dÎ¼}} = \frac{4\mu\left( 1 - 2\mu^{2} \right)\sin^{4}\frac{k\Delta x}{2}}{\left\lbrack 1 - 4\mu^{2}\left( 1 - \mu^{2} \right)\sin^{4}\frac{k\Delta x}{2} \right\rbrack^{\frac{1}{2}}}\]
+$$\frac{d|\lambda|}{\text{dÎ¼}} = \frac{4\mu\left( 1 - 2\mu^{2} \right)\sin^{4}\frac{k\Delta x}{2}}{\left\lbrack 1 - 4\mu^{2}\left( 1 - \mu^{2} \right)\sin^{4}\frac{k\Delta x}{2} \right\rbrack^{\frac{1}{2}}}$$
 
 all the \(|\lambda|\) curves have minima at \(\mu = 1/\sqrt{2}\).
 SubstitutÂ­ing this value of \(\mu\) into \texttt{a1.31} we find that
 these minimum values of the amplification factor are equal to
 
-{\[\left( 1 - \sin^{4}\frac{k\Delta x}{2} \right)^{\frac{1}{2}}\]}
+$$\left( 1 - \sin^{4}\frac{k\Delta x}{2} \right)^{\frac{1}{2}}$$}
 
 Thus, as the wave length increases from the minimum value of
 \(2\Delta x\) this minimum value of \(|\lambda|\) monotonically
@@ -2465,7 +2462,7 @@ should depend on these quantities and it is either impractical or
 impossible to control the damping by changing them. For example, for
 small values of \(\mu\) expansion of \texttt{a1.31} gives
 
-\[|\lambda| = 1 - 2\mu^{2}\sin^{4}\frac{k\Delta x}{2} + \ldots\]
+$$|\lambda| = 1 - 2\mu^{2}\sin^{4}\frac{k\Delta x}{2} + \ldots$$
 
 showing that for a given amount of time (a fixed value of
 \(\text{n \Delta }t\)) the total damping will be approximately
@@ -2510,15 +2507,15 @@ dispersion}}{Computational dispersion}}\label{Section3.2}
 
 As we have seen, the linear advection equation
 
-{\[\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} = 0\]\[c = const\]}
+$$\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} = 0$$$$c = const$$}
 
 has a solution in the form of a single harmonic component
 
-{\[u\left( x,t \right) = Re\left\lbrack U\left( t \right)e^{\text{ikx}} \right\rbrack\]}
+$$u\left( x,t \right) = Re\left\lbrack U\left( t \right)e^{\text{ikx}} \right\rbrack$$}
 
 provided that
 
-{\[\frac{\text{dU}}{\text{dt}} + ikcU = 0\]}
+$$\frac{\text{dU}}{\text{dt}} + ikcU = 0$$}
 
 In this oscillation equation \(kc\) is equal to the frequency \(\nu\),
 and \(c = \frac{\nu}{k}\) is the phase speed of the waves. It is seen
@@ -2529,7 +2526,7 @@ is no dispersion.
 
 Now consider the equation
 
-{\[\frac{{\partial u}_{j}}{\partial t} + c\frac{u_{j + 1} - u_{j - 1}}{2\Delta x} = 0\]}
+$$\frac{{\partial u}_{j}}{\partial t} + c\frac{u_{j + 1} - u_{j - 1}}{2\Delta x} = 0$$}
 
 that is obtained by approximating the space derivative in \texttt{a2.1}
 by a centered difference quotient. The equation \texttt{a2.4} is neither
@@ -2550,17 +2547,17 @@ numerical solution.
 Recall that \texttt{a2.4} has a solution in the form of a single
 harmonic component
 
-{\[u_{j}\left( t \right) = Re\left\lbrack U\left( t \right)e^{\text{ikjx}} \right\rbrack\]}
+$$u_{j}\left( t \right) = Re\left\lbrack U\left( t \right)e^{\text{ikjx}} \right\rbrack$$}
 
 provided that
 
-{\[\frac{\text{dU}}{\text{dt}} + ik\left( \frac{\sin{k\Delta x}}{k\Delta x} \right)U = 0\]}
+$$\frac{\text{dU}}{\text{dt}} + ik\left( \frac{\sin{k\Delta x}}{k\Delta x} \right)U = 0$$}
 
 We have now written this so that it can conveniently be compared with
 \texttt{a2.3} . Instead of the constant phase speed c, we see that waves
 now propagate with the phase speed
 
-{\[c^{*} = c\frac{\sin{k\Delta x}}{k\Delta x}\]}
+$$c^{*} = c\frac{\sin{k\Delta x}}{k\Delta x}$$}
 
 This phase speed is a function of the wave number k. Thus, the finite
 differencing in space causes a dispersion of the waves ; we shall call
@@ -2604,13 +2601,13 @@ consideration.
 We now turn our attention to the group velocity. In the case of the
 linear equation \texttt{a2.1} we obtain for the group velocity \(c_{g}\)
 
-{\[\tau_{c} = \frac{d\left( \text{kc} \right)}{\text{dk}} = c\]}
+$$\tau_{c} = \frac{d\left( \text{kc} \right)}{\text{dk}} = c$$}
 
 Thus, the group velocity is constant and equal to the phase speed \(c\).
 With the differential-difference equation \texttt{a2.4} , however,
 \texttt{a2.7} gives for the group velocity c*
 
-{\[c_{g} = \frac{d\left( kc^{*} \right)}{\text{dt}} = c\cos{k\Delta x}\]}
+$$c_{g} = \frac{d\left( kc^{*} \right)}{\text{dt}} = c\cos{k\Delta x}$$}
 
 Thus, as \(k\Delta x\), increases from zero, the group velocity
 \(c_{g}\), decreases monotonically from \(c_{g}\), and becomes equal
@@ -2642,14 +2639,14 @@ This situation can be illustrated by a simple example. Let us define Y
 (x) as a function that is slowly varying in space; for example, it can
 be a sine function of a large wavelength. Furthermore, we define
 
-{\[u_{j} \equiv \left( - 1 \right)^{j}Y_{J}\]}
+$$u_{j} \equiv \left( - 1 \right)^{j}Y_{J}$$}
 
 as shown in \texttt{figg:15}. Thus, the function Â±Y(x) is the envelope
 of the function \(u_{j}\). Suppose that we calculate the advection of
 \(u_{j}\) using \texttt{a2.4} , then substituting \texttt{a2.10} into
 \texttt{a2.4} we obtain
 
-\[\frac{\partial Y}{\partial t} - c\frac{Y_{J + 1} - Y_{J - 1}}{2\Delta X} = 0\]
+$$\frac{\partial Y}{\partial t} - c\frac{Y_{J + 1} - Y_{J - 1}}{2\Delta X} = 0$$
 
 Thus, the advection of \(Y_{j}`is governed by the same equation
 as the advection of :math:`u_{j}`except that the advection velocity
@@ -2671,7 +2668,7 @@ can be used to analyze its behaviour for some given initial conditions
 of interest. To this end it is convenient to define a non-dimensional
 time variable
 
-{\[\tau \equiv \frac{\text{ct}}{\Delta x}\]}
+$$\tau \equiv \frac{\text{ct}}{\Delta x}$$}
 
 \begin{figure}
 \centering
@@ -2682,26 +2679,26 @@ time variable
 and, after dividing equation \texttt{a2.4} by \(\frac{c}{2\Delta x}\),
 to write it in the form
 
-{\[2\frac{d}{d\tau}u_{j}\left( \tau \right) = u_{j - 1}\left( \tau \right) - u_{j + 1}\left( \tau \right)\]}
+$$2\frac{d}{d\tau}u_{j}\left( \tau \right) = u_{j - 1}\left( \tau \right) - u_{j + 1}\left( \tau \right)$$}
 
 This can be recognized as the recurrence formula of the Bessel function
 of the first kind of order \(j,J_{j}\left( \tau \right)_{,}\) (e.g.
 Courant and Hilbert, 1953, p. 488). In other words,
 
-{\[u_{j}\left( \tau \right) = J_j\left( \tau \right)\]}
+$$u_{j}\left( \tau \right) = J_j\left( \tau \right)$$}
 
 is a solution of \texttt{a2.12}. Several of these functions, of the
 lowest order, are shown in \texttt{figg:16}. The figure illustrates more
 of these functions than indicated, since, for any \(j\),
 
-\[J_{- j} = \left( - 1 \right)^{j}J_{j}\]
+$$J_{- j} = \left( - 1 \right)^{j}J_{j}$$
 
 Note, furthermore, that in \texttt{a2.12} the subscript \emph{j} can
 take any integer value, since the location of the grid point for which
 we choose \(J = 0\) is arbitrary. Thus, a solution that is more general
 than \texttt{a2.13} is
 
-\[u_{j}\left( \tau \right) = J_{j - p}\left( \tau \right)\]
+$$u_{j}\left( \tau \right) = J_{j - p}\left( \tau \right)$$
 
 \begin{figure}
 \centering
@@ -2713,14 +2710,14 @@ Where \(p\) is an arbitrary integer. Since we are solving a linear
 equation, a still more general solution is a linear combination of all
 these solutions, that is
 
-{\[u_{j}\left( \tau \right) = \sum_{p = - \infty}^{\infty}{a_{p}J_{j - p}}\left( \tau \right)\]}
+$$u_{j}\left( \tau \right) = \sum_{p = - \infty}^{\infty}{a_{p}J_{j - p}}\left( \tau \right)$$}
 
 where \(a_{p}\) are arbitrary constants. Now, for \(\tau = 0\) all of
 the functions \(J_{k}\) are equal to zero, except \(J_{0}\), for which
 \(J_{0}\left( 0 \right) = 1\). Hence, substituting \(\tau = 0\) into
 \texttt{a2.14} we obtain
 
-{\[u_{j}\left( 0 \right) = a_{j}\]}
+$$u_{j}\left( 0 \right) = a_{j}$$}
 
 Therefore the constants in \texttt{a2.14} can be chosen so as to satisfy
 arbitrary initial conditions \(u_{j} = u_{j}\left( 0 \right)\). Since it
@@ -2730,12 +2727,12 @@ represent the general solution of \texttt{a2.12}, or \texttt{a2.4}.
 It is instructive to look in some detail at the solution satisfying the
 initial conditions
 
-{\[\begin{aligned}
+$$\begin{aligned}
 u_{j}\left( 0 \right) = \left\{ \begin{array}{cc}
 1  &  for \quad j = 0\\
 0  &  for \quad j \neq 0\\
 \end{array} \right.
-\end{aligned}\]}
+\end{aligned}$$}
 
 the simplest solution of the form \texttt{a2.13}, for different values
 of the non-dimensional time. At the initial moment the function u\}
@@ -2812,13 +2809,13 @@ points as the central point and the second located on the side from
 which the fluid is being advected toward the centre. Therefore we
 approximate \texttt{a2.1} by
 
-{\[\begin{aligned}
+$$\begin{aligned}
 \frac{\partial u_j}{\partial t} + c\frac{u_{j} - u_{j - 1}}{\Delta x} &= 0, \quad \textrm{for}
 \quad c > 0 \\
-\end{aligned}\]\[\begin{aligned}
+\end{aligned}$$$$\begin{aligned}
 \frac{\partial u_j}{\partial t} + c\frac{u_{j+1} - u_{j}}{\Delta x} &= 0 \quad \textrm{for}
 \quad c < 0 \\
-\end{aligned}\]}
+\end{aligned}$$}
 
 These equations are again differential-difference equaÂ­tions. The first
 equation in \texttt{a3.1} employs the backward and the second in
@@ -2842,8 +2839,8 @@ will contaminate the numerical solution.
 If, specifically, a forward difference is used for the time derivative
 in \texttt{a3.1}, we obtain, for \emph{c \textgreater{} 0},
 
-{\[\frac{u_j^{n + 1} - u_j^{n}}{\Delta t}
-+c \frac{u_j^{n} - u_{j - 1}^{n}}{\Delta x} = 0\]}
+$$\frac{u_j^{n + 1} - u_j^{n}}{\Delta t}
++c \frac{u_j^{n} - u_{j - 1}^{n}}{\Delta x} = 0$$}
 
 This is the scheme that was used for the examples of the introductory
 chapter. It was found that this scheme was damping, with the amount of
@@ -2898,16 +2895,16 @@ before we introduce the non-dimensional time
 \(\tau = \frac{\text{ct}}{\Delta x}\). Eq. \texttt{a3.1} can then be
 written as
 
-{\[\frac{d}{d t}u_{j}\left( \tau \right) + u_{j}\left( \tau \right) - u_{j - 1}\left( \tau \right) = 0\]}
+$$\frac{d}{d t}u_{j}\left( \tau \right) + u_{j}\left( \tau \right) - u_{j - 1}\left( \tau \right) = 0$$}
 
 A solution of this equation is the Poisson frequency function
 
-{\[\begin{aligned}
+$$\begin{aligned}
 u_j(\tau) = \left\{ \begin{array}{cc}
 &\frac{e^{- \tau}\tau^{j - p}}{(j-p)!} \qquad &\textrm{for} \quad j \geq p \\
 & 0  \qquad &\textrm{for} \quad j < p\\
 \end{array} \right.
-\end{aligned}\]}
+\end{aligned}$$}
 
 as can easily be checked by substitution. Here \emph{p} is again an
 arbitrary integer, that is, we have already taken into account the fact
@@ -2932,7 +2929,7 @@ function for \(\tau = 4\). There is no need to include a vertical scale,
 since the area enclosed by the graph of a frequency function has to be
 equal to unity, so
 
-{\[\sum_{j - p = 0}^{\infty}\frac{e^{- \tau}\tau^{j - p}}{\left( j - p \right)^{!}} = 1\]}
+$$\sum_{j - p = 0}^{\infty}\frac{e^{- \tau}\tau^{j - p}}{\left( j - p \right)^{!}} = 1$$}
 
 Thus, for \(\tau = 0\), when, as shown by \texttt{a3.4}, the histogram
 consists of a single rectangle, its ordinate is equal to unity.
@@ -2946,7 +2943,7 @@ previous section. As Ï increases beyond zero \texttt{a3.4} transforms
 into a skewed bell-shaped histogram of the type as shown in the figure,
 with its mean position on the \emph{x} axis
 
-\[\sum_{j - p = 0}^{\infty}\left( j - p \right)\frac{e^{- \tau}\tau^{j - p}}{\left( j - p \right)^{!}} = \tau\]
+$$\sum_{j - p = 0}^{\infty}\left( j - p \right)\frac{e^{- \tau}\tau^{j - p}}{\left( j - p \right)^{!}} = \tau$$
 
 moving at a constant speed. Thus, the mean position propagates with a
 speed equal to the physical advection velocity. The maximum point of the
@@ -2962,12 +2959,12 @@ As in Section \texttt{Section3.2} we can form a solution more general
 than \texttt{a3.4}, as a linear combination of all possible soluÂ­tions
 \texttt{a3.4}, that is
 
-{\[u_{j}\left( \tau \right) = \sum_{p = - \infty}^{j}a_{p}\frac{e^{- \tau}\tau^{j - p}}{\left( j - p \right)^{!}}\]}
+$$u_{j}\left( \tau \right) = \sum_{p = - \infty}^{j}a_{p}\frac{e^{- \tau}\tau^{j - p}}{\left( j - p \right)^{!}}$$}
 
 where \(a_{p}\) are arbitrary constants. Substituting \(\tau = 0\) into
 \texttt{a3.6} we obtain
 
-{\[u_{j}\left( 0 \right) = a_{j}\]}
+$$u_{j}\left( 0 \right) = a_{j}$$}
 
 Thus, the constants \(a_{p}\) can again be chosen so as to satisfy
 arbitrary initial conditions \(u_{j} = u_{j}(0)\), and so \texttt{a3.6}
@@ -2983,12 +2980,12 @@ An example of the solutions \texttt{a2.14}, for centered differencing,
 and \texttt{a3.6}, for upstream differencing, for an initial disturbance
 of a somewhat larger space scale
 
-\[\begin{aligned}
+$$\begin{aligned}
 u_{j}(0) = \left\{ \begin{array}{cc}
 1  &\textrm{for} \quad j = -1,0,1\\
 0  &\textrm{for} \quad j \neq -1,0,1\\
 \end{array} \right.
-\end{aligned}\]
+\end{aligned}$$
 
 is shown in \texttt{figg:34}. If the grid distance is of the order of
 300 km, and c is about 15 msec-1 we can see that 5 units of
@@ -3022,9 +3019,9 @@ When the approximate value \(u_{j}\) are expanded into Taylor series
 about the central point, and substituted into the finite difference
 quotient, we obtain
 
-{\[\frac{u_{j + 1} - u_{j - 1}}{2\Delta x} = \frac{\partial u}{\partial x} +
+$$\frac{u_{j + 1} - u_{j - 1}}{2\Delta x} = \frac{\partial u}{\partial x} +
 \frac{1}{3!}\frac{\partial^3 u}{\partial x^3}( \Delta x )^{2} +
-O\left\lbrack \left( \Delta x \right)^{4} \right\rbrackÂ Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â \]}
+O\left\lbrack \left( \Delta x \right)^{4} \right\rbrackÂ Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â $$}
 
 Thus, this quotient is of the second order of accuracy. It is formed by
 taking differences of values of \(u_{j}\) at points one grid distance
@@ -3032,9 +3029,9 @@ away from the central point. Similarly a quotient can be formed by
 taking differences of values two grid distance away. We then obtain,
 replacing \(\Delta x\) in \texttt{a4.1} by \(2\Delta x\),
 
-{\[\frac{u_{j + 2} - u_{j - 2}}{4\Delta x} = \frac{\partial u}{\partial x} +
+$$\frac{u_{j + 2} - u_{j - 2}}{4\Delta x} = \frac{\partial u}{\partial x} +
 \frac{4}{3!}\frac{\partial^3 u}{\partial x^3}( \Delta x )^{2} +
-O\left\lbrack \left( \Delta x \right)^{4} \right\rbrackÂ \]}
+O\left\lbrack \left( \Delta x \right)^{4} \right\rbrackÂ $$}
 
 This quotient is still second order accurate, but the coefficients are
 larger. Other consistent approximations to
@@ -3044,9 +3041,9 @@ combination for the second order terms in the truncation errors of
 \texttt{a4.1} and \texttt{a4.2} cancel is particularly important. This
 is
 
-{\[\frac{4}{3}\frac{u_{j+1} - u_{j-1}}{2\Delta x} - \frac{1}{3}\frac{u_{j+2} - u_{j-2}}{4\Delta x} 
+$$\frac{4}{3}\frac{u_{j+1} - u_{j-1}}{2\Delta x} - \frac{1}{3}\frac{u_{j+2} - u_{j-2}}{4\Delta x} 
 = \frac{\partial u}{\partial x} 
-+ O\left\lbrack \left( \Delta x \right)^{4} \right\rbrack\]}
++ O\left\lbrack \left( \Delta x \right)^{4} \right\rbrack$$}
 
 And represets a fourth-order accurate approximation to
 \(\frac{\partial u}{\partial x}\).
@@ -3066,31 +3063,31 @@ approximation \texttt{a4.3} for the space derivative in the advection
 equation. Replacing the space derivative in \texttt{a2.1} by
 \texttt{a4.3} we obtain the differential-difference equation
 
-{\[\frac{\partial u_{j}}{\partial t} + c\left( \frac{4}{3}\frac{u_{j + 1} - u_{j - 1}}{2\Delta x} - \frac{1}{3}\frac{u_{j + 2} - u_{j - 1}}{4\Delta x} \right) = 0\]}
+$$\frac{\partial u_{j}}{\partial t} + c\left( \frac{4}{3}\frac{u_{j + 1} - u_{j - 1}}{2\Delta x} - \frac{1}{3}\frac{u_{j + 2} - u_{j - 1}}{4\Delta x} \right) = 0$$}
 
 As in Section \texttt{Section3.2}, we investigate the behavior of a
 tentative solution in form of a harmonic component
 
-\[u_j( t ) = Re\left\lbrack U\left( t \right)e^{ikj\Delta x} \right\rbrack\]
+$$u_j( t ) = Re\left\lbrack U\left( t \right)e^{ikj\Delta x} \right\rbrack$$
 
 With second-order space differencing, we obtain the phase speed
 
-\[c^{*} = c\frac{\sin{k \Delta x}}{k \Delta x}\]
+$$c^{*} = c\frac{\sin{k \Delta x}}{k \Delta x}$$
 
 Now, in the same way, with fourth-order differencing we find the phase
 speed
 
-{\[c^{**} = c\left( \frac{4}{3}\frac{\sin{k\Delta x}}{k \Delta x} 
-- \frac{1}{3}\frac{\sin{2k\Delta x}}{2k\Delta x} \right)\]}
+$$c^{**} = c\left( \frac{4}{3}\frac{\sin{k\Delta x}}{k \Delta x} 
+- \frac{1}{3}\frac{\sin{2k\Delta x}}{2k\Delta x} \right)$$}
 
 We shall compare these two results. For second order differencing, we
 obtain by series expansion for small values of k
 
-\[c^{*} = c\left( 1 - \frac{1}{3!}\left( k\Delta x \right)^{2} + \ldots \right)\]
+$$c^{*} = c\left( 1 - \frac{1}{3!}\left( k\Delta x \right)^{2} + \ldots \right)$$
 
 On the other hand, with fourth order differencing we have
 
-\[c^{**} = c\left( 1 - \frac{4}{5!}\left( k\Delta x \right)^{4} + \ldots \right)\]
+$$c^{**} = c\left( 1 - \frac{4}{5!}\left( k\Delta x \right)^{4} + \ldots \right)$$
 
 Thus, even though the decelerating effect is still present, the phase
 speed error has been much reduced for small values of \emph{k}.
@@ -3172,21 +3169,21 @@ equation}}{The two-dimensional advection equation}}\label{the-two-dimensional-ad
 
 We now consider the two-dimensional linear advection equation
 
-{\[\frac{\partial u}{\partial t} + c_{x}\frac{\partial u}{\partial x}+ c_y\frac{\partial u}{\partial y} = 0
-\qquad c_x,\quad c_y = cost\]}
+$$\frac{\partial u}{\partial t} + c_{x}\frac{\partial u}{\partial x}+ c_y\frac{\partial u}{\partial y} = 0
+\qquad c_x,\quad c_y = cost$$}
 
 where \(u = u\left( x,y,t \right)`is a function of two space
 variables, and :math:`c_{x},c_{y}\) are the components of the advection
 velocity. Thus, the advection speed is given by
 
-{\[c = \sqrt{c_{x}^{2} + c_{y}^{2}}\]}
+$$c = \sqrt{c_{x}^{2} + c_{y}^{2}}$$}
 
 We shall test the stability of schemes for the numerical solution of
 \texttt{a5.1} by the procedure of Section \texttt{Section3.1}. Thus,
 space derivatives are approximated by standard second-order difference
 quotients, giving
 
-{\[\frac{\partial}{\partial t}u_{i,j} = - c_{x}\frac{u_{i + 1,j} - u_{i - 1,j}}{2\Delta x} - c_{y}\frac{u_{i,j + 1} - u_{i,j - 1}}{2\Delta y}\]}
+$$\frac{\partial}{\partial t}u_{i,j} = - c_{x}\frac{u_{i + 1,j} - u_{i - 1,j}}{2\Delta x} - c_{y}\frac{u_{i,j + 1} - u_{i,j - 1}}{2\Delta y}$$}
 
 Here, as is usual for two-dimensional problems, we have changed the
 choice of subscript denoting the grid points along \emph{x} axis, so
@@ -3195,17 +3192,17 @@ that the coordinates of the grid points are now \(x = i\Delta x\),
 \(u\left( i\Delta x,j\Delta y \right)\) are denoted by \(u_{i,j}\). As a
 tentative solution of \texttt{a5.3} we substitute
 
-{\[u_{i,j} = Re\left\lbrack U\left( t \right)e^{i( kx + ly \)} \right\rbrack\]}
+$$u_{i,j} = Re\left\lbrack U\left( t \right)e^{i( kx + ly \)} \right\rbrack$$}
 
 giving the oscillation equation
 
-{\[\frac{d U}{d t} = i\left( - \frac{c_{x}}{\Delta x}\sin{k\Delta x} -\frac{c_{y}}{\Delta y}\sin{l\Delta y} \right)U\]}
+$$\frac{d U}{d t} = i\left( - \frac{c_{x}}{\Delta x}\sin{k\Delta x} -\frac{c_{y}}{\Delta y}\sin{l\Delta y} \right)U$$}
 
 If the leapfrog scheme is used for the time derivative, we obtain as the
 stability criterion
 
-{\[\left| \left( \frac{c_x}{\Delta x}\sin{k\Delta x} +
- \frac{c_y}{\Delta y}\sin{l\Delta y} \right)\Delta t \right| \leq 1\]}
+$$\left| \left( \frac{c_x}{\Delta x}\sin{k\Delta x} +
+ \frac{c_y}{\Delta y}\sin{l\Delta y} \right)\Delta t \right| \leq 1$$}
 
 This has to be satisfied for all admissible values of the wave numbers
 \emph{k}, \emph{l}.
@@ -3232,7 +3229,7 @@ velocity makes an angle of \(\frac{\pi}{4}\) with the axis, in this case
 \(c_{x} = c_{y} = \frac{\sqrt{2}}{2}c\). Thus we obtain the stability
 criterion
 
-{\[\sqrt{2}c\frac{\Delta t}{\Delta x} \leq 1\]}
+$$\sqrt{2}c\frac{\Delta t}{\Delta x} \leq 1$$}
 
 Therefore, in the two-dimensional case we have to choose a time step
 that is \(\sqrt{2}\) times less than that permitted in the
@@ -3242,7 +3239,7 @@ long as the shortest resolvable wave length of \({2d}^{*}\), exactly as
 in the one-dimensional case. The two-dimensional wave number of this
 wave
 
-\[\sqrt{k^{2} + l^{2}}\]
+$$\sqrt{k^{2} + l^{2}}$$
 
 is, however, greater by a factor of \(\sqrt{2}\) than wave numbers along
 the axes, and its wave length is therefore shorter by the same factor.
@@ -3254,7 +3251,7 @@ instability}}{Aliasing error and nonlinear instability}}\label{aliasing-error-an
 Another generalization of the simple one-dimensional linear advection
 equation is to consider the nonlinear advection equation
 
-{\[\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} = 0\]}
+$$\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} = 0$$}
 
 We have returned to dimension, so that \emph{u} = \emph{u} (\emph{x},
 \emph{t}).
@@ -3262,7 +3259,7 @@ We have returned to dimension, so that \emph{u} = \emph{u} (\emph{x},
 Shuman (1974) calls \texttt{a6.1} the \emph{shock equation}. Its general
 solution (e.g. Platzman, 1964) is
 
-\[u = f\left( x - ut \right)\]
+$$u = f\left( x - ut \right)$$
 
 as can readily be verified. Here \emph{f} is an arbitrary function.
 
@@ -3274,12 +3271,12 @@ the inability of the discrete grid to resolve wave lengths shorter than
 \(u\left( x \right)\) which can be represented by values at grid points,
 for example
 
-{\[u = \sin{kx}\]}
+$$u = \sin{kx}$$}
 
 where \({k < k}_{max}\) . However, substituting \texttt{a6.2} into the
 nonlinear term of \texttt{a6.1} gives
 
-\[u\frac{\partial u}{\partial x} = k\sin{kx}\cos{kx} = \frac{1}{2}k\sin{2kx}\]
+$$u\frac{\partial u}{\partial x} = k\sin{kx}\cos{kx} = \frac{1}{2}k\sin{2kx}$$
 
 Hence, if the wave number in \texttt{a6.2} is in the interval
 \(\frac{1}{2}k_{max} < k \leq k_{max}\), the nonlinear term will give a
@@ -3305,17 +3302,17 @@ is called \emph{aliasing error}.
 In a more general case, suppose that the function u consists of a number
 of harmonic components
 
-\[u = \sum_{n}^{}u_{n}\]
+$$u = \sum_{n}^{}u_{n}$$
 
 The nonlinear term will then contain products of harmoÂ­nics of different
 wave lengths, such as
 
-\[\sin{k_1}x\sin{k_2}x\]
+$$\sin{k_1}x\sin{k_2}x$$
 
 However,
 
-\[\sin{k_1 x}\sin{k_2 x} = \frac{1}{2}
-\left\lbrack \cos{( k_{1} - k_{2} )x - \cos{( k_{1} + k_{2} )x}} \right\rbrack\]
+$$\sin{k_1 x}\sin{k_2 x} = \frac{1}{2}
+\left\lbrack \cos{( k_{1} - k_{2} )x - \cos{( k_{1} + k_{2} )x}} \right\rbrack$$
 
 Thus, even if a finite difference calculation is started with waves
 which all have \(k \leq k_{max}\), very soon through this process of
@@ -3324,28 +3321,28 @@ misrepresentation of waves will occur.
 
 In general we can write
 
-\[\sin{kx} = \sin{\left[ 2 k_{max} - ( 2 k_{max} - k ) \right] x}\]
+$$\sin{kx} = \sin{\left[ 2 k_{max} - ( 2 k_{max} - k ) \right] x}$$
 
 Substituting here \(k_{max} = \frac{\pi}{\Delta x}\) and using the
 formula for the sine of a difference, we obtain
 
-\[\sin{kx} = \sin{\frac{2\pi}{\Delta x}x}\cos{\left( \frac{2\pi}{\Delta x} 
-- k \right)}x - \cos{\frac{2\pi}{\Delta x}x}\sin{\left( \frac{2\pi}{\Delta x} - k \right)}x\]
+$$\sin{kx} = \sin{\frac{2\pi}{\Delta x}x}\cos{\left( \frac{2\pi}{\Delta x} 
+- k \right)}x - \cos{\frac{2\pi}{\Delta x}x}\sin{\left( \frac{2\pi}{\Delta x} - k \right)}x$$
 
 However, at the grid points \(x = j\Delta x\) and
 
-\[\sin\frac{2\pi}{\Delta x}j\Delta x = 0, \qquad \cos{\frac{2\pi}{\Delta x}j\Delta x = 1}\]
+$$\sin\frac{2\pi}{\Delta x}j\Delta x = 0, \qquad \cos{\frac{2\pi}{\Delta x}j\Delta x = 1}$$
 
 Therefore, we find
 
-{\[\sin{k j \Delta x} = -\sin{\left( 2k_{max} - k \right)j\Delta x}\]}
+$$\sin{k j \Delta x} = -\sin{\left( 2k_{max} - k \right)j\Delta x}$$}
 
 In this way, we see that, knowing only the grid point values, we cannot
 distinguish the wave numbers \(k\) from \(2k_{max} - k\) . Thus, if
 \(k > k_{max}\), using the convention mentioned earlier, we can say that
 the wave number k is misrepresented as the wave number
 
-{\[k^{*} = 2k_{max} - k\]}
+$$k^{*} = 2k_{max} - k$$}
 
 Hence, as shown in \texttt{figg:62}, the resulting wave has a wave
 number \(k^{*}\) which is less than \(k_{max}\) by an amount equal to
@@ -3505,15 +3502,15 @@ reasons.
 We shall introduce the procedure of Arakawa by considering the vorticity
 equation
 
-{\[\frac{\partial\zeta}{\partial t} + \textbf{v} \cdot\nabla\zeta = 0,\qquad \zeta = \nabla^{2}\Psi\]}
+$$\frac{\partial\zeta}{\partial t} + \textbf{v} \cdot\nabla\zeta = 0,\qquad \zeta = \nabla^{2}\Psi$$}
 
 where the velocity \(\textbf{v}\) is assumed to be nondivergent, that is
 
-{\[\textbf{v} = \textbf{k} \times \nabla\Psi\]}
+$$\textbf{v} = \textbf{k} \times \nabla\Psi$$}
 
 Substituting this into \texttt{a7.1} we obtain
 
-{\[\frac{\partial}{\partial t}\nabla^{2}\Psi = J\left( \nabla^2\Psi, \Psi \right)\]}
+$$\frac{\partial}{\partial t}\nabla^{2}\Psi = J\left( \nabla^2\Psi, \Psi \right)$$}
 
 This equation gives the local change in vorticity as a result of
 advection by a two-dimensional nondivergent velocity. It is also a
@@ -3535,12 +3532,12 @@ can almost always assume that in the region considered A, the stream
 function can be expressed as a series of orthogonal functions (e.g.
 CourantandHilbert, 1953, p.369)
 
-{\[\Psi = \sum_{n}^{}\Psi_{n}\]}
+$$\Psi = \sum_{n}^{}\Psi_{n}$$}
 
 where the functions \(\Psi_n\) are eigenfunctions of the Helmholtz
 equation
 
-{\[\nabla^{2}\Psi_{n} + \lambda_{n}^{2}\Psi_{n} = 0\]}
+$$\nabla^{2}\Psi_{n} + \lambda_{n}^{2}\Psi_{n} = 0$$}
 
 The parameters \(\lambda_{n} \) are known as the \emph{generalized wave
 numbers} of the components \(\Psi_{n}\)
@@ -3550,17 +3547,17 @@ As an example, let \emph{A} be a rectangular region with sides
 periodic in x with period \(L_{x}\) and is zero along the lower and
 upper boundary. Then we can write the stream function
 
-{\[\Psi = \sum_{n_1, n_2} \left( \alpha_{n_1, n_2}\cos{\frac{2\pi n_1}{L_x}x}+
- b_{n_1, n_2}\sin{\frac{2\pi n_1}{L_x}x} \right)\sin{ \frac{\pi n_2}{L_y} y}\]}
+$$\Psi = \sum_{n_1, n_2} \left( \alpha_{n_1, n_2}\cos{\frac{2\pi n_1}{L_x}x}+
+ b_{n_1, n_2}\sin{\frac{2\pi n_1}{L_x}x} \right)\sin{ \frac{\pi n_2}{L_y} y}$$}
 
 Differentiating this we obtain
 
-\[\nabla^2\Psi_n = - \left\lbrack \left( \frac{2\pi n_1}{L_x} \right)^{2} +
-\left( \frac{\pi n_2}{L_y}  \right)^{2} \right\rbrack\Psi_{n}\]
+$$\nabla^2\Psi_n = - \left\lbrack \left( \frac{2\pi n_1}{L_x} \right)^{2} +
+\left( \frac{\pi n_2}{L_y}  \right)^{2} \right\rbrack\Psi_{n}$$
 
 that is,
 
-\[\lambda_n^2 = \left( \frac{2\pi n_1}{L_x} \right)^{2} + \left( \frac{\pi n_2}{L_y} \right)^{2}\]
+$$\lambda_n^2 = \left( \frac{2\pi n_1}{L_x} \right)^{2} + \left( \frac{\pi n_2}{L_y} \right)^{2}$$
 
 If the region \emph{A} had different geometry, another set of orthogonal
 functions would satisfy \texttt{a7.5} and the boundÂ­ary conditions, and
@@ -3569,50 +3566,50 @@ solutions of the Helmholtz equation \texttt{a7.5}.
 
 Define the average of a variable a by
 
-\[\overline{\alpha} \equiv \frac{1}{A}\int_A \alpha d A\]
+$$\overline{\alpha} \equiv \frac{1}{A}\int_A \alpha d A$$
 
 We are interested in the average value of the kinetic energy per unit
 mass
 
-{\[\overline{K} = \frac{1}{2}\overline{( u^{2} + \nu^{2} ) } = \frac{1}{2}\overline{\nabla\Psi\cdot\nabla\Psi}\]}
+$$\overline{K} = \frac{1}{2}\overline{( u^{2} + \nu^{2} ) } = \frac{1}{2}\overline{\nabla\Psi\cdot\nabla\Psi}$$}
 
 Substituting \texttt{a7.4}, and assuming that this series can be
 differentiated and integrated term by term, we obtain
 
-\[\overline{K} = \frac{1}{2}\overline{ \nabla \sum_n\Psi_n\cdot\nabla\sum_m \Psi_m } 
+$$\overline{K} = \frac{1}{2}\overline{ \nabla \sum_n\Psi_n\cdot\nabla\sum_m \Psi_m } 
 = \frac{1}{2}\overline{  \sum_n\nabla\Psi_n\cdot\sum_m \nabla\Psi_m }  
-= \frac{1}{2}\sum_m\sum_n \overline{ \nabla\Psi_m \nabla\Psi_n }\]
+= \frac{1}{2}\sum_m\sum_n \overline{ \nabla\Psi_m \nabla\Psi_n }$$
 
 We note that
 
-\[\nabla\Psi_m \nabla\Psi_n =\nabla \cdot \left( \Psi_m\nabla\Psi_n \right) - \Psi_m\nabla^2\Psi_n\]
+$$\nabla\Psi_m \nabla\Psi_n =\nabla \cdot \left( \Psi_m\nabla\Psi_n \right) - \Psi_m\nabla^2\Psi_n$$
 
 Assume that no mass transport occurs through the boundÂ­aries of A, that
 is,
 
-\[\overline{\nabla\cdot\left( \Psi_{m}\nabla\Psi_{n} \right)} = 0\]
+$$\overline{\nabla\cdot\left( \Psi_{m}\nabla\Psi_{n} \right)} = 0$$
 
 Using \texttt{a7.5}, we then obtain
 
-\[\overline{K} = -\frac{1}{2}\sum_m\sum_n \overline{ \Psi_m \nabla^2\Psi_n }
-= -\frac{1}{2}\sum_m\sum_n \lambda_n^2\overline{ \Psi_m \Psi_n }\]
+$$\overline{K} = -\frac{1}{2}\sum_m\sum_n \overline{ \Psi_m \nabla^2\Psi_n }
+= -\frac{1}{2}\sum_m\sum_n \lambda_n^2\overline{ \Psi_m \Psi_n }$$
 
 Since the functions \(\Psi_{n}\) are orthogonal, that is,
 
-\[\overline{ \Psi_m \Psi_n } = 0 \qquad for m \neq n\]
+$$\overline{ \Psi_m \Psi_n } = 0 \qquad for m \neq n$$
 
 the double sum reduces to a sum over only a single subscript, namely,
 
-\[\overline{K} = \frac{1}{2}\sum_{n}\lambda_{n}^{2}\overline{\Psi_n^2}\]
+$$\overline{K} = \frac{1}{2}\sum_{n}\lambda_{n}^{2}\overline{\Psi_n^2}$$
 
 We have therefore expressed the average kinetic energy in the region A
 \emph{as a sum of contributions of different harmonics}
 
-{\[\overline{K} = \frac{1}{2}\sum_{n}K_n\]}
+$$\overline{K} = \frac{1}{2}\sum_{n}K_n$$}
 
 Where
 
-{\[K_{n} \equiv \frac{1}{2}\lambda_{n}^{2}\overline{\Psi_n^2}\]}
+$$K_{n} \equiv \frac{1}{2}\lambda_{n}^{2}\overline{\Psi_n^2}$$}
 
 The contributions \(K_{n}\), considered as a function of n, represent
 the kinetic energy spectrum. As seen from \texttt{a7.9}, they are never
@@ -3629,29 +3626,29 @@ fields of atmospheric variables.
 
 The mean square vorticity
 
-\[\overline{\zeta^2} = \overline{(\nabla^{2}\Psi^{2} )^2}\]
+$$\overline{\zeta^2} = \overline{(\nabla^{2}\Psi^{2} )^2}$$
 
 can be expressed as a sum of contributions of different harmonics in a
 similar way. Substituting \texttt{a7.4}, using \texttt{a7.5}, and the
 orthogonality of the functions \(\Psi_{n}\), we obtain
 
-{\[\overline{\zeta^2} = \sum_{n}\lambda^{4}\overline{\Psi_n^2}\]}
+$$\overline{\zeta^2} = \sum_{n}\lambda^{4}\overline{\Psi_n^2}$$}
 
 Substituting the expression \texttt{a7.9} for the kinetic energy of a
 component \(\Psi_{n}\); we find for the average value of the enstrophy
 half the vorticity squared,
 
-{\[\frac{1}{2}\overline{\zeta^{2}} = \sum_{n}\lambda_n^2 K_{n}\]}
+$$\frac{1}{2}\overline{\zeta^{2}} = \sum_{n}\lambda_n^2 K_{n}$$}
 
 Comparing this with \texttt{a7.8} we see that the average wave number is
 related to average values of enstrophy and kinetic energy. Define the
 average wave number as
 
-{\[\lambda \equiv \sqrt{ \frac{\sum_n\lambda_n^2 K_n} {\sum_n K_n} }\]}
+$$\lambda \equiv \sqrt{ \frac{\sum_n\lambda_n^2 K_n} {\sum_n K_n} }$$}
 
 Substituting (7.11) and (7.8) we find
 
-{\[\lambda = \sqrt{ \frac{\overline{\zeta_n^2} }{\overline{K}}  }\]}
+$$\lambda = \sqrt{ \frac{\overline{\zeta_n^2} }{\overline{K}}  }$$}
 
 Thus, when the velocity is two-dimensional and nondiverÂ­gent, the
 average wave number is determined by the ratio of the average values of
@@ -3662,37 +3659,37 @@ spectral components permitted by the vorticity equation \texttt{a7.3}.
 It will suffice to look at the time dependence of \texttt{a7.13}. Then
 \texttt{a7.3} gives
 
-{\[\frac{\partial}{\partial t} \frac{1}{2} \overline{\zeta^2} =
+$$\frac{\partial}{\partial t} \frac{1}{2} \overline{\zeta^2} =
 \overline{\zeta \frac{\partial}{\partial t} \zeta } =
-\overline{\zeta J(\zeta,\Psi)}\]}
+\overline{\zeta J(\zeta,\Psi)}$$}
 
 Again assuming no mass transport through the boundÂ­aries of A, we find
 
-{\[\begin{aligned}
+$$\begin{aligned}
 \frac{\partial}{\partial t} \overline{K} =
 \frac{\partial}{\partial t} \frac{1}{2} \overline{(\nabla\Psi)^2} =
 \overline{\nabla\Psi \cdot \frac{\partial}{\partial t}\nabla\Psi} =\\
 -\overline{\Psi\frac{\partial}{\partial t} \nabla^2\Psi} =
 -\overline{\Psi J(\zeta,\Psi)}
-\end{aligned}\]}
+\end{aligned}$$}
 
 However, for any two scalar quantities \emph{p,q} we have
 
-\[J(p,q) = \textbf{k}\cdot\nabla \times \left( p\nabla q \right) = - \textbf{k}\nabla \times \left( p\nabla q \right)\]
+$$J(p,q) = \textbf{k}\cdot\nabla \times \left( p\nabla q \right) = - \textbf{k}\nabla \times \left( p\nabla q \right)$$
 
 Using Stokes\textquotesingle{} theorem, we see that
 
-{\[\overline{J\left( p,q \right)} = 0\]}
+$$\overline{J\left( p,q \right)} = 0$$}
 
 if either \emph{p} or \emph{q} is constant along the boundary of
 \emph{A}. Under the same conditions, we have
 
-{\[\overline{p J\left( p,q \right)} = 0, \qquad \overline{q J\left( p,q \right)} = 0\]}
+$$\overline{p J\left( p,q \right)} = 0, \qquad \overline{q J\left( p,q \right)} = 0$$}
 
 Therefore, if we assume that \(\Psi\) is constant along the boundary of
 \emph{A}, \texttt{a7.14} and \texttt{a7.15} give
 
-{\[\frac{1}{2}\overline{\zeta^{2}} =  const, \quad \text{and} \quad \overline{K} = const.\]}
+$$\frac{1}{2}\overline{\zeta^{2}} =  const, \quad \text{and} \quad \overline{K} = const.$$}
 
 In this way, we find that \emph{the average wave number does not change
 with time} with two-dimensional nondivergent flow. In other words,
@@ -3705,7 +3702,7 @@ the higher the wave number, the more it is limited} (Fjortoft, 1953).
 As pointed out by Charney (1966) this situation can be illustrated by a
 simple mechanical analogy. The foregoing relations show that
 
-\[\overline{K}\lambda^{2} = \sum_{n}K_{n}\lambda_{n}^{2} = \text{const}\]
+$$\overline{K}\lambda^{2} = \sum_{n}K_{n}\lambda_{n}^{2} = \text{const}$$
 
 On the left hand side here each of the two factors is constant, as the
 first one is equal to the average energy. Thus, as shown in
@@ -3753,7 +3750,7 @@ We illustrate Arakawa\textquotesingle s method by considering how to
 satisfy \texttt{a7.17}. In our finite difference calculation it takes
 the form
 
-{\[\overline{\zeta_{ij}J_{ij}(\zeta,\Psi)} = \frac{1}{N}\sum_{i,j}\zeta_{ij}J_{ij}(\zeta,\Psi) = 0\]}
+$$\overline{\zeta_{ij}J_{ij}(\zeta,\Psi)} = \frac{1}{N}\sum_{i,j}\zeta_{ij}J_{ij}(\zeta,\Psi) = 0$$}
 
 where \(J_{ij}\) denotes a finite difference approximation to the
 Jacobian, and \(N\) the total number of grid points.
@@ -3762,14 +3759,14 @@ There are many ways of constructing finite difference approximations to
 the Jacobian. We can use any of the three equivalent analytic
 expressions
 
-{\[\begin{aligned}
+$$\begin{aligned}
 J(p,q) = \frac{\partial p}{\partial x}\frac{\partial q}{\partial y} -
 \frac{\partial p}{\partial y}\frac{\partial q}{\partial x} =\\
 \frac{\partial }{\partial y}q\frac{\partial p}{\partial x} -
 \frac{\partial }{\partial x}q\frac{\partial q}{\partial x} =\\
 \frac{\partial }{\partial x}p\frac{\partial q}{\partial y} -
 \frac{\partial }{\partial y}p\frac{\partial q}{\partial x}
-\end{aligned}\]}
+\end{aligned}$$}
 
 We shall consider only approximations of the second order of accuracy.
 With the simplest centered space differencing, we require values of
@@ -3785,13 +3782,13 @@ expressions \texttt{a7.2}
 \caption{Stencil used to define approximations to Jacobian.}
 \end{figure}
 
-{\[J^{++}(p,q) = \frac{1}{4d^2} \left[ (p_1 - p_3)(q_2 - q_4) - (p_2-p_4)(q_1-q_3) \right]\]}
+$$J^{++}(p,q) = \frac{1}{4d^2} \left[ (p_1 - p_3)(q_2 - q_4) - (p_2-p_4)(q_1-q_3) \right]$$}
 
-{\[J^{\times +}(p,q) = \frac{1}{4d^2} \left[ q_2(p_5 - p_6) - q_4(p_8-p_7)
- -q_1(p_5 - p_8) - q_3(p_6-p_7)  \right]\]}
+$$J^{\times +}(p,q) = \frac{1}{4d^2} \left[ q_2(p_5 - p_6) - q_4(p_8-p_7)
+ -q_1(p_5 - p_8) - q_3(p_6-p_7)  \right]$$}
 
-{\[J^{+ \times}(p,q) = \frac{1}{4d^2} \left[ p_1(q_5 - q_8) - p_3(q_6 - q_7)
- - p_2(q_5 - q_6) - p_4(q_8 - q_7)  \right]\]}
+$$J^{+ \times}(p,q) = \frac{1}{4d^2} \left[ p_1(q_5 - q_8) - p_3(q_6 - q_7)
+ - p_2(q_5 - q_6) - p_4(q_8 - q_7)  \right]$$}
 
 The superscripts \(+\) and \(\times\) denote the positions of the points
 from which values of \(p\) and \(q\), respectively, are used to form the
@@ -3800,7 +3797,7 @@ approximation. Each of the approximations \texttt{a7.21a},
 of accuracy. A more general approximation can now be formed as a linear
 combination of these three, that is
 
-{\[J(p.q) = \alpha J^{++} + \beta J^{\times +} + \gamma J^{+\times}\]}
+$$J(p.q) = \alpha J^{++} + \beta J^{\times +} + \gamma J^{+\times}$$}
 
 With the consistency requirement
 
@@ -3817,8 +3814,8 @@ terms cancel out in the summation process, thereby fulfilling
 \texttt{a7.19}. For example, the point \emph{0} will contribute terms to
 \texttt{a7.19} of the form
 
-\[\zeta_0 J_0( \zeta,\Psi ) = \frac{1}{4d^{2}}\left( \alpha \zeta_{0} \zeta_{1}\Psi_{2} \right)
-\quad + \quad \text{23 more terms}\]
+$$\zeta_0 J_0( \zeta,\Psi ) = \frac{1}{4d^{2}}\left( \alpha \zeta_{0} \zeta_{1}\Psi_{2} \right)
+\quad + \quad \text{23 more terms}$$
 
 A term containing \(\zeta_{0}\zeta_{1}\Psi_{2}\) will also appear in the
 expresÂ­sion for \(\zeta_{1}J_{1}\left( \zeta,\Psi \right)\). Because of
@@ -3826,19 +3823,19 @@ the form of the Jacobian approximations \texttt{a7.21a} it will have to
 come from the product \(p_{3}q_{6}\). Thus, one contribution from the
 point 1 will be
 
-\[\alpha = \beta = \gamma = \frac{1}{3}\]
+$$\alpha = \beta = \gamma = \frac{1}{3}$$
 
 These two terms will cancel if \(\alpha = \beta\) . Arakawa has shown
 that, when
 
-\[\zeta_{1}J_{1}\left( \zeta,\Psi \right) = \frac{1}{4d^{2}}\left( \ldots\beta\zeta_{1}\zeta_{0}\Psi_{2} + \ldots \right).\]
+$$\zeta_{1}J_{1}\left( \zeta,\Psi \right) = \frac{1}{4d^{2}}\left( \ldots\beta\zeta_{1}\zeta_{0}\Psi_{2} + \ldots \right).$$
 
 not only do all the terms in the sum \texttt{a7.19} cancel, but also all
 the terms in the expression for the conservation of the average kinetic
 energy, and the average vorticity (Arakawa, 1966; Lilly, 1965). Thus,
 the approximation
 
-{\[J_{A} \equiv \frac{1}{3}\left( J^{+ +} + J^{\times +} + J^{+ \times} \right)\]}
+$$J_{A} \equiv \frac{1}{3}\left( J^{+ +} + J^{\times +} + J^{+ \times} \right)$$}
 
 will conserve average vorticity, enstrophy and kinetic energy when used
 for the numerical solution of \texttt{a7.3}. This is more than
@@ -3935,25 +3932,25 @@ We shall first consider the simplest case of gravity waves where the
 dependent variables are functions of one space variable. They are
 governed by the linearized equations
 
-{\[\frac{\partial u}{\partial t} &= - g\frac{\partial h}{\partial x}\]\[\frac{\partial h}{\partial t} &= - H\frac{\partial u}{\partial x},\]\[&g,H = \text{const}\]}
+$$\frac{\partial u}{\partial t} &= - g\frac{\partial h}{\partial x}$$$$\frac{\partial h}{\partial t} &= - H\frac{\partial u}{\partial x},$$$$&g,H = \text{const}$$}
 
 Thus, we have a system with two dependent and two independent variables.
 
 We seek wave solutions of \texttt{b1.1} in the form
 
-{\[u(x,t) = \text{Re} \left[ \widehat{u} e^{i(k x - \nu t)} \right]\]\[h(x,t) = \text{Re} \left[ \widehat{h} e^{i(k x - \nu t)} \right]\]}
+$$u(x,t) = \text{Re} \left[ \widehat{u} e^{i(k x - \nu t)} \right]$$$$h(x,t) = \text{Re} \left[ \widehat{h} e^{i(k x - \nu t)} \right]$$}
 
 and obtain the homogeneous system
 
-\[v\widehat{u} &= gk\widehat{h}\]\[v\widehat{h} &= Hk\widehat{u}\]
+$$v\widehat{u} &= gk\widehat{h}$$$$v\widehat{h} &= Hk\widehat{u}$$
 
 giving the frequency equation
 
-{\[v^{2} =gH k^{2}\]}
+$$v^{2} =gH k^{2}$$}
 
 Thus,
 
-{\[c = \frac{v}{k} = \pm \sqrt{gH}\]}
+$$c = \frac{v}{k} = \pm \sqrt{gH}$$}
 
 showing that the gravity waves can propagate along the \emph{x} axis in
 both directions at a speed \(\sqrt{gH}\). This speed is not a function
@@ -3961,30 +3958,30 @@ of wave number so that there is no dispersion of the waves.
 
 Consider now the differential-difference equations
 
-{\[\frac{\partial u_{j}}{\partial t} &= - g\frac{h_{j + 1} - h_{j - 1}}{2\Delta x}\]\[\frac{\partial h_{j}}{\partial t} &= - H\frac{u_{j + 1} - u_{j - 1}}{2\Delta x}\]}
+$$\frac{\partial u_{j}}{\partial t} &= - g\frac{h_{j + 1} - h_{j - 1}}{2\Delta x}$$$$\frac{\partial h_{j}}{\partial t} &= - H\frac{u_{j + 1} - u_{j - 1}}{2\Delta x}$$}
 
 that we obtain when the space derivatives in \texttt{b1.1} are
 approximated by centered finite difference quotients using values at the
 two nearest points. The solutions \texttt{b1.2} now take the form
 
-{\[u_{j}\left( t \right) = Re\left\lbrack \widehat{u}e^{i\left( kj\Delta x - vt \right)} \right\rbrack\]\[h_{j}\left( t \right) = Re\left\lbrack \widehat{h}e^{i\left( kj\Delta x - vt \right)} \right\rbrack\]}
+$$u_{j}\left( t \right) = Re\left\lbrack \widehat{u}e^{i\left( kj\Delta x - vt \right)} \right\rbrack$$$$h_{j}\left( t \right) = Re\left\lbrack \widehat{h}e^{i\left( kj\Delta x - vt \right)} \right\rbrack$$}
 
 Substitution of these solutions into \texttt{b1.5} leads to
 
-\[\nu\widehat{u} = g\frac{\sin{k\Delta x}}{\Delta x}\widehat{h}\]\[\nu\widehat{h} = H\frac{\sin{k\Delta x}}{\Delta x}\widehat{u}\]
+$$\nu\widehat{u} = g\frac{\sin{k\Delta x}}{\Delta x}\widehat{h}$$$$\nu\widehat{h} = H\frac{\sin{k\Delta x}}{\Delta x}\widehat{u}$$
 
 giving the frequency equation
 
-{\[\nu^{2} = gH\left( \frac{\sin{k\Delta x}}{\Delta x} \right)^{2}\]}
+$$\nu^{2} = gH\left( \frac{\sin{k\Delta x}}{\Delta x} \right)^{2}$$}
 
 Thus, instead of a constant phase speed, the gravity waves now propagate
 with the phase speed
 
-{\[c^{*} = \pm \sqrt{gH}\frac{\sin{k\Delta x}}{k \Delta x}\]}
+$$c^{*} = \pm \sqrt{gH}\frac{\sin{k\Delta x}}{k \Delta x}$$}
 
 or
 
-{\[c^{*} = c \frac{\sin{k\Delta x}}{k\Delta x}\]}
+$$c^{*} = c \frac{\sin{k\Delta x}}{k\Delta x}$$}
 
 This phase speed is a function of wave number, and, thus, we see that
 the space differencing again results in compuÂ­tational dispersion. The
@@ -4043,15 +4040,15 @@ waves}}{Two-dimensional gravity waves}}\label{Section4.2}
 We now consider \emph{two-dimensional} gravity waves. Thus, we consider
 the system of linearized equations
 
-{\[\frac{\partial u}{\partial t} &= - g\frac{\partial h}{\partial x}\]\[\frac{\partial v}{\partial t} &= - g\frac{\partial h}{\partial y}\]\[\frac{\partial h}{\partial t} &= - H\nabla\cdot\textbf{v}\]}
+$$\frac{\partial u}{\partial t} &= - g\frac{\partial h}{\partial x}$$$$\frac{\partial v}{\partial t} &= - g\frac{\partial h}{\partial y}$$$$\frac{\partial h}{\partial t} &= - H\nabla\cdot\textbf{v}$$}
 
 Substituting the wave solutions
 
-{\[u = Re\left\lbrack \widehat{u}e^{i\left( kx + ly - \nu t \right)} \right\rbrack\]\[v = Re\left\lbrack \widehat{v}e^{i\left( kx + ly - \nu t \right)} \right\rbrack\]\[h = Re\left\lbrack \widehat{h}e^{i\left( kx + ly - \nu t \right)} \right\rbrack\]}
+$$u = Re\left\lbrack \widehat{u}e^{i\left( kx + ly - \nu t \right)} \right\rbrack$$$$v = Re\left\lbrack \widehat{v}e^{i\left( kx + ly - \nu t \right)} \right\rbrack$$$$h = Re\left\lbrack \widehat{h}e^{i\left( kx + ly - \nu t \right)} \right\rbrack$$}
 
 We now obtain
 
-{\[\nu^{2} = gH\left( k^{2} + l^{2} \right)\]}
+$$\nu^{2} = gH\left( k^{2} + l^{2} \right)$$}
 
 Thus, in the two-dimensional case, the gravity waves propagate with the
 same constant phase speed \(\sqrt{gH}\).
@@ -4091,19 +4088,19 @@ space derivatives in \texttt{b2.1} for all three lattices. We write
 these approximations using the difference operators \(\delta_{x} \) and
 \(\delta_{y}\), defined by, for example,
 
-\[\delta_x h = \frac{1}{2d^*}\left[ h(x+d^*,y) - h(x-d^*,y)  \right]\]
+$$\delta_x h = \frac{1}{2d^*}\left[ h(x+d^*,y) - h(x-d^*,y)  \right]$$
 
 Thus, \texttt{b2.1} can be approximated by
 
-{\[\frac{\partial u}{\partial t} &= - g\delta_{x}h\]\[\frac{\partial v}{\partial t} &= - g\delta_{y}h\]\[\frac{\partial h}{\partial t} &= - H\left( \delta_{x}u + \delta_{y}v \right)\]}
+$$\frac{\partial u}{\partial t} &= - g\delta_{x}h$$$$\frac{\partial v}{\partial t} &= - g\delta_{y}h$$$$\frac{\partial h}{\partial t} &= - H\left( \delta_{x}u + \delta_{y}v \right)$$}
 
 Substituting wave solutions analogous as in \texttt{b2.2}, we obtain
 
-{\[v^2 = gH\frac{\sin^{2}{kd^*} + \sin^2{l d^*}{d^{*2}}\]}
+$$v^2 = gH\frac{\sin^{2}{kd^*} + \sin^2{l d^*}{d^{*2}}$$}
 
 we define
 
-\[X \equiv kd^{*} \qquad Y \equiv ld^{*}\]
+$$X \equiv kd^{*} \qquad Y \equiv ld^{*}$$
 
 \begin{figure}
 \centering
@@ -4117,7 +4114,7 @@ the true phase speed]
 \(\sqrt{gH}\) , can be written as
 \end{description}
 
-{\[\frac{c^*}{ \sqrt{gH}} = \sqrt{\frac{\sin^{2}X + \sin^{2}Y}{X^{2} + Y^{2}}}\]}
+$$\frac{c^*}{ \sqrt{gH}} = \sqrt{\frac{\sin^{2}X + \sin^{2}Y}{X^{2} + Y^{2}}}$$}
 
 This formula reduces to the previous formula, \texttt{b1.8} or
 \texttt{b1.9}, when applied to the one-dimensional case.
@@ -4189,7 +4186,7 @@ In this section we discuss the effect of centered space differencing on
 \emph{gravity-inertia waves}. Thus, we consider the system of linearized
 equations
 
-{\[\frac{\partial u}{\partial t} &= - g\frac{\partial h}{\partial x} +f v\]\[\frac{\partial v}{\partial t} &= - g\frac{\partial h}{\partial y} - f u\]\[\frac{\partial h}{\partial t} &= - H\nabla\cdot\textbf{v}\]}
+$$\frac{\partial u}{\partial t} &= - g\frac{\partial h}{\partial x} +f v$$$$\frac{\partial v}{\partial t} &= - g\frac{\partial h}{\partial y} - f u$$$$\frac{\partial h}{\partial t} &= - H\nabla\cdot\textbf{v}$$}
 
 These equations differ from those of section \texttt{Section4.2} in the
 appearance of the two Coriolis terms. The Coriolis terms contain no
@@ -4244,7 +4241,7 @@ arrangement of variables.
 Using the subscripts shown in the figure, we define the centered space
 differencing operator by
 
-\[(\delta_x\alpha) = \frac{1}{d'} \left( \alpha_{i+\frac{1}{2},j} - \alpha_{i-\frac{1}{2},j} \right)\]
+$$(\delta_x\alpha) = \frac{1}{d'} \left( \alpha_{i+\frac{1}{2},j} - \alpha_{i-\frac{1}{2},j} \right)$$
 
 this rotation is applicable to all the lattices. Here \(d^{'}\) is the
 distance between the points between which the finite difference is
@@ -4259,28 +4256,28 @@ size \(d\), and for the lattice (E) it is equal to \(\sqrt{2d}\).
 
 We also define an average taken over the same two points by
 
-\[\left( {\overline{\alpha}}^{x} \right)_{i,j} \equiv \frac{1}{2}\left( \alpha_{i + \frac{1}{2},j} - \alpha_{i - \frac{1}{2},j} \right)\]
+$$\left( {\overline{\alpha}}^{x} \right)_{i,j} \equiv \frac{1}{2}\left( \alpha_{i + \frac{1}{2},j} - \alpha_{i - \frac{1}{2},j} \right)$$
 
 \(\left( \delta_{y}\alpha \right)_{i,j}\) and
 \(\left( {\overline{\alpha}}^{y} \right)_{i,j}\) are defined in the same
 way, but with respect to the \emph{y} axis. Finally,
 
-\[\left( {\overline{\alpha}}^{xy} \right)_{i,j}  \equiv  \left( {\overline{\overline{\alpha}}^{x}}^y \right)_{i,j}\]
+$$\left( {\overline{\alpha}}^{xy} \right)_{i,j}  \equiv  \left( {\overline{\overline{\alpha}}^{x}}^y \right)_{i,j}$$
 
 For each of the five lattices we use the simplest centered
 approximations for the space derivatives and Coriolis terms
 \texttt{b3.1}. We obtain the difference systems
 
-{\[\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{x} + fv\]\[\frac{\partial v}{\partial t} &= - g\overline{\delta_y h}^{y} - fu\]\[\frac{\partial h}{\partial t} &= -H\left( \overline{\delta_x u}^{x} + \overline{\delta_y v}^{y} \right)\]}
+$$\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{x} + fv$$$$\frac{\partial v}{\partial t} &= - g\overline{\delta_y h}^{y} - fu$$$$\frac{\partial h}{\partial t} &= -H\left( \overline{\delta_x u}^{x} + \overline{\delta_y v}^{y} \right)$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{y} + fv\]\[\frac{\partial v}{\partial t} &= - g\overline{\delta_y h}^{x} - fu\]\[\frac{\partial h}{\partial t} &= -H\left( - \overline{\delta_x u}^{y} +  \overline{\delta_y v}^x \right)\]}
+$$\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{y} + fv$$$$\frac{\partial v}{\partial t} &= - g\overline{\delta_y h}^{x} - fu$$$$\frac{\partial h}{\partial t} &= -H\left( - \overline{\delta_x u}^{y} +  \overline{\delta_y v}^x \right)$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\delta_x h + f\overline{v}^{xy}\]\[\frac{\partial v}{\partial t} &= - g\delta_y h - f\overline{u}^{xy}\]\[\frac{\partial h}{\partial t} &= -H\left( \delta_x u +  \delta_y v \right)\]}
+$$\frac{\partial u}{\partial t} &= - g\delta_x h + f\overline{v}^{xy}$$$$\frac{\partial v}{\partial t} &= - g\delta_y h - f\overline{u}^{xy}$$$$\frac{\partial h}{\partial t} &= -H\left( \delta_x u +  \delta_y v \right)$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{xy} + f\overline{v}^{xy}\]\[\frac{\partial v}{\partial t} &= - g\overline{\delta_y h}^{xy} - f\overline{u}^{xy}\]\[\frac{\partial h}{\partial t} &= -H\left( \overline{\delta_x u}^{xy} 
-+  \overline{\delta_y v}^{xy} \right)\]}
+$$\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{xy} + f\overline{v}^{xy}$$$$\frac{\partial v}{\partial t} &= - g\overline{\delta_y h}^{xy} - f\overline{u}^{xy}$$$$\frac{\partial h}{\partial t} &= -H\left( \overline{\delta_x u}^{xy} 
++  \overline{\delta_y v}^{xy} \right)$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\delta_x h + fv\]\[\frac{\partial v}{\partial t} &= - g\delta_y h - fu\]\[\frac{\partial h}{\partial t} &= -H\left( \delta_x u +  \delta_y v \right)\]}
+$$\frac{\partial u}{\partial t} &= - g\delta_x h + fv$$$$\frac{\partial v}{\partial t} &= - g\delta_y h - fu$$$$\frac{\partial h}{\partial t} &= -H\left( \delta_x u +  \delta_y v \right)$$}
 
 We shall first analyze a one-dimensional case, that in which the
 variables, \(u,v \) and h do not vary with \(y\)
@@ -4293,16 +4290,16 @@ Thus, we have
 
 The system \texttt{b3.1} then reduces to
 
-{\[\frac{\partial u}{\partial t} &= -g\frac{\partial h}{\partial x} + fv\]\[\frac{\partial v}{\partial t} &= - fu\]\[\frac{\partial h}{\partial t} &= -H\frac{\partial u}{\partial x}\]}
+$$\frac{\partial u}{\partial t} &= -g\frac{\partial h}{\partial x} + fv$$$$\frac{\partial v}{\partial t} &= - fu$$$$\frac{\partial h}{\partial t} &= -H\frac{\partial u}{\partial x}$$}
 
 Substituting the wave solutions \texttt{b1.2}, we obtain the frequency
 equation which can be written as
 
-{\[\left( \frac{\nu}{f} \right)^{2} = 1 + \frac{gH}{f^{2}}k^{2}\]}
+$$\left( \frac{\nu}{f} \right)^{2} = 1 + \frac{gH}{f^{2}}k^{2}$$}
 
 Thus, as the \emph{radius of deformation}
 
-\[\lambda = \sqrt{\frac{gH}{f}}\]
+$$\lambda = \sqrt{\frac{gH}{f}}$$
 
 is never equal to zero, the frequency of the gravity-inertia waves is a
 monotonically increasing function of \(k\). Therefore, the group
@@ -4314,28 +4311,28 @@ We now look at the effect of the finite differencing in space in this
 case. As the variables are assumed not to depend on \(y\), the systems
 \texttt{b3.2A} reduce to
 
-{\[\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{x} + fv\]\[\frac{\partial v}{\partial t} &=  - fu\]\[\frac{\partial h}{\partial t} &= -H \overline{\delta_x u}^{x}\]}
+$$\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{x} + fv$$$$\frac{\partial v}{\partial t} &=  - fu$$$$\frac{\partial h}{\partial t} &= -H \overline{\delta_x u}^{x}$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\delta_x h + fv\]\[\frac{\partial v}{\partial t} &=  - fu\]\[\frac{\partial h}{\partial t} &= -H \delta_x u\]}
+$$\frac{\partial u}{\partial t} &= - g\delta_x h + fv$$$$\frac{\partial v}{\partial t} &=  - fu$$$$\frac{\partial h}{\partial t} &= -H \delta_x u$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\delta_x h + f\overline{v}^{x}\]\[\frac{\partial v}{\partial t} &=  - f\overline{u}^{x}\]\[\frac{\partial h}{\partial t} &= -H \delta_x u\]}
+$$\frac{\partial u}{\partial t} &= - g\delta_x h + f\overline{v}^{x}$$$$\frac{\partial v}{\partial t} &=  - f\overline{u}^{x}$$$$\frac{\partial h}{\partial t} &= -H \delta_x u$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{x} + f\overline{v}^{x}\]\[\frac{\partial v}{\partial t} &=  - f\overline{u}^{x}\]\[\frac{\partial h}{\partial t} &= -H \overline{\delta_x u}^{x}\]}
+$$\frac{\partial u}{\partial t} &= - g\overline{\delta_x h}^{x} + f\overline{v}^{x}$$$$\frac{\partial v}{\partial t} &=  - f\overline{u}^{x}$$$$\frac{\partial h}{\partial t} &= -H \overline{\delta_x u}^{x}$$}
 
-{\[\frac{\partial u}{\partial t} &= - g\delta_x h + fv\]\[\frac{\partial v}{\partial t} &=  - fu\]\[\frac{\partial h}{\partial t} &= -H \delta_x u\]}
+$$\frac{\partial u}{\partial t} &= - g\delta_x h + fv$$$$\frac{\partial v}{\partial t} &=  - fu$$$$\frac{\partial h}{\partial t} &= -H \delta_x u$$}
 
 Substitution of wave solutions into these systems gives the frequency
 equations
 
-{\[\left(\frac{\nu}{d}\right)^2 = 1 + \left(\frac{\lambda}{d}\right)^2 \sin^2{kd}\]}
+$$\left(\frac{\nu}{d}\right)^2 = 1 + \left(\frac{\lambda}{d}\right)^2 \sin^2{kd}$$}
 
-{\[\left(\frac{\nu}{d}\right)^2 = 1 + 4\left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{2}}\]}
+$$\left(\frac{\nu}{d}\right)^2 = 1 + 4\left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{2}}$$}
 
-{\[\left(\frac{\nu}{d}\right)^2 = \cos^2{\frac{kd}{2}} + 4\left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{2}}\]}
+$$\left(\frac{\nu}{d}\right)^2 = \cos^2{\frac{kd}{2}} + 4\left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{2}}$$}
 
-{\[\left(\frac{\nu}{d}\right)^2 = \cos^2{\frac{kd}{2}} + \left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{2}}\]}
+$$\left(\frac{\nu}{d}\right)^2 = \cos^2{\frac{kd}{2}} + \left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{2}}$$}
 
-{\[\left(\frac{\nu}{d}\right)^2 = 1 + 2\left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{\sqrt{2}}}\]}
+$$\left(\frac{\nu}{d}\right)^2 = 1 + 2\left(\frac{\lambda}{d}\right)^2 \sin^2{\frac{kd}{\sqrt{2}}}$$}
 
 The non-dimensional frequency \(\frac{\nu}{f}\) is now seen to depend on
 two parameters, \(kd\) and \(\frac{\lambda}{d}\)
@@ -4405,7 +4402,7 @@ the coordinate system \emph{x\textquotesingle, y\textquotesingle{}} by
 rotating the \emph{x,y} in the positive direction through an angle of
 \(\frac{\pi}{4}\), and then, using the relations
 
-\[u^{'} &= \frac{\sqrt{2}}{2}\left( u + v \right)\]\[v^{'} &= \frac{\sqrt{2}}{2}\left( - u + v \right)\]
+$$u^{'} &= \frac{\sqrt{2}}{2}\left( u + v \right)$$$$v^{'} &= \frac{\sqrt{2}}{2}\left( - u + v \right)$$
 
 change from variables \(u,v,h\) to new dependent variables
 \(u^{'},v^{'},h\) . We find that this transforms the system
@@ -4465,32 +4462,32 @@ as was done for the advection equation.
 
 We shall demonstrate this for the one-dimensional equations
 
-{\[\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} +
- g\frac{\partial h}{\partial x} &= 0\]\[\frac{\partial h}{\partial t} + c\frac{\partial h}{\partial x} +
- H\frac{\partial u}{\partial x} &= 0\]}
+$$\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} +
+ g\frac{\partial h}{\partial x} &= 0$$$$\frac{\partial h}{\partial t} + c\frac{\partial h}{\partial x} +
+ H\frac{\partial u}{\partial x} &= 0$$}
 
 We first multiply the second of these equations by an arbitrary
 parameter \(\lambda\), and add the result to the first equation. We
 obtain
 
-{\[\frac{\partial}{\partial t}( u + \lambda h ) +
+$$\frac{\partial}{\partial t}( u + \lambda h ) +
 ( c + \lambda H )\frac{\partial u}{\partial x} +
-( g + \lambda c )\frac{\partial h}{\partial x} = 0\]}
+( g + \lambda c )\frac{\partial h}{\partial x} = 0$$}
 
 We wish to choose \(\lambda\) so that
 
-{\[\frac{g + \lambda c}{c + \lambda H} = \lambda\]}
+$$\frac{g + \lambda c}{c + \lambda H} = \lambda$$}
 
 \begin{description}
 \item[to obtain an equation with only one dependent variable,]
 \(u + \lambda h\) . The two solutions of \texttt{b4.3} are
 \end{description}
 
-{\[\lambda = \pm \sqrt{\frac{g}{H}}\]}
+$$\lambda = \pm \sqrt{\frac{g}{H}}$$}
 
 Substituting these into \texttt{b4.2} we obtain
 
-{\[\left[ \frac{\partial}{\partial t} + ( c + \sqrt{gH}\frac{\delta}{\text{Î´x}} ) \right] \left( u + \sqrt{\frac{g}{H}}h \right) &= 0\]\[\left[ \frac{\partial}{\partial t} + ( c - \sqrt{gH}\frac{\delta}{\text{Î´x}} ) \right] \left( u - \sqrt{\frac{g}{H}}h \right) &= 0\]}
+$$\left[ \frac{\partial}{\partial t} + ( c + \sqrt{gH}\frac{\delta}{\text{Î´x}} ) \right] \left( u + \sqrt{\frac{g}{H}}h \right) &= 0$$$$\left[ \frac{\partial}{\partial t} + ( c - \sqrt{gH}\frac{\delta}{\text{Î´x}} ) \right] \left( u - \sqrt{\frac{g}{H}}h \right) &= 0$$}
 
 This is the \emph{normal form} of the system \texttt{b4.1}. It shows
 that \texttt{b4.1} is equivalent to a system of two advection
@@ -4510,14 +4507,14 @@ before, except that in place of the advection velocity \(c\) we now have
 time differencing, and \(c\) is considered positive, we obtain the
 Courant-Friedrichs-Lewy stability criterion for this case as
 
-{\[( c + \sqrt{gH})\frac{\Delta t}{\Delta x} \leq 1\]}
+$$( c + \sqrt{gH})\frac{\Delta t}{\Delta x} \leq 1$$}
 
 The advection velocity in the atmosphere is normally about an order of
 magnitude less than the phase speed of external gravity waves.
 Accordingly, in the foregoing criterion \(c\) is often neglected
 compared with \(\sqrt{gH}\), giving the stability requirement
 
-{\[\sqrt{gH}\frac{\Delta t}{\Delta x} < 1\]}
+$$\sqrt{gH}\frac{\Delta t}{\Delta x} < 1$$}
 
 When using the \emph{three-dimensional} primitive equations, external
 gravity waves are normally eliminated by perÂ­mitting no vertical
@@ -4525,12 +4522,12 @@ velocity at the upper boundary. The highest phase speed admitted by the
 system is then that of the Lamb waves, which for an isothermal
 atmosphere is
 
-\[\sqrt{\left( \frac{f}{k} \right)^{2} + \gamma RT}\]
+$$\sqrt{\left( \frac{f}{k} \right)^{2} + \gamma RT}$$
 
 where \(\gamma \equiv \frac{c_{p}}{c_{v}}\). If we neglect the first
 term and recall that the scale height of an isothermal atmosphere is
 
-\[H^{*} = \frac{RT}{g}\]
+$$H^{*} = \frac{RT}{g}$$
 
 we see that the phase speed of the Lamb waves is of the same order of
 magnitude as that of the external gravity waves. Thus, in view of the
@@ -4553,25 +4550,25 @@ substitution of wave solutions. For example, consider the leapfrog
 scheme with centered space differencing applied to the
 \emph{two-dimensional} system
 
-{\[\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} = 0\]\[\frac{\partial v}{\partial t} + g\frac{\partial h}{\partial y} = 0\]\[\frac{\partial h}{\partial t} + H\nabla\cdot v = 0\]}
+$$\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} = 0$$$$\frac{\partial v}{\partial t} + g\frac{\partial h}{\partial y} = 0$$$$\frac{\partial h}{\partial t} + H\nabla\cdot v = 0$$}
 
 Using one of the lattices of \texttt{figg:421} as well as the notation
 of Section \texttt{Section4.2}, we obtain
 
-{\[u^{n+1} = u^{n-1} -2 g \Delta t \delta_x h^n\]\[v^{n+1} = v^{n-1} -2 g \Delta t \delta_y h^n\]\[h^{n+1} = h^{n-1} -2 H \Delta t ( \delta_x u + \delta_y v)^n\]}
+$$u^{n+1} = u^{n-1} -2 g \Delta t \delta_x h^n$$$$v^{n+1} = v^{n-1} -2 g \Delta t \delta_y h^n$$$$h^{n+1} = h^{n-1} -2 H \Delta t ( \delta_x u + \delta_y v)^n$$}
 
 Substituting the wave solutions
 
-{\[u^n = Re \left[ \lambda^n \widehat{u} e^{i(kx+ly)} \right]\]\[v^n = Re \left[ \lambda^n \widehat{v} e^{i(kx+ly)} \right]\]\[h^n = Re \left[ \lambda^n \widehat{h} e^{i(kx+ly)} \right]\]}
+$$u^n = Re \left[ \lambda^n \widehat{u} e^{i(kx+ly)} \right]$$$$v^n = Re \left[ \lambda^n \widehat{v} e^{i(kx+ly)} \right]$$$$h^n = Re \left[ \lambda^n \widehat{h} e^{i(kx+ly)} \right]$$}
 
 we obtain the homogeneous system
 
-{\[\left( \lambda^{2} - 1 \right)\widehat{u} + i\lambda 2\sqrt{2}g\mu \sin{X}\widehat{h} = 0\]\[\left( \lambda^{2} - 1 \right)\widehat{v} + i\lambda 2\sqrt{2}g\mu \sin{Y}\widehat{h} = 0\]\[i\lambda 2\sqrt{2}K\mu \left( \sin{X}\widehat{u} + \sin{Y}\widehat{v} \right) + \left( \lambda^{2} - 1 \right)\widehat{h} = 0\]}
+$$\left( \lambda^{2} - 1 \right)\widehat{u} + i\lambda 2\sqrt{2}g\mu \sin{X}\widehat{h} = 0$$$$\left( \lambda^{2} - 1 \right)\widehat{v} + i\lambda 2\sqrt{2}g\mu \sin{Y}\widehat{h} = 0$$$$i\lambda 2\sqrt{2}K\mu \left( \sin{X}\widehat{u} + \sin{Y}\widehat{v} \right) + \left( \lambda^{2} - 1 \right)\widehat{h} = 0$$}
 
 Here \emph{X} and \emph{Y} are defined as in Section \texttt{Section4.2}
 , while
 
-\[\mu \equiv \frac{\Delta t}{\left( \sqrt{2}d^{*} \right)}\]
+$$\mu \equiv \frac{\Delta t}{\left( \sqrt{2}d^{*} \right)}$$
 
 that is, \(\mu \equiv \frac{\Delta t}{d}\) when the lattice (E) is
 chosen.
@@ -4580,19 +4577,19 @@ The properties of the numerical solution can now be studied by analyzing
 \texttt{b4.11}. The requirement that its determinant be equal to zero
 gives six solutions for \(\lambda\). Two of these are
 
-{\[\lambda = 1\]}
+$$\lambda = 1$$}
 
 and
 
-{\[\lambda = - 1\]}
+$$\lambda = - 1$$}
 
 The remaining four are given by
 
-{\[\lambda^{2} = 1 - 4A \pm 2\sqrt{2A( 2A - 1 )}\]}
+$$\lambda^{2} = 1 - 4A \pm 2\sqrt{2A( 2A - 1 )}$$}
 
 Where
 
-\[A \equiv gH\mu^{2}\left( \sin^{2}X + \sin^{2}Y \right)\]
+$$A \equiv gH\mu^{2}\left( \sin^{2}X + \sin^{2}Y \right)$$
 
 We can now analyze the solutions \texttt{b4.10} associated with the
 values found for \(\lambda\). The first of these values, \texttt{b4.12},
@@ -4619,16 +4616,16 @@ solutions given by \texttt{b4.14} has to be investigated. They will all
 also be neutral for \(2A < 1\). To obtain the condition in the form
 \(B\Delta t \leq 1\) we write
 
-\[\sqrt{2A \leq 1}\]
+$$\sqrt{2A \leq 1}$$
 
 Since this has to be satisfied for all the admissible waves, we find
 that the CFL criterion in the two-dimensional case is now
 
-{\[2\sqrt{gH}\mu \leq 1\]}
+$$2\sqrt{gH}\mu \leq 1$$}
 
 or
 
-{\[\sqrt{2gH}\frac{\Delta t}{\Delta x} \leq 1\]}
+$$\sqrt{2gH}\frac{\Delta t}{\Delta x} \leq 1$$}
 
 This is in agreement with the previous results. The non dimensional
 constant on the left side is sometimes called the \emph{Courant number}.
@@ -4636,21 +4633,21 @@ constant on the left side is sometimes called the \emph{Courant number}.
 With solutions like \texttt{b4.10}, the frequency \(\text{v }\) is given
 by
 
-\[\lambda = \left| \lambda \right|e^{- i\nu\Delta t}.\]
+$$\lambda = \left| \lambda \right|e^{- i\nu\Delta t}.$$
 
 Thus, the expressions obtained for \(\lambda\) can be used to calcuÂ­late
 the \emph{relative phase speed} \(\frac{c^{*}}{\sqrt{gH}}\) using the
 relation
 
-{\[\frac{c^{*}}{\sqrt{gH}} = \frac{1}{\Delta t\sqrt{gH\left( k^{2} + l^{2} \right)}}\arctan\frac{- \lambda_{im}}{\lambda_{re}}\]}
+$$\frac{c^{*}}{\sqrt{gH}} = \frac{1}{\Delta t\sqrt{gH\left( k^{2} + l^{2} \right)}}\arctan\frac{- \lambda_{im}}{\lambda_{re}}$$}
 
 If we are given \(\lambda^{2}\) rather than \(\lambda\), as here, we can
 express the relative phase speed as a function of \((\lambda^{2})_{im}\)
 and \((\lambda^{2})_{re}\). Thus, using \texttt{b4.14}, we find for
 \(2A \leq 1:\)
 
-{\[\frac{c^*}{\sqrt{gH}} = \frac{1}{2\mu\sqrt{2gH\left( X^{2} + Y^{2} \right)}} \times
- \arctan{ \left( \pm \frac{2\sqrt{2A\left( 1 - 2A \right)}}{1 - 4A} \right)   }\]}
+$$\frac{c^*}{\sqrt{gH}} = \frac{1}{2\mu\sqrt{2gH\left( X^{2} + Y^{2} \right)}} \times
+ \arctan{ \left( \pm \frac{2\sqrt{2A\left( 1 - 2A \right)}}{1 - 4A} \right)   }$$}
 
 \begin{description}
 \item[This expression, of course, approaches \texttt{b2.6} as]
@@ -4661,8 +4658,8 @@ For a more explicit illustration of the effect of time differencing, we
 can perform a series expansion of \texttt{b4.18}. One obtains, for
 \(\sqrt{2A} < \frac{1}{\sqrt{2}},\)
 
-\[\frac{c^*}{\sqrt{gH}} = 
-\sqrt{\frac{\sin^2{X} + \sin^2{Y}}{X^2 + Y^2}} \left( 1 + \frac{1}{3}A + \frac{3}{10}A^2 + \ldots \right)\]
+$$\frac{c^*}{\sqrt{gH}} = 
+\sqrt{\frac{\sin^2{X} + \sin^2{Y}}{X^2 + Y^2}} \left( 1 + \frac{1}{3}A + \frac{3}{10}A^2 + \ldots \right)$$
 
 The factor multiplying the series in parenthesis describes the
 decelerating effect of space differencing, as given by \texttt{b2.6}.
@@ -4688,7 +4685,7 @@ Finally, we point out that time differencing suggests new ways of
 distributing the variables, as the grid can now also be time-staggered.
 A good example is given by the linearized system
 
-{\[\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} - fv &= 0\]\[\frac{\partial v}{\partial t} + g\frac{\partial h}{\partial y} + fu &= 0\]\[\frac{\partial h}{\partial t} + H\left( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}  \right) &= 0\]}
+$$\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} - fv &= 0$$$$\frac{\partial v}{\partial t} + g\frac{\partial h}{\partial y} + fu &= 0$$$$\frac{\partial h}{\partial t} + H\left( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}  \right) &= 0$$}
 
 approximated using lattice (E), the leapfrog scheme and centered space
 differencing. If all the variables were calculated at every time level,
@@ -4764,7 +4761,7 @@ forward, and then those of the other equation backward in time. Thus,
 this scheme could be called the \emph{forward-backward} scheme. With
 centered space differencing, \texttt{b4.8} is approximated by
 
-{\[u^{n + 1} = u^{n} - g\Delta t\delta_{x}h^{n}\]\[v^{n + 1} = v^{n} - g\Delta t\delta_{y}h^{n}\]\[h^{n + 1} = h^{n} - H\Delta t\left( \delta_{x}u + \delta_{y}v \right)^{n + 1}\]}
+$$u^{n + 1} = u^{n} - g\Delta t\delta_{x}h^{n}$$$$v^{n + 1} = v^{n} - g\Delta t\delta_{y}h^{n}$$$$h^{n + 1} = h^{n} - H\Delta t\left( \delta_{x}u + \delta_{y}v \right)^{n + 1}$$}
 
 or by an analogous system in which the order of integraÂ­tion is
 reversed.
@@ -4772,11 +4769,11 @@ reversed.
 Substituting the wave solutions \texttt{b4.10} we find three solutions
 for x. One of these,
 
-{\[\lambda = 1\]}
+$$\lambda = 1$$}
 
 gives again a neutral and stationary solution. The remaining two are
 
-{\[\lambda = 1 - A \pm \sqrt{A\left( A - 2 \right)}\]}
+$$\lambda = 1 - A \pm \sqrt{A\left( A - 2 \right)}$$}
 
 where the quantity \(A\) is defined as in the preceding section.
 Solutions \texttt{b5.2} and \texttt{b5.3} are obtained for both versions
@@ -4787,11 +4784,11 @@ forward.
 Examination of the amplification factors given by \texttt{b5.3} shows
 that the scheme is stable and neutral for \(  A \leq 2\) , that is, for
 
-\[\sqrt{2A} \leq 2\]
+$$\sqrt{2A} \leq 2$$
 
 To satisfy this for all the admissible waves, we must have
 
-{\[2\sqrt{gH} \mu \leq 2\]}
+$$2\sqrt{gH} \mu \leq 2$$}
 
 Thus, the forward-backward scheme is stable and neutral with time steps
 \emph{twice those allowed by the CFL criterion for the leapfrog scheme}
@@ -4817,11 +4814,11 @@ give for the wave equation, since the system of gravity wave equaÂ­tions
 is equivalent to a single wave equation. Consider the one-dimensional
 version of this system:
 
-{\[\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} = 0\]\[\frac{\partial h}{\partial t} + H\frac{\partial u}{\partial x} = 0\]}
+$$\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} = 0$$$$\frac{\partial h}{\partial t} + H\frac{\partial u}{\partial x} = 0$$}
 
 Eliminating one of the variables u, h we obtain a wave equation
 
-{\[\frac{\partial^{2} h}{\partial t^{2}} - gH\frac{\partial^{2} h}{\partial x^{2}} = 0\]}
+$$\frac{\partial^{2} h}{\partial t^{2}} - gH\frac{\partial^{2} h}{\partial x^{2}} = 0$$}
 
 We can perform the same elimination for each of the finite difference
 schemes.
@@ -4829,7 +4826,7 @@ schemes.
 The forward-backward and space-centered approxiÂ­mation to \texttt{b5.5}
 is
 
-{\[\frac{u_j^{n + 1} - u_j^n}{\Delta t} + g\frac{h_{j + 1}^{n} - h_{j - 1}^{n}}{2\Delta x} = 0\]\[\frac{h_j^{n + 1} - h_j^n}{\Delta t} + H\frac{u_{j + 1}^{n + 1} - u_{j - 1}^{n + 1}}{2\Delta x} = 0\]}
+$$\frac{u_j^{n + 1} - u_j^n}{\Delta t} + g\frac{h_{j + 1}^{n} - h_{j - 1}^{n}}{2\Delta x} = 0$$$$\frac{h_j^{n + 1} - h_j^n}{\Delta t} + H\frac{u_{j + 1}^{n + 1} - u_{j - 1}^{n + 1}}{2\Delta x} = 0$$}
 
 We now substract from the second of these equations an analogous
 equation for time level \(n - 1\) instead of \(n\), divide the resulting
@@ -4837,8 +4834,8 @@ equation by \(\Delta t\), and, finally, eliminate all u values from it
 using the first of \texttt{b5.7}, written for space points \(j + 1\) and
 \(j - 1\) instead of \(j\). We obtain
 
-{\[\frac{h_{j}^{n + 1} - 2h_{j}^{n} + h_{j}^{n - 1}}{\left( \Delta t \right)} 
-+ gH\frac{h_{j + 2}^{n} - 2u_j^{n} + h_{j - 2}^{n}}{\left( 2\Delta x \right)^{2}} = 0\]}
+$$\frac{h_{j}^{n + 1} - 2h_{j}^{n} + h_{j}^{n - 1}}{\left( \Delta t \right)} 
++ gH\frac{h_{j + 2}^{n} - 2u_j^{n} + h_{j - 2}^{n}}{\left( 2\Delta x \right)^{2}} = 0$$}
 
 This is a finite difference analogue of the wave equation \texttt{b5.6}.
 Note that although each of the two equations \texttt{b5.7} is only of
@@ -4850,8 +4847,8 @@ If we use a leapfrog and space-centered approximation to \texttt{b5.5},
 and follow an elimination procedure like that used in deriving
 \texttt{b5.8}, we obtain
 
-{\[\frac{h_j^{n + 1} - 2h_ j^{n - 1} + h_j^{n - 3}}{\left( \Delta t \right)^{2}} 
-- gH\frac{h_{j + 2}^{n - 1} - 2h_j^{n - 1} + h_{j - 2}^{n - 1}}{\left( 2\Delta x \right)^{2}} = 0\]}
+$$\frac{h_j^{n + 1} - 2h_ j^{n - 1} + h_j^{n - 3}}{\left( \Delta t \right)^{2}} 
+- gH\frac{h_{j + 2}^{n - 1} - 2h_j^{n - 1} + h_{j - 2}^{n - 1}}{\left( 2\Delta x \right)^{2}} = 0$$}
 
 This also is an analogue to the wave equation \texttt{b5.6} of
 second-order accuracy. However, in \texttt{b5.8} the second time
@@ -4934,31 +4931,31 @@ We shall first discuss the properties of the implicit scheme applied to
 the system \texttt{b4.8} in some detail, that is, the case of pure
 gravity waves. Thus, we consider the finite difference system
 
-{\[u^{n + 1} = u^{n} - g\Delta t\frac{1}{2}\left( \delta_{x}h^{n} + \delta_{x}h^{n + 1} \right)\]\[v^{n + 1} = v^{n} - g\Delta t\frac{1}{2}\left( \delta_{y}h^{n} + \delta_{y}h^{n + 1} \right)\]\[h^{n + 1} = h^{n} - H\Delta t\frac{1}{2}\left[
-\left( \delta_x u + \delta_{y}v \right)^{n} + \left( \delta_{x}u + \delta_{y}v \right)^{n + 1} \right]\]}
+$$u^{n + 1} = u^{n} - g\Delta t\frac{1}{2}\left( \delta_{x}h^{n} + \delta_{x}h^{n + 1} \right)$$$$v^{n + 1} = v^{n} - g\Delta t\frac{1}{2}\left( \delta_{y}h^{n} + \delta_{y}h^{n + 1} \right)$$$$h^{n + 1} = h^{n} - H\Delta t\frac{1}{2}\left[
+\left( \delta_x u + \delta_{y}v \right)^{n} + \left( \delta_{x}u + \delta_{y}v \right)^{n + 1} \right]$$}
 
 the gravity and gravity-inertia wave equations
 
 Substituting the wave solutions \texttt{b4.10} we find three solutions
 for \(\lambda\). One of these,
 
-{\[\lambda = 1\]}
+$$\lambda = 1$$}
 
 is again that associated with a neutral and stationary soluÂ­tion. The
 remaining two are
 
-{\[\lambda = \frac{1}{1 + \frac{1}{2}A}\left( 1 - \frac{1}{2}A \pm \sqrt{- 2A} \right)\]}
+$$\lambda = \frac{1}{1 + \frac{1}{2}A}\left( 1 - \frac{1}{2}A \pm \sqrt{- 2A} \right)$$}
 
 Examination of \texttt{b6.3} shows that it always gives ampliÂ­fication
 factors satisfying
 
-{\[\left| \lambda \right| = 1\]}
+$$\left| \lambda \right| = 1$$}
 
 and so the scheme is unconditionally stable and neutral. Using
 \texttt{b6.3} and \texttt{b4.17}, we find for the relative phase speed
 of the nonstationary solutions,
 
-{\[\frac{C^{*}}{\sqrt{gH}} = \frac{1}{\mu\sqrt{2gH(X^{2} + Y^{2})}}\arctan{( \pm \frac{\sqrt{2A}}{1 - \frac{1}{2}A} )}\]}
+$$\frac{C^{*}}{\sqrt{gH}} = \frac{1}{\mu\sqrt{2gH(X^{2} + Y^{2})}}\arctan{( \pm \frac{\sqrt{2A}}{1 - \frac{1}{2}A} )}$$}
 
 The numerical values given by \texttt{b6.5} for the physical mode with
 \(2\sqrt{gH}\mu = 5\) are shown in \texttt{figg:461}. The time step is
@@ -5022,7 +5019,7 @@ for variables at time level \(n + 1\) will be illustrated for the
 shallow water equations. These equations can be written in a compact
 form
 
-{\[\frac{\partial u}{\partial t} = - g\frac{\partial h}{\partial x} + A_{u}\]\[\frac{\partial v}{\partial t} = - g\frac{\partial h}{\partial y} + A_{v}\]\[\frac{\partial h}{\partial t} = - H\nabla\textbf{v} + A_{h}\]}
+$$\frac{\partial u}{\partial t} = - g\frac{\partial h}{\partial x} + A_{u}$$$$\frac{\partial v}{\partial t} = - g\frac{\partial h}{\partial y} + A_{v}$$$$\frac{\partial h}{\partial t} = - H\nabla\textbf{v} + A_{h}$$}
 
 where \(A_{u}\), \(A_{v}\) and \(A_{h}\) denote the terms that were
 omitted in the system \texttt{b4.8} describing the propagation of pure
@@ -5032,40 +5029,40 @@ When we use leapfrog differencing for these additional terms, and
 implicit differencing over a time interval \(2\Delta t\) for the gravity
 wave terms and centered space differencing, \texttt{b6.6} is replaced by
 
-{\[u^{n + 1} = u^{n - 1} - g\Delta t\left( \delta_{x}h^{n - 1} + \delta_{x}h^{n + 1} \right) + 2\Delta t A_{u}^{n},\]\[v^{n + 1} = v^{n - 1} - g\Delta t\left( \delta_{y}h^{n - 1} + \delta_{y}h^{n + 1} \right) + 2\Delta t A_{v}^{n},\]\[h^{n + 1} = h^{n - 1} - H\Delta t\left[ \left( \delta_{x}u + \delta_{y}v \right)^{n - 1} + \left( \delta_{x}u + \delta_{y}v \right)^{n + 1} \right] +  2\Delta t A_{h}^{n}\]}
+$$u^{n + 1} = u^{n - 1} - g\Delta t\left( \delta_{x}h^{n - 1} + \delta_{x}h^{n + 1} \right) + 2\Delta t A_{u}^{n},$$$$v^{n + 1} = v^{n - 1} - g\Delta t\left( \delta_{y}h^{n - 1} + \delta_{y}h^{n + 1} \right) + 2\Delta t A_{v}^{n},$$$$h^{n + 1} = h^{n - 1} - H\Delta t\left[ \left( \delta_{x}u + \delta_{y}v \right)^{n - 1} + \left( \delta_{x}u + \delta_{y}v \right)^{n + 1} \right] +  2\Delta t A_{h}^{n}$$}
 
 We now apply the operator \(\delta_{x}\) to the first, and
 \(\delta_{y}\) to the second of these equations, respectively, and add
 the results. We introduce the notation
 
-\[\delta_{xx}h = \delta_x(\delta_x h ) \qquad  \delta_{yy}h = \delta_y(\delta_y h )\]
+$$\delta_{xx}h = \delta_x(\delta_x h ) \qquad  \delta_{yy}h = \delta_y(\delta_y h )$$
 
 We obtain
 
-\[\left( \delta_{x}u + \delta_{y}v \right)^{n + 1} =
+$$\left( \delta_{x}u + \delta_{y}v \right)^{n + 1} =
 \left( \delta_{x}u + \delta_{y}v \right)^{n - 1} 
 - g\Delta t \left[ ( \delta_{xx} + \delta_{yy} )h^{n - 1} 
 + ( \delta_{xx} + \delta_{yy} )h^{n + 1}\right] +
-2\Delta t( \delta_{x}A_{u} + {\delta_{y}A}_{v})^{n}\]
+2\Delta t( \delta_{x}A_{u} + {\delta_{y}A}_{v})^{n}$$
 
 Substituting the right-hand side into the third of \texttt{b6.7}, and
 defining the "finite difference Laplacian" by
 
-\[\mathbf{\nabla_d}^2 \equiv ( \delta_{xx} + \delta_{yy} )h,\]
+$$\mathbf{\nabla_d}^2 \equiv ( \delta_{xx} + \delta_{yy} )h,$$
 
 we find
 
-\[\text{  h}^{n + 1} = h^{n - 1} - 2H\Delta t\left( \delta_{x}u + \delta_{y}v \right)^{n + 1}
+$$\text{  h}^{n + 1} = h^{n - 1} - 2H\Delta t\left( \delta_{x}u + \delta_{y}v \right)^{n + 1}
  + gH\left( \Delta t \right)^{2}\left( \mathbf{\nabla_d}{2}h^{n - 1} + \mathbf{\nabla_d}^{2}h^{n + 1} \right) 
- + 2\Delta t\left\lbrack A_{h} - H\Delta t\left( {\delta_{x}A}_{u} + {\delta_{y}A}_{v} \right) \right\rbrack\]
+ + 2\Delta t\left\lbrack A_{h} - H\Delta t\left( {\delta_{x}A}_{u} + {\delta_{y}A}_{v} \right) \right\rbrack$$
 
 Using, in addition, the definitions
 
-\[F^{n + 1} \equiv h^{n + 1} - 2H\Delta t \left( \delta_{x}u + \delta_{y}v \right)^{n + 1} + gH(\Delta t)^{2}\mathbf{\nabla_d}^2 h^{n + 1},\]\[G^{n} \equiv 2\Delta t \left\lbrack A_{h} - H\Delta t\left( {\delta_{x}A}_{u} + {\delta_{y}A}_{v} \right) \right\rbrack^{n}\]
+$$F^{n + 1} \equiv h^{n + 1} - 2H\Delta t \left( \delta_{x}u + \delta_{y}v \right)^{n + 1} + gH(\Delta t)^{2}\mathbf{\nabla_d}^2 h^{n + 1},$$$$G^{n} \equiv 2\Delta t \left\lbrack A_{h} - H\Delta t\left( {\delta_{x}A}_{u} + {\delta_{y}A}_{v} \right) \right\rbrack^{n}$$
 
 this can be written as
 
-{\[h^{n + 1} - gH(\Delta t )^{2}\mathbf{\nabla_d}^{2}h^{n + 1} = F^{n + 1} + G^{n}\]}
+$$h^{n + 1} - gH(\Delta t )^{2}\mathbf{\nabla_d}^{2}h^{n + 1} = F^{n + 1} + G^{n}$$}
 
 The terms have been arranged to show that at time level n the right-hand
 side is known at all space grid points. Once this equation has been
@@ -5083,12 +5080,12 @@ notation of \texttt{figg:462}, it can be written as
 \caption{}
 \end{figure}
 
-{\[\mathbf{\nabla_d}^2 h = \frac{1}{4(d^*)^2}\left( h_{1} + h_{2} + h_{3} + h_{4} - 4h_{0} \right)\]}
+$$\mathbf{\nabla_d}^2 h = \frac{1}{4(d^*)^2}\left( h_{1} + h_{2} + h_{3} + h_{4} - 4h_{0} \right)$$}
 
 Thus, \texttt{b6.8} is a finite difference approximation to an elliptic
 equation
 
-\[\nabla^{2}h + ah + b\left( x,y \right) = 0\]
+$$\nabla^{2}h + ah + b\left( x,y \right) = 0$$
 
 To solve such an equation, it is necessary to know the values of
 \(h(x,y)\) at the boundaries of the computation region. For a numerical
@@ -5191,7 +5188,7 @@ in this system we will norÂ­mally wish to use different schemes for terms
 associated with them. Thus, considering the linearized system with
 advection and gravity wave terms,
 
-{\[\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} + g\frac{\partial h}{\partial x} &= 0\]\[\frac{\partial h}{\partial t} + c\frac{\partial h}{\partial x} + H\frac{\partial u}{\partial x} &= 0\]}
+$$\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} + g\frac{\partial h}{\partial x} &= 0$$$$\frac{\partial h}{\partial t} + c\frac{\partial h}{\partial x} + H\frac{\partial u}{\partial x} &= 0$$}
 
 we might wish to use one scheme for the advection terms, and another for
 the gravity wave terms â in much the same way as was done within the
@@ -5209,13 +5206,13 @@ at
 a time. In the case of \texttt{b7.1}, within a given time step, we could
 first solve the system of advection equations
 
-{\[\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} = 0\]\[\frac{\partial h}{\partial t} + c\frac{\partial h}{\partial x} = 0\]}
+$$\frac{\partial u}{\partial t} + c\frac{\partial u}{\partial x} = 0$$$$\frac{\partial h}{\partial t} + c\frac{\partial h}{\partial x} = 0$$}
 
 Denote the provisional values \(u^{n + 1}, h^{n + 1}\) obtained in this
 way by \(u^{*},h^{*}\). Use these values at the beginning of the time
 step for solving the remaining subsystem
 
-{\[\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} = 0\]\[\frac{\partial h}{\partial t} + H\frac{\partial u}{\partial x} = 0\]}
+$$\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} = 0$$$$\frac{\partial h}{\partial t} + H\frac{\partial u}{\partial x} = 0$$}
 
 The values \(u^{n + 1}\), \(h^{n + 1}\), obtained after solving also
 this other subsystem, are now taken as actual approximate values of
@@ -5234,19 +5231,19 @@ we consider the example above. Denote by \(\lambda_{a}\) and
 numerical solution of subsystems \texttt{b7.2} and \texttt{b7.3},
 respectively. Then, we have
 
-\[u^{*} &= Re\left( \lambda_{a}\lambda^{n}\widehat{u}e^{ikx} \right)\]\[h^{*} &= Re\left( \lambda_{a}\lambda^{n}\widehat{\lambda}e^{ikx} \right)\]
+$$u^{*} &= Re\left( \lambda_{a}\lambda^{n}\widehat{u}e^{ikx} \right)$$$$h^{*} &= Re\left( \lambda_{a}\lambda^{n}\widehat{\lambda}e^{ikx} \right)$$
 
 and
 
-\[u^{n + 1} = Re\left( \lambda_{b}\lambda_{a}\lambda^{n}\widehat{u}e^{\text{ikx}} \right)\]\[h^{n + 1} = Re\left( \lambda_{b}\lambda_{a}\lambda^{n}\widehat{u}e^{\text{ikx}} \right)\]
+$$u^{n + 1} = Re\left( \lambda_{b}\lambda_{a}\lambda^{n}\widehat{u}e^{\text{ikx}} \right)$$$$h^{n + 1} = Re\left( \lambda_{b}\lambda_{a}\lambda^{n}\widehat{u}e^{\text{ikx}} \right)$$
 
 Therefore, we find,
 
-\[\lambda = \lambda_{b}\lambda_{a}\]
+$$\lambda = \lambda_{b}\lambda_{a}$$
 
 and
 
-\[\left| \lambda \right| = \left| \lambda_{b} \right|\left| \lambda_{a} \right|\]
+$$\left| \lambda \right| = \left| \lambda_{b} \right|\left| \lambda_{a} \right|$$
 
 Thus, if both of the schemes chosen for the solution of subsystems
 \texttt{b7.2} and \texttt{b7.3} are stable, the combined scheme
@@ -5307,7 +5304,7 @@ prevented in some cases even by using cenÂ­tered differencing; this
 method will be outlined briefly here. We consider the system of
 linearized gravity wave equations
 
-{\[\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} &= 0\]\[\frac{\partial v}{\partial t} + g\frac{\partial h}{\partial y} &= 0\]\[\frac{\partial h}{\partial t} + H\nabla\cdot\mathbf{v} &= 0\]}
+$$\frac{\partial u}{\partial t} + g\frac{\partial h}{\partial x} &= 0$$$$\frac{\partial v}{\partial t} + g\frac{\partial h}{\partial y} &= 0$$$$\frac{\partial h}{\partial t} + H\nabla\cdot\mathbf{v} &= 0$$}
 
 Consider any two neighbouring height points for example within the
 lattice (E). A height perturbation at one of these points cannot affect
@@ -5353,29 +5350,29 @@ obtained by
 
 space-averaging, that is
 
-\[u^{'n} &= \frac{\sqrt{2}}{2}\left( {\overline{u}}^{y'} + {\overline{v}}^{y'} \right)^{n},\]\[v^{'n} &= \frac{\sqrt{2}}{2}\left( - {\overline{u}}^{x'} + {\overline{v}}^{x'} \right)^{n}.\]
+$$u^{'n} &= \frac{\sqrt{2}}{2}\left( {\overline{u}}^{y'} + {\overline{v}}^{y'} \right)^{n},$$$$v^{'n} &= \frac{\sqrt{2}}{2}\left( - {\overline{u}}^{x'} + {\overline{v}}^{x'} \right)^{n}.$$
 
 An overbar denotes a two-point average taken along the direction
 indicated following the bar sign. Acceleration contributions are added
 to these initial values to obtain values at the end of the time step,
 
-\[u^{'n + 1} &= u^{'n} - g\Delta t\frac{1}{2}\left( \delta_{x'}h^{n} + \delta_{x'}h^{n + 1} \right)\]\[v^{'n + 1} &= v^{'n} - g\Delta t\frac{1}{2}\left( \delta_{y'}h^{n} + \delta_{y'}h^{n + 1} \right)\]
+$$u^{'n + 1} &= u^{'n} - g\Delta t\frac{1}{2}\left( \delta_{x'}h^{n} + \delta_{x'}h^{n + 1} \right)$$$$v^{'n + 1} &= v^{'n} - g\Delta t\frac{1}{2}\left( \delta_{y'}h^{n} + \delta_{y'}h^{n + 1} \right)$$
 
 The velocity divergence in the continuity equation can now be
 approximated by
 
-\[\frac{1}{2}\left( \delta_{x}u + \delta_{y}v \right) + \frac{1}{2}\left( \delta_{x}u^{'} + \delta_{y}v^{'} \right)\]
+$$\frac{1}{2}\left( \delta_{x}u + \delta_{y}v \right) + \frac{1}{2}\left( \delta_{x}u^{'} + \delta_{y}v^{'} \right)$$
 
 giving equal weight to all eight directions of the lattice. In this way
 the implicit approximation to the continuity equation may be obtained as
 
-{\[h^{n + 1} = h^{n} - H\Delta t\left( \delta_{x}u + \delta_{y}v \right)^{n} 
-+ \frac{1}{4}gH( \Delta t)^{2}\left( \nabla_{0}^{2}h^{n} + \nabla_{0}^{2}h^{n + 1} \right)\]}
+$$h^{n + 1} = h^{n} - H\Delta t\left( \delta_{x}u + \delta_{y}v \right)^{n} 
++ \frac{1}{4}gH( \Delta t)^{2}\left( \nabla_{0}^{2}h^{n} + \nabla_{0}^{2}h^{n + 1} \right)$$}
 
 Here the velocity components at level \emph{n + 1} have already been
 eliminated using the first two of \texttt{b6.1}, and
 
-{\[\nabla_{0}^{2} \equiv \frac{1}{4d^{2}} \times \left[ h_{1} + h_{2} + h_{3} + h_{4} + 2\left( h_{5} + h_{6} + h_{7} + h_{8} \right) - 12h_{0} \right]\]}
+$$\nabla_{0}^{2} \equiv \frac{1}{4d^{2}} \times \left[ h_{1} + h_{2} + h_{3} + h_{4} + 2\left( h_{5} + h_{6} + h_{7} + h_{8} \right) - 12h_{0} \right]$$}
 
 This is again a finite difference approximation to \(\nabla^{2}h\), but
 now it is calculated using the height values of nine neighÂ­bouring
@@ -5483,7 +5480,7 @@ consider the simplest case where this minimum number of three values is
 used. It suffices to consider one function only, which we assume to be a
 solution of the oscillation equation. Thus, we consider the function
 
-{\[U\left( t \right) = U\left( 0 \right)e^{i\omega t}\]}
+$$U\left( t \right) = U\left( 0 \right)e^{i\omega t}$$}
 
 where the values \(U\left( t - \Delta t \right)\), \(U\left( t \right)\)
 and \(U\left( t + \Delta t \right)\), are known.
@@ -5491,7 +5488,7 @@ and \(U\left( t + \Delta t \right)\), are known.
 We shall first examine the effect of changing only the middle of these
 three values using the relation
 
-{\[\overline{U(t)} = U(t) + \frac{1}{2}S  \left[ U\left( t - \Delta t \right) - 2U\left( t \right) + U\left( t + \Delta t \right) \right]\]}
+$$\overline{U(t)} = U(t) + \frac{1}{2}S  \left[ U\left( t - \Delta t \right) - 2U\left( t \right) + U\left( t + \Delta t \right) \right]$$}
 
 known as the \emph{centered filter}. The overbar now denotes the
 filtered value of a function, and \(S\) is the \emph{filter parameter}.
@@ -5503,13 +5500,13 @@ the three values of \(U(t)\)
 
 For a quantitative analysis of the effect of the filter we define
 
-{\[\overline{U(t)} \equiv R U(t)\]}
+$$\overline{U(t)} \equiv R U(t)$$}
 
 where the complex factor \(R\) is called the \emph{response} of the
 filter. When this is substituted into \texttt{b9.2} and we use
 \texttt{b9.1}, we obtain
 
-{\[R = 1 - S\left( 1 - \cos{\omega\Delta t} \right)\]}
+$$R = 1 - S\left( 1 - \cos{\omega\Delta t} \right)$$}
 
 It is convenient to define \(R \equiv \left| R \right|e^{i\delta}\).
 
@@ -5524,12 +5521,12 @@ integration, the value \(U\left( t - \Delta t \right)\) has already been
 changed prior to changing \(U(t)\). It is then approÂ­priate to consider
 the filter
 
-{\[\overline{U(t)} = U\left( t \right) + \frac{1}{2}S \left\lbrack \overline{U}\left( t - \Delta t \right) - 2U\left( t \right) + U\left( t + \Delta t \right) \right\rbrack\]}
+$$\overline{U(t)} = U\left( t \right) + \frac{1}{2}S \left\lbrack \overline{U}\left( t - \Delta t \right) - 2U\left( t \right) + U\left( t + \Delta t \right) \right\rbrack$$}
 
 Asselin (1972) calls this the basic time filter. A procedure like the
 one used in deriving \texttt{b9.4} now gives
 
-{\[R = \frac{( 2 - S )^{2} + 2S^{2}\left( 1 - \cos{\omega\Delta t} \right)}{( 2 - S^{2} ) + 4S\left( 1 - \cos{\omega\Delta t} \right)}e^{i\omega\Delta t}.\text{        }\]}
+$$R = \frac{( 2 - S )^{2} + 2S^{2}\left( 1 - \cos{\omega\Delta t} \right)}{( 2 - S^{2} ) + 4S\left( 1 - \cos{\omega\Delta t} \right)}e^{i\omega\Delta t}.\text{        }$$}
 
 Thus, there is now a phase change that is different from zero; however,
 it is small for small values of \(\omega\Delta t\). The amplitude factor
