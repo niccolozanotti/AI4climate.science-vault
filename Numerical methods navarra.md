@@ -2045,7 +2045,7 @@ $$U^{\left( n + 1 \right)} = U^{\left( n - 1 \right)} + 2\Delta t\left( i\omega 
 
 Other combinations, of course, are also possible.
 
-## The Advection Equation}\label{Chapter3}
+## The Advection Equation
 
 We now consider differential equations with one dependent and two or
 three independent variables, that is, partial differential equations.
@@ -3871,7 +3871,7 @@ have a one-dimensional analogue, as the nondivergentvorticity equation
 \texttt{a7.3} is not nonlinear when applied to a one-dimensional
 problem.
 
-## The Gravity and Gravity-Inertia wave equations}\label{Chapter4}
+## The Gravity and Gravity-Inertia wave equations
 
 In this chapter we consider the equations describing the horizontal
 propagation of gravity and gravity-inertia waves. Mathematically, this
