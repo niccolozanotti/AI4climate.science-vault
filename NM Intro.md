@@ -142,8 +142,9 @@ computer, by a suitable step-wise procedure.
 We shall now consider some basic elements of the finite difference
 method. For simplicity, we start by considering a function of one
 independent variable
-
-$$u = u(x)$$
+$$
+u = u(x)
+$$
 The function \emph{u} is a solution to a differential equation that we
 are interested in. We want to find an approximaÂ­tion to this solution in
 a bounded region R of the indeÂ­pendent variable, having a length
