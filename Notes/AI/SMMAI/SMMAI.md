@@ -51,10 +51,10 @@ description: >
 
 >[!summary]- Lab module contents
 > - Numerical Linear Algebra with `python`
-> 	- [[python basics|SMMAI python basics]]
-> 	- Introduction to `python` for NLA
-> 	- Visualization with `matplotlib` 
-> 	- Solving linear systems with `python`
+> 	- [[SMMAI python basics|python basics]]
+> 	- [[SMMAI Intro to python for NLA|Introduction to python for NLA]]
+> 	- [[SMMAI Visualizing with matplotlib|Visualization with matplotlib]] 
+> 	- [[SMMAI Solving linear systems with python|Solving linear systems with python]]
 > - Basics of Machine Learning
 > 	- [A (very short) introduction to Machine Learning](https://devangelista2.github.io/statistical-mathematical-methods/ML/intro_ML.html#)
 > 	- [Data Compression with Singular Value Decomposition (SVD)](https://devangelista2.github.io/statistical-mathematical-methods/ML/SVD.html)
