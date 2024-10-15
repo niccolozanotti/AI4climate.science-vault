@@ -51,7 +51,7 @@ description: >
 
 >[!summary]- Lab module contents
 > - Numerical Linear Algebra with `python`
-> 	- [[`python` basics|SMMAI python basics]]
+> 	- [[python basics|SMMAI python basics]]
 > 	- Introduction to `python` for NLA
 > 	- Visualization with `matplotlib` 
 > 	- Solving linear systems with `python`
