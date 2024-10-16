@@ -18,10 +18,7 @@ The intensification of hurricanes is driven by a combination of factors. Some ke
 - **Ocean Heat Content (OHC)**: The amount of heat stored in the upper layers of the ocean plays a key role in storm intensification.
 - **Pre-existing Weather Patterns**: Large-scale phenomena like the **Madden-Julian Oscillation (MJO)** or **El Niño Southern Oscillation (ENSO)** can affect hurricane activity.
 - **Land Interaction**: Proximity to land can weaken hurricanes, while warm waters near coasts may lead to rapid intensification.
-
 - **Dust from the Sahara**: The Saharan Air Layer can suppress hurricane development by injecting dry air into the atmosphere.
-
-  
 
 ### Structure of the Bayesian Network
 
