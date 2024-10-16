@@ -50,12 +50,8 @@ description: >
 > 29. Modeling with Deep Learning methods
 > 30. Prospects of global climate modeling
 ^syllabus-CSM
-## Lectures
 
->[!summary]- Lecture list
-> - [[CSM Lecture 1|Lecture 1]]: Introductione
-^lecture-list-CSM
-
+- $\LaTeX$ notes: [here](https://raw.githubusercontent.com/niccolozanotti/climate-modeling-notes/main/notes.pdf)
 ## Exam
 
 Written + Oral. Previous years questions [here](https://mega.nz/folder/Cc0j0CKT#UysyRoxpP-6kfzonFGK35Q/file/DZtzmJjS).
