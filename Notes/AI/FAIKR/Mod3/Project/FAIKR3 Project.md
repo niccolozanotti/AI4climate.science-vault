@@ -99,3 +99,27 @@ Consider an El Niño event (ENSO), which is known to increase wind shear in the 
   
 This Bayesian Network approach can help you assess how different climate and environmental factors contribute to the risk of hurricane intensification, providing a powerful tool for both understanding and predicting future hurricane activity.
 
+```mermaid
+graph TD
+    ENSO --> SST
+    SST --> Intensity
+    WindShear --> Intensity
+    %% Humidity and OHC relationships are not defined yet and can be learned by the algorithm.
+```
+
+Domanda: 
+- **Parameter learning:** Given a set of data samples and a DAG that captures the dependencies between the variables, estimate the (conditional) probability distributions of the individual variables.
+- **Structure learning:** Given a set of data samples, estimate a DAG that captures the dependencies between the variables.
+
+
+```mermaid
+graph TD
+    GHG[GHG Concentration] --> SAT[Surface Air Temperature]
+    SAT --> OHC[Ocean Heat Content]
+    OHC --> SeaIce[Sea Ice Extent]
+    SAT --> SeaIce
+    Wind[Wind Patterns] --> SeaIce
+    SeaIce --> Albedo[Albedo]
+    Albedo --> SeaIce
+    Cloud[Cloud Cover] --> SAT
+```
