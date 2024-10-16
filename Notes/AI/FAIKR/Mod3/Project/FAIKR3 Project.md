@@ -111,6 +111,7 @@ Domanda:
 - **Parameter learning:** Given a set of data samples and a DAG that captures the dependencies between the variables, estimate the (conditional) probability distributions of the individual variables.
 - **Structure learning:** Given a set of data samples, estimate a DAG that captures the dependencies between the variables.
 
+---
 
 ```mermaid
 graph TD
