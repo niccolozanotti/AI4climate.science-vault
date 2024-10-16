@@ -6,14 +6,9 @@ tags:
 description:
 ---
 
-To create a **Bayesian Network** (BN) that assesses what influences and ultimately causes the **intensification of hurricanes**, you can focus on key atmospheric and oceanic variables, as well as environmental factors. Here’s a framework and process to guide you through this case study:
+## Bayesian network to assess the impact of several factors on hurricane formation
 
-  
-
-**1. Defining Key Variables:**
 The intensification of hurricanes is driven by a combination of factors. Some key variables to include in your Bayesian Network could be:
-
-  
 
 • **Sea Surface Temperature (SST)**: Warmer sea surface temperatures provide more energy for hurricanes to strengthen.
 
@@ -63,27 +58,13 @@ graph TD
 - **Atmospheric Pressure**: Lower pressure systems aid hurricane formation and intensification.
 - **Land Interaction**: When hurricanes make landfall, they usually weaken, but if they pass over warm waters near coastal regions, they may undergo rapid intensification.
 
-ENSO → SST → Hurricane Intensity
-
-      ↘ Wind Shear → Hurricane Intensity
-
-MJO  → Humidity → Hurricane Intensity
-
-      ↘ OHC → Hurricane Intensity
-
-  
 
 You could expand this with more detailed connections depending on data availability.
 
-  
 
 **3. Data Collection:**
 
-  
-
-You’ll need reliable climate and hurricane data to estimate the parameters of the Bayesian Network. Some useful datasets include:
-
-  
+  You’ll need reliable climate and hurricane data to estimate the parameters of the Bayesian Network. Some useful datasets include:
 
 • **National Hurricane Center (NHC) Data**: Provides historical hurricane tracks and intensities.
 
@@ -95,11 +76,7 @@ You’ll need reliable climate and hurricane data to estimate the parameters of 
 
 • **Global Tropical Cyclone Climate Data**: Provides datasets on tropical cyclones across the globe, which include intensification trends.
 
-  
-
 **4. Parameter Estimation:**
-
-  
 
 Once you define the network structure, you can estimate the conditional probability distributions (CPDs) for each node. You could use:
 
