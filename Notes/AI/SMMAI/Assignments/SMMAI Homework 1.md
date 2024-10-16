@@ -7,7 +7,7 @@ tags:
 description:
 ---
 Correspondent lab lectures: [[SMMAI-labs Lecture1|1]], [[SMMAI-labs Lecture2|2]], [[SMMAI-labs Lecture3|3]]
-
+- [New version](https://devangelista2.github.io/statistical-mathematical-methods/Homeworks/HW1.html) #todo check for changes
 ## Direct Methods for the Solution of Linear Systems
 
 1. Given a matrix $A \in \mathbb{R}^{n \times n}$ and the vector $x_{\text{true}} = (1, 1, \ldots, 1)^T \in \mathbb{R}^n$, write a script that:
