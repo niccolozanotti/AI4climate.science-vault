@@ -12,17 +12,11 @@ draft: true
 The intensification of hurricanes is driven by a combination of factors. Some key variables to include in your Bayesian Network could be:
 
 - **Sea Surface Temperature (SST)**: Warmer sea surface temperatures provide more energy for hurricanes to strengthen.
-
 - **Atmospheric Pressure**: Lower pressure systems facilitate hurricane formation and intensification.
-
 - **Wind Shear**: Changes in wind speed and direction with altitude (vertical wind shear) can inhibit or enhance hurricane intensity.
-
 - **Humidity**: High levels of atmospheric moisture (especially in the lower atmosphere) can fuel storm growth.
-
 - **Ocean Heat Content (OHC)**: The amount of heat stored in the upper layers of the ocean plays a key role in storm intensification.
-
 - **Pre-existing Weather Patterns**: Large-scale phenomena like the **Madden-Julian Oscillation (MJO)** or **El Niño Southern Oscillation (ENSO)** can affect hurricane activity.
-
 - **Land Interaction**: Proximity to land can weaken hurricanes, while warm waters near coasts may lead to rapid intensification.
 
 - **Dust from the Sahara**: The Saharan Air Layer can suppress hurricane development by injecting dry air into the atmosphere.
@@ -31,7 +25,6 @@ The intensification of hurricanes is driven by a combination of factors. Some ke
 
 ### Structure of the Bayesian Network
 
-  
 A simplified network could have **Sea Surface Temperature (SST)**, **Wind Shear**, and **Ocean Heat Content (OHC)** as parent nodes directly affecting hurricane intensification. **ENSO** and **MJO** could serve as influential external factors that indirectly affect these conditions. Here’s a basic structure:
 
 ```mermaid
@@ -59,7 +52,7 @@ graph TD
 - **Land Interaction**: When hurricanes make landfall, they usually weaken, but if they pass over warm waters near coastal regions, they may undergo rapid intensification.
 
 
-You could expand this with more detailed connections depending on data availability.
+Could be expanded/shrunk with more detailed connections depending on data availability.
 
 
 **3. Data Collection:**
@@ -76,18 +69,13 @@ You could expand this with more detailed connections depending on data availabil
 
 - **Global Tropical Cyclone Climate Data**: Provides datasets on tropical cyclones across the globe, which include intensification trends.
 
-**4. Parameter Estimation:**
+### Parameter Estimation
 
 Once you define the network structure, you can estimate the conditional probability distributions (CPDs) for each node. You could use:
-
-  
-
 - **Maximum Likelihood Estimation (MLE)**: For fitting the model to historical hurricane data.
-
 - **Bayesian Estimation**: Incorporating prior knowledge (e.g., from climate science literature) to estimate CPDs where data is sparse.
 
-**5. Modeling Process:**
-
+### Modeling Process
 
 - **1. Data Preprocessing**: Clean and format the dataset, focusing on variables affecting hurricane intensification (e.g., SST, wind shear, pressure gradients).
 
@@ -99,27 +87,18 @@ Once you define the network structure, you can estimate the conditional probabil
 
 - **5. Validation**: Validate the network by comparing predicted intensifications with historical hurricane records.
 
-**6. Example Scenario:**
+### Example Scenario
 
 Consider an El Niño event (ENSO), which is known to increase wind shear in the Atlantic, typically suppressing hurricane formation. Your Bayesian Network could assess how much the reduction in SST or the increase in wind shear during an El Niño event reduces the likelihood of hurricane intensification. Similarly, during La Niña conditions, the model could show how warmer SSTs and reduced wind shear increase the chance of hurricane intensification.
 
-  
-
-**7. Visualization:**
-
-  
+### Visualization
 
 - Once your BN is built, visualize it to communicate how each factor (e.g., SST, wind shear) contributes to hurricane intensification. Graphical tools like pgmpy in Python can be used to visualize the structure of the Bayesian Network.
 
-  
-
-**8. Extensions:**
-
-  
+### Extensions  
 
 - You can extend the model to include socio-economic impacts by linking hurricane intensification to potential damage, using variables like **coastal population density**, **urbanization**, and **preparedness level**.
 
   
-
 This Bayesian Network approach can help you assess how different climate and environmental factors contribute to the risk of hurricane intensification, providing a powerful tool for both understanding and predicting future hurricane activity.
 
