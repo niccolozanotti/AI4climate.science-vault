@@ -51,7 +51,9 @@ description: >
 > 30. Prospects of global climate modeling
 ^syllabus-CSM
 
-- $\LaTeX$ notes: [here](https://raw.githubusercontent.com/niccolozanotti/climate-modeling-notes/main/notes.pdf)
+## Notes 
+
+An up to date version of the $\LaTeX$ notes can be downloaded [here](https://raw.githubusercontent.com/niccolozanotti/climate-modeling-notes/main/notes.pdf). The repository with the source code is niccolozanotti/climate-modeling-notes
 ## Exam
 
 Written + Oral. Previous years questions [here](https://mega.nz/folder/Cc0j0CKT#UysyRoxpP-6kfzonFGK35Q/file/DZtzmJjS).
