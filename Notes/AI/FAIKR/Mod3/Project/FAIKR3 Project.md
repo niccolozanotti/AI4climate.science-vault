@@ -26,7 +26,7 @@ A simplified network could have **Sea Surface Temperature (SST)**, **Wind Shear*
 
 ```mermaid
 graph TD
-    ENSO['ENSO'] --> SST[SST]
+    ENSO[ENSO] --> SST[SST]
     ENSO --> WindShear[Wind Shear]
     MJO[MJO] --> Humidity[Humidity]
     MJO --> WindShear
@@ -49,12 +49,12 @@ graph TD
 - **Land Interaction**: When hurricanes make landfall, they usually weaken, but if they pass over warm waters near coastal regions, they may undergo rapid intensification.
 
 
-Could be expanded/shrunk with more detailed connections depending on data availability.
+Could be expanded/shrunk with more detailed connections depending on **data availability**.
 
 
-**3. Data Collection:**
+### Data Collection
 
-  You’ll need reliable climate and hurricane data to estimate the parameters of the Bayesian Network. Some useful datasets include:
+ Some useful datasets:
 
 - **National Hurricane Center (NHC) Data**: Provides historical hurricane tracks and intensities.
 
