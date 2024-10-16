@@ -3,8 +3,8 @@ title:
 aliases: 
 date: 2024-10-16
 tags: 
-description:
-draft: true
+description: 
+draft: false
 ---
 
 ## Bayesian network to assess the impact of several factors on hurricane formation
