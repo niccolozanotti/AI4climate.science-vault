@@ -6,6 +6,7 @@ date: 2024-09-29
 tags: 
 original: https://wanderer.cmcc.it/appchap.html
 description:
+draft: true
 ---
 ## Zonal mean of spectral amplitudes
 

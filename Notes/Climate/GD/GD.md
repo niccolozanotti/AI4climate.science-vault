@@ -12,93 +12,38 @@ aliases:
 description: >
   Notes of Professor Antonio Navarra on Global dynamics.
 ---
-#todo : substituting [[GD#^syllabus-GD-online|online contents]] with [[GD#^syllabus-GD|local contents]]  
+
 >[!info] Description
-> Revised version of *Notes on Global dynamics* by Prof. Antonio Navarra. All rights reserved. Original content accessible [here](https://wanderer.cmcc.it/index_GD.html)[^1].
-## Course contents
+> Revised version of *Notes on Global dynamics* by Prof. Antonio Navarra. All rights reserved. 
 
->[!summary]- Contents ( #fix of #wikilinks in progress **done** up to section 4.)
-> - [[GD Intro|1. Introduction]]
->     - [[GD Intro#Coordinate systems|1.1. Coordinate systems]] 
->         - [[GD Intro#Spherical Coordinates|1.1.1. Spherical Coordinates]] 
->         - [[GD Intro#The $ beta$-plane|1.1.2. The beta-plane]]
->     - [[GD Intro#Advective derivative|1.2. Advective derivative]]
->     - [[GD Intro#Primitive Equations|1.3. Primitive Equations]]
->     - [[GD Intro#Hydrostatic balance|1.4. Hydrostatic balance]]
->     - [[GD Intro#Summary of fundamental equations|1.5. Summary of fundamental equations]]
-> - [[GD Circulation theorems|2. Circulation theorems and Ertel’s potential vorticity]]
-> - [[GD Homogeneous flows|3. Homogeneous flows]]
->     - [[GD Homogeneous flows#The shallow equation in spherical coordinates|3.1. The shallow equation in spherical coordinates]]
->     - [[GD Homogeneous flows#The incompressible equations|3.2. The incompressible equations]]
->     - [[GD Homogeneous flows#The vorticity equation on the $ beta$-plane|3.3. The vorticity equation on the $\beta$-plane]]
->     - [[GD Homogeneous flows#Accelerating the zonal flow|3.4. Accelerating the zonal flow]]
-> - [[GD Quasi-Geostrophic Potential Vorticity|4. The Quasi-Geostrophic potential vorticity]]
->     - [[GD Quasi-Geostrophic Potential Vorticity#The equations of motion|4.1. The equations of motion]]
->     - [[GD Quasi-Geostrophic Potential Vorticity#The Boussinesq equation for the atmosphere|4.2. The Boussinesq equation for the atmosphere]]
->     - [[GD Quasi-Geostrophic Potential Vorticity#Scales of motion|4.3. Scales of motion]]
->     - [[GD Quasi-Geostrophic Potential Vorticity#The Rossby number expansion|4.4. The Rossby number expansion]]
->     - [[GD Quasi-Geostrophic Potential Vorticity#The quasi-geostrophic potential vorticity equation|4.5. The quasi-geostrophic potential vorticity equation]]
->     - [[GD Quasi-Geostrophic Potential Vorticity#Relation with Ertel's potential vorticity|4.6. Relation with Ertel’s potential vorticity]]
->         - [[GD Quasi-Geostrophic Potential Vorticity#Gradients along isopycnals|4.6.1. Gradients along isopycnals]]
->         - [[GD Quasi-Geostrophic Potential Vorticity#Fluxes of potential vorticity|4.6.2. Fluxes of potential vorticity]]
->         - [[GD Quasi-Geostrophic Potential Vorticity#Meridional fluxes of potential vorticity|4.6.3. Meridional fluxes of potential vorticity]]
-> - [[5. The vorticity equation|5. The vorticity equation]]
->     - [[5. The vorticity equation#Western intensification|5.1. Western intensification]]
->     - [[5. The vorticity equation#The eddy equation|5.2. The eddy equation]]
->     - [[5. The vorticity equation#Enstrophy|5.3. Enstrophy]]
->     - [[5. The vorticity equation#Steady flows|5.4. Steady flows]]
-> - [[6. Flows over topography|6. Flows over topography]]
->     - [[6. Flows over topography#Linearized vorticity equation with topography|6.1. Linearized vorticity equation with topography]]
->     - [[6. Flows over topography#Waves forced by topography|6.2. Waves forced by topography]]
->         - [[6. Flows over topography#Inviscid waves|6.2.1. Inviscid waves]]
->         - [[6. Flows over topography#Dissipation and Ekman pumping|6.2.2. Dissipation and Ekman pumping]]
->     - [[6. Flows over topography#Multiple equilibria|6.3. Multiple equilibria]]
-> - [[7. Waves and oscillations|7. Waves and oscillations]]
->     - [[7. Waves and oscillations#Sound and Gravity Waves|7.1. Sound and Gravity Waves]]
->     - [[7. Waves and oscillations#Barotropic waves|7.2. Barotropic waves]]
->     - [[7. Waves and oscillations#Baroclinic waves|7.3. Baroclinic waves]]
->     - [[7. Waves and oscillations#Charney-Drazin|7.4. Charney-Drazin]]
-> - [[8. Energetics|8. Energetics]]
->     - [[8. Energetics#Eddy energy|8.1. Eddy energy]]
->     - [[8. Energetics#Baroclinic Energetics|8.2. Baroclinic Energetics]]
->     - [[8. Energetics#Critical Lines|8.3. Critical Lines]]
-> - [[9. The General Circulation of the Atmosphere|9. The General Circulation of the Atmosphere]]
->     - [[9. The General Circulation of the Atmosphere#Space-time splittings|9.1. Space-time splittings]]
->     - [[9. The General Circulation of the Atmosphere#Zonal means|9.2. Zonal means]]
->     - [[9. The General Circulation of the Atmosphere#Time means|9.3. Time means]]
->     - [[9. The General Circulation of the Atmosphere#Higher order quantities|9.4. Higher order quantities]]
->     - [[9. The General Circulation of the Atmosphere#The time averaged zonal general circulation|9.5. The time averaged zonal general circulation]]
->     - [[9. The General Circulation of the Atmosphere#The horizontal general circulation|9.6. The horizontal general circulation]]
->         - [[9. The General Circulation of the Atmosphere#The horizontal wind|9.6.1. The horizontal wind]]
->         - [[9. The General Circulation of the Atmosphere#Mean Sea Level Pressure|9.6.2. Mean Sea Level Pressure]]
->         - [[9. The General Circulation of the Atmosphere#The Sea Surface Temperature|9.6.3. The Sea Surface Temperature]]
->         - [[9. The General Circulation of the Atmosphere#The 2 Meter Temperature|9.6.4. The 2 Meter Temperature]]
->     - [[9. The General Circulation of the Atmosphere#The Kinetic Energy|9.7. The Kinetic Energy]]
->     - [[9. The General Circulation of the Atmosphere#The Meridional Momentum Flux|9.8. The Meridional Momentum Flux]]
->     - [[9. The General Circulation of the Atmosphere#The Meridional Heat Flux|9.9. The Meridional Heat Flux]]
-> - [[10. The energy balance|10. The energy balance]]
->     - [[10. The energy balance#The balance at the top of the atmosphere|10.1. The balance at the top of the atmosphere]]
->     - [[10. The energy balance#The surface energy balance|10.2. The surface energy balance]]
->     - [[10. The energy balance#Precipitation|10.3. Precipitation]]
->     - [[GD Theenergy balance#Clouds|10.4. Clouds]]
-> - [[11. The General Circulation of the Oceans|11. The General Circulation of the Oceans]]
->     - [[11. The General Circulation of the Oceans#The thermal structure of the Ocean|11.1. The thermal structure of the Ocean]]
->     - [[11. The General Circulation of the Oceans#The salinity structure of the Ocean|11.2. The salinity structure of the Ocean]]
->     - [[11. The General Circulation of the Oceans#Ocean Currents|11.3. Ocean Currents]]
->         - [[11. The General Circulation of the Oceans#The overall basin circulation|11.3.1. The overall basin circulation]]
->         - [[11. The General Circulation of the Oceans#The equatorial circulation|11.3.2. The equatorial circulation]]
->         - [[11. The General Circulation of the Oceans#The Gulf Stream|11.3.3. The Gulf Stream]]
->         - [[11. The General Circulation of the Oceans#The Kuroshio|11.3.4. The Kuroshio]]
->         - [[11. The General Circulation of the Oceans#The upwelling zones|11.3.5. The upwelling zones]]
->         - [[11. The General Circulation of the Oceans#The Antarctic Circumpolar Current|11.3.6. The Antarctic Circumpolar Current]]
->         - [[11. The General Circulation of the Oceans#Deep water formation and the thermohaline circulation|11.3.7. Deep water formation and the thermohaline circulation]]
->     - [[11. The General Circulation of the Oceans#Heat and freshwater transports|11.4. Heat and freshwater transports]]
->     - [[11. The General Circulation of the Oceans#The mixed layer|11.5. The mixed layer]]
->     - [[11. The General Circulation of the Oceans#Transient phenomena|11.6. Transient phenomena]]
->         - [[11. The General Circulation of the Oceans#Kelvin and Rossby waves|11.6.1. Kelvin and Rossby waves]]
->         - [[11. The General Circulation of the Oceans#El Nino and La Nina|11.6.2. El Nino and La Nina]]
+## Contents 
 
->[!summary]- Online contents
+>[!summary]- Table of Contents
+> Links to the original material
+> - [1. Introduction](https://wanderer.cmcc.it/chp01chap.html)
+>     - [1.1. Coordinate systems](https://wanderer.cmcc.it/chp01chap.html#coordinate-systems)
+>         - [1.1.1. Spherical Coordinates](https://wanderer.cmcc.it/chp01chap.html#spherical-coordinates)
+>         - [1.1.2. The Beta-plane](https://wanderer.cmcc.it/chp01chap.html#the-beta-plane)
+>     - [1.2. Advective derivative](https://wanderer.cmcc.it/chp01chap.html#advective-derivative)
+>     - [1.3. Primitive Equations](https://wanderer.cmcc.it/chp01chap.html#primitive-equations)
+>     - [1.4. Hydrostatic balance](https://wanderer.cmcc.it/chp01chap.html#hydrostatic-balance)
+>     - [1.5. Summary of fundamental equations](https://wanderer.cmcc.it/chp01chap.html#summary-of-fundamental-equations)
+> - [2. Circulation theorems and Ertel’s potential vorticity](https://wanderer.cmcc.it/chp001chap.html)
+> - [3. Homogeneous flows](https://wanderer.cmcc.it/chp02chap.html)
+>     - [3.1. The shallow equation in spherical coordinates](https://wanderer.cmcc.it/chp02chap.html#the-shallow-equation-in-spherical-coordinates)
+>     - [3.2. The incompressible equations](https://wanderer.cmcc.it/chp02chap.html#the-incompressible-equations)
+>     - [3.3. The vorticity equation on the \(\beta\)-plane](https://wanderer.cmcc.it/chp02chap.html#the-vorticity-equation-on-the-beta-plane)
+>     - [3.4. Accelerating the zonal flow](https://wanderer.cmcc.it/chp02chap.html#accelerating-the-zonal-flow)
+> - [4. The Quasi-Geostrophic potential vorticity](https://wanderer.cmcc.it/chp1chap.html)
+>     - [4.1. The equations of motion](https://wanderer.cmcc.it/chp1chap.html#the-equations-of-motion)
+>     - [4.2. The Boussinesq equation for the atmosphere](https://wanderer.cmcc.it/chp1chap.html#the-boussinesq-equation-for-the-atmosphere)
+>     - [4.3. Scales of motion](https://wanderer.cmcc.it/chp1chap.html#scales-of-motion)
+>     - [4.4. The Rossby number expansion](https://wanderer.cmcc.it/chp1chap.html#the-rossby-number-expansion)
+>     - [4.5. The quasi-geostrophic potential vorticity equation](https://wanderer.cmcc.it/chp1chap.html#the-quasi-geostrophic-potential-vorticity-equation)
+>     - [4.6. Relation with Ertel’s potential vorticity](https://wanderer.cmcc.it/chp1chap.html#relation-with-ertels-potential-vorticity)
+>         - [4.6.1. Gradients along isopycnals](https://wanderer.cmcc.it/chp1chap.html#gradients-along-isopycnals)
+>         - [4.6.2. Fluxes of potential vorticity](https://wanderer.cmcc.it/chp1chap.html#fluxes-of-potential-vorticity)
+>         - [4.6.3. Meridional fluxes of potential vorticity](https://wanderer.cmcc.it/chp1chap.html#meridional-fluxes-of-potential-vorticity)
 > - [5. The vorticity equation](https://wanderer.cmcc.it/chp11chap.html)
 >     - [5.1. Western intensification](https://wanderer.cmcc.it/chp11chap.html#western-intensification)
 >     - [5.2. The eddy equation](https://wanderer.cmcc.it/chp11chap.html#the-eddy-equation)
@@ -165,13 +110,16 @@ description: >
 >     - [15.1. Zonal mean of spectral amplitudes](https://wanderer.cmcc.it/appchap.html#zonal-mean-of-spectral-amplitudes)
 >     - [15.2. Differentiation of implicit functions](https://wanderer.cmcc.it/appchap.html#differentiation-of-implicit-functions)
 >     - [15.3. Pressure gradient force in terms of potential temperature](https://wanderer.cmcc.it/appchap.html#pressure-gradient-force-in-terms-of-potential-temperature)
-^syllabus-GD-online
-## Reading material
+> - [16. References](https://wanderer.cmcc.it/refchap.html)
 
-- [References](https://wanderer.cmcc.it/refchap.html)
+
+- Original notes:  [here](https://wanderer.cmcc.it/index_GD.html)[^1].
+- $\LaTeX$ notes: [here](https://raw.githubusercontent.com/niccolozanotti/climate-modeling-notes/main/gd.pdf) 
+	- [source](https://github.com/niccolozanotti/climate-modeling-notes/tree/main/GD) 
 
 ## Resources
 
 - [Course web page](https://wanderer.cmcc.it/index_GD.html)
 
 [^1]: if prompted for credentials, use the following: `{user: cmcc, psw: pD8phJg3e76J}`
+
