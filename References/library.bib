@@ -30,6 +30,7 @@
  journaltitle = {Climate Risk Management},
  keywords = {Climate storylines,Downward counterfactuals,European Union Solidarity Fund},
  pages = {100349},
+ shortjournal = {Climate Risk Management},
  title = {A Framework for Building Climate Storylines Based on Downward Counterfactuals: {{The}} Case of the {{European Union Solidarity}} Fund},
  url = {https://www.sciencedirect.com/science/article/pii/S2212096321000784},
  volume = {33}
@@ -62,6 +63,7 @@
  doi = {10.1038/nclimate2450},
  journaltitle = {Nature Climate Change},
  pages = {107--113},
+ shortjournal = {Nature Climate Change},
  title = {Tales of Future Weather},
  volume = {5}
 }
@@ -87,6 +89,7 @@
  journaltitle = {Climate Risk Management},
  keywords = {Climate change communication,CMIP5,Extreme seasonal weather,Irish climate change projections,North Atlantic storminess,Seasonal analogues},
  pages = {37--52},
+ shortjournal = {Climate Risk Management},
  title = {Past and Future Climate Change in the Context of Memorable Seasonal Extremes},
  url = {https://www.sciencedirect.com/science/article/pii/S221209631600005X},
  volume = {11}
@@ -101,13 +104,51 @@
 }
 
 @book{Russell2021,
- abstract = {xviii, 1132 pages : illustrations ; 26 cm},
  author = {Russell, S. and Norvig, P.},
  date = {2021},
  edition = {4th Global Edition},
  publisher = {Pearson},
  title = {Artificial Intelligence : A Modern Approach},
  url = {https://elibrary.pearson.de/book/99.150005/9781292401171}
+}
+
+@unpublished{Scutari2019,
+ author = {Scutari, Marco},
+ date = {2019-11-06},
+ eventtitle = {1st “{{Artificial Intelligence}} for {{Copernicus}}” {{Workshop}}},
+ langid = {english},
+ title = {Challenges in {{Bayesian Network Modelling}} of {{Climate}} and {{Weather Data}}},
+ venue = {Reading, UK}
+}
+
+@article{Scutari2019a,
+ abstract = {Learning the structure of Bayesian networks from data is known to be a computationally challenging, NP-hard problem. The literature has long investigated how to perform structure learning from data containing large numbers of variables, following a general interest in high-dimensional applications (“small n, large p”) in systems biology and genetics. More recently, data sets with large numbers of observations (the so-called “big data”) have become increasingly common; and these data sets are not necessarily high-dimensional, sometimes having only a few tens of variables depending on the application. We revisit the computational complexity of Bayesian network structure learning in this setting, showing that the common choice of measuring it with the number of estimated local distributions leads to unrealistic time complexity estimates for the most common class of score-based algorithms, greedy search. We then derive more accurate expressions under common distributional assumptions. These expressions suggest that the speed of Bayesian network learning can be improved by taking advantage of the availability of closed-form estimators for local distributions with few parents. Furthermore, we find that using predictive instead of in-sample goodness-of-fit scores improves speed; and we confirm that it improves the accuracy of network reconstruction as well, as previously observed by Chickering and Heckerman (Stat Comput 10: 55–62,~2000). We demonstrate these results on large real-world environmental and epidemiological data; and on reference data sets available from public repositories.},
+ author = {Scutari, Marco and Vitolo, Claudia and Tucker, Allan},
+ date = {2019-09-01},
+ doi = {10.1007/s11222-019-09857-1},
+ issn = {1573-1375},
+ journaltitle = {Statistics and Computing},
+ number = {5},
+ pages = {1095--1108},
+ shortjournal = {Statistics and Computing},
+ title = {Learning {{Bayesian}} Networks from Big Data with Greedy Search: Computational Complexity and Efficient Implementation},
+ url = {https://doi.org/10.1007/s11222-019-09857-1},
+ volume = {29}
+}
+
+@article{Scutari2019b,
+ abstract = {Three classes of algorithms to learn the structure of Bayesian networks from data are common in the literature: constraint-based algorithms, which use conditional independence tests to learn the dependence structure of the data; score-based algorithms, which use goodness-of-fit scores as objective functions to maximise; and hybrid algorithms that combine both approaches. Constraint-based and score-based algorithms have been shown to learn the same structures when conditional independence and goodness of fit are both assessed using entropy and the topological ordering of the network is known [1]. In this paper, we investigate how these three classes of algorithms perform outside the assumptions above in terms of speed and accuracy of network reconstruction for both discrete and Gaussian Bayesian networks. We approach this question by recognising that structure learning is defined by the combination of a statistical criterion and an algorithm that determines how the criterion is applied to the data. Removing the confounding effect of different choices for the statistical criterion, we find using both simulated and real-world complex data that constraint-based algorithms are often less accurate than score-based algorithms, but are seldom faster (even at large sample sizes); and that hybrid algorithms are neither faster nor more accurate than constraint-based algorithms. This suggests that commonly held beliefs on structure learning in the literature are strongly influenced by the choice of particular statistical criteria rather than just by the properties of the algorithms themselves.},
+ author = {Scutari, Marco and Graafland, Catharina Elisabeth and Gutiérrez, José Manuel},
+ date = {2019-12-01},
+ doi = {10.1016/j.ijar.2019.10.003},
+ issn = {0888-613X},
+ journaltitle = {International Journal of Approximate Reasoning},
+ keywords = {Bayesian networks,Climate networks,Conditional independence tests,Network scores,Structure learning},
+ pages = {235--253},
+ shortjournal = {International Journal of Approximate Reasoning},
+ title = {Who Learns Better {{Bayesian}} Network Structures: {{Accuracy}} and Speed of Structure Learning Algorithms},
+ url = {https://www.sciencedirect.com/science/article/pii/S0888613X19301434},
+ volume = {115}
 }
 
 @article{Shepherd2016,
@@ -119,6 +160,7 @@
  journaltitle = {Current Climate Change Reports},
  number = {1},
  pages = {28--38},
+ shortjournal = {Current Climate Change Reports},
  title = {A {{Common Framework}} for {{Approaches}} to {{Extreme Event Attribution}}},
  url = {https://doi.org/10.1007/s40641-016-0033-y},
  volume = {2}
@@ -133,6 +175,7 @@
  journaltitle = {Climatic Change},
  number = {3},
  pages = {555--571},
+ shortjournal = {Climatic Change},
  title = {Storylines: An Alternative Approach to Representing Uncertainty in Physical Aspects of Climate Change},
  url = {https://doi.org/10.1007/s10584-018-2317-9},
  volume = {151}
@@ -145,21 +188,26 @@
  doi = {10.1098/rspa.2019.0013},
  journaltitle = {Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences},
  pages = {20190013},
+ shortjournal = {Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences},
  title = {Storyline Approach to the Construction of Regional Climate Change Information},
  volume = {475}
 }
 
-@article{Shepherd2019a,
- author = {Shepherd, Theodore G.},
- date = {2019-05-15},
- doi = {10.1098/rspa.2019.0013},
- journaltitle = {Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences},
- number = {2225},
- pages = {20190013},
- title = {Storyline Approach to the Construction of Regional Climate Change Information},
- url = {https://doi.org/10.1098/rspa.2019.0013},
- urldate = {2024-04-10},
- volume = {475}
+@article{Vitolo2018,
+ abstract = {The link between pollution and health is commonly explored by trying to identify the dominant cause of pollution and its most significant effect on health outcomes. The use of multivariate features to describe exposure is less explored because investigating a large domain of scenarios is theoretically (i.e., interpretation of results) and technically (i.e., computational effort) challenging. In this work we explore the use of Bayesian Networks with a multivariate approach to identify the probabilistic dependence structure of the environment-health nexus. This consists of environmental factors (topography and climate), exposure levels (concentration of outdoor air pollutants), and health outcomes (mortality rates). The information is collated with regard to a data-rich study area: the English regions (UK), which incorporate environmental types that are different in character from urban to rural. We implemented a reproducible workflow in the R programming language to collate environment-health data and analyze almost 50 millions of observations making use of a graphical model (Bayesian Network) and Big Data technologies. Results show that for pollution and weather variables the model tests well in sample but also has good predictive power when tested out of sample. This is facilitated by a training/testing split in the data along time and space dimension and suggests that the model generalizes well to new regions and time periods.},
+ author = {Vitolo, Claudia and Scutari, Marco and Ghalaieny, Mohamed and Tucker, Allan and Russell, Andrew},
+ date = {2018-04-01},
+ doi = {10.1002/2017EA000326},
+ journaltitle = {Earth and Space Science},
+ keywords = {air pollution,Bayesian Networks,climate,health,modeling},
+ number = {4},
+ pages = {76--88},
+ publisher = {John Wiley \& Sons, Ltd},
+ shortjournal = {Earth and Space Science},
+ title = {Modeling {{Air Pollution}}, {{Climate}}, and {{Health Data Using Bayesian Networks}}: {{A Case Study}} of the {{English Regions}}},
+ url = {https://doi.org/10.1002/2017EA000326},
+ urldate = {2024-10-19},
+ volume = {5}
 }
 
 @book{Washington2005,

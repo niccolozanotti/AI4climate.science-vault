@@ -66,7 +66,7 @@ def merge_multiple_bib_files(repo_path, output_file):
     print(f'Merged {len(bib_files)} .bib files and saved to {output_file}')
 
 if __name__ == "__main__":
-   repo_path = '/Users/niccolozanotti/Documents/GitHub/obsidian-vault/References'
+   repo_path = '/Users/niccolozanotti/Documents/GitHub/AI4climate.science-vault/References'
    output_file = f'{repo_path}/library.bib'
    merge_multiple_bib_files(repo_path, output_file)
 ```
