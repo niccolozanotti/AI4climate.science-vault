@@ -19,8 +19,8 @@ description: >
 ## Course contents
 
 >[!summary]- Contents 
-> 1. [[CSM Intro|Introduction and Historical Developments]]
-> 2. [[CSM Climate system description|Physical Description of the climate system]]
+> 1. Introduction and Historical Developments
+> 2. Physical Description of the climate system
 > 3. Basic Numerical methods for constructing the Earth System Model
 > 4. Numerical Grids
 > 5. Finite Differences
@@ -53,7 +53,8 @@ description: >
 
 ## Notes 
 
-An up to date version of the $\LaTeX$ notes can be downloaded [here](https://raw.githubusercontent.com/niccolozanotti/climate-modeling-notes/main/cm.pdf). Source code [here](https://github.com/niccolozanotti/climate-modeling-notes/tree/main/CM).
+-  $\LaTeX$ notes can be downloaded [here](https://raw.githubusercontent.com/niccolozanotti/climate-modeling-notes/main/cm.pdf). 
+	- Source code [here](https://github.com/niccolozanotti/climate-modeling-notes/tree/main/CM).
 ## Exam
 
 Written + Oral. Previous years questions [here](https://mega.nz/folder/Cc0j0CKT#UysyRoxpP-6kfzonFGK35Q/file/DZtzmJjS).
