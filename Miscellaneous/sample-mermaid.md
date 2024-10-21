@@ -4,6 +4,7 @@ aliases:
 date: 2024-09-22
 tags: 
 description:
+draft: true
 ---
 
 Sample mermaid.js diagrams from [here](https://mermaid.js.org/syntax/examples.html) 

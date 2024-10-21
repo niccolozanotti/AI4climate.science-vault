@@ -12,8 +12,8 @@ This website stems from the notes I am taking using [Obsidian](https://obsidian
 
 _As of now_ it holds:
 - my [[Notes|University notes]] with the main topics being [[AI|Artificial Intelligence]] and [[Climate|Climate science]] (📓Notes in the header)
+- Some [[References/Literature-Notes/|references]] (books/papers) I am reading and taking notes on. Full list of references [[References|here]].
 - [[Miscellaneous|Miscellanea]]
-- Some [[References/Literature-Notes/|references]] (books/papers) I am reading and taking notes on 
 
 ---
 ### How to navigate the website
