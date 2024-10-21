@@ -76,7 +76,7 @@ Bibliographies:
 - `library1.bib` : AI
 - `library2.bib` : Climate modeling
 - `library3.bib` : Data Assimilation
-- `library4.bib` : Climate story-line
+- `library4.bib` : BayesianNet Climate Project
 
 ---
 
@@ -129,7 +129,7 @@ def markdown_references_from_bib(file_path):
 
 # Example usage
 if __name__ == "__main__":
-    repo_path = '/Users/niccolozanotti/Documents/GitHub/obsidian-vault/References'
+    repo_path = '/Users/niccolozanotti/Documents/GitHub/AI4climate.science-vault/References'
     bib_file = f'{repo_path}/library.bib'
     markdown_references_from_bib(bib_file)
 ```
