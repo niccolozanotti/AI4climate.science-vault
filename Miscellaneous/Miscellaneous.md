@@ -20,4 +20,5 @@ Collection of random (but useful) stuff:
 - [Why should we keep working on theory and fluid dynamics in climate sciences?](https://blogs.reading.ac.uk/weather-and-climate-at-reading/2024/why-should-keep-working-on-theory-and-fluid-dynamics-in-climate-sciences/)
 - [Machine Learning for Climate Physics and Simulations](https://arxiv.org/abs/2404.13227)
 - [Exploring the design space of deep-learning-based weather forecasting systems](https://arxiv.org/abs/2410.07472)
+- [Google NeuralGCM Stephan Hoyer small talk](https://youtu.be/n4Rw3RlpyJw)
 
