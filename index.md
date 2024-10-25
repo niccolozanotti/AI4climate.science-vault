@@ -14,7 +14,6 @@ _As of now_ it holds:
 - my [[Notes|University notes]] with the main topics being [[AI|Artificial Intelligence]] and [[Climate|Climate science]] (📓Notes in the header)
 - Some [[References/Literature-Notes/|references]] (books/papers) I am reading and taking notes on. Full list of references [[References|here]].
 - [[Miscellaneous|Miscellanea]]
-- My [[Projects|Projects/Research]]
 
 ---
 ### How to navigate the website
