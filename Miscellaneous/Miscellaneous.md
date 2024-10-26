@@ -26,3 +26,5 @@ description: Collection of random (but useful) stuff
 ## Teleconnections
 - [Super nice blog article in NOAA's ENSO Blog about teleconnections](https://www.climate.gov/news-features/blogs/enso/what-are-teleconnections-connecting-earths-climate-patterns-global)
 
+## Articles on AI Weather forecasting
+- [AI is transforming weather forecasting. Is the U.S. falling behind?](https://12ft.io/https://www.washingtonpost.com/weather/2024/10/25/ai-weather-models-helene-milton-forecasts/) (Washington Post)
