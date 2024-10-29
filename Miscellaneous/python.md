@@ -12,5 +12,6 @@ description:
 
 - [Real Python](https://realpython.com/python-f-strings/)
 	- [New features](https://realpython.com/python-f-strings/#upgrading-f-strings-python-312-and-beyond) from python **3.12**
+- [cheatsheet](https://fstring.help/cheat/)
 
 
