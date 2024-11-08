@@ -145,6 +145,7 @@
 	{trigger: "e\\xi sts", replacement: "\\exists", options: "mA", priority: 1},
 
 	{trigger: "LL", replacement: "\\mathcal{L}", options: "mA"},
+	{trigger: "GG", replacement: "\\mathcal{G}", options: "mA"},
 	{trigger: "HH", replacement: "\\mathcal{H}", options: "mA"},
     {trigger: "MM", replacement: "\\mathcal{M}", options: "mA"},
 	{trigger: "CC", replacement: "\\mathbb{C}", options: "mA"},
