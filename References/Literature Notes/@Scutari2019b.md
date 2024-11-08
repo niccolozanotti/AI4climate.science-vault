@@ -23,4 +23,7 @@ Three classes of algorithms to learn the structure of Bayesian networks from dat
 
 ## Background and notation
 
-Set of random variables $\mathbf{X} = \{ X_{1}, \dots, X_{N} \}$ associated to nodes of a directed acyclic graph (**DAG**) $\mathcal{G}$. We indicate with $A$ the set of arcs of $\mathcal{G}$ 
+Set of random variables $\mathbf{X} = \{ X_{1}, \dots, X_{N} \}$ associated to nodes of a directed acyclic graph (**DAG**) $\mathcal{G}$. We indicate with $A$ the set of arcs of $\mathcal{G}$. 
+Graphical separation in $\mathcal{G} \iff$ conditional independence between the respective variables.
+
+$\Theta$ indicate the set of parameters of the global distribution of $\mathbf{X}$, $P(\mathbf{X})$. The global distribution decomposes in one *local distribution* for each $X_{i}$ (with parameters $\Theta_{X_{i}}$) conditional on its parents $\Pi_{X_{i}}$.
