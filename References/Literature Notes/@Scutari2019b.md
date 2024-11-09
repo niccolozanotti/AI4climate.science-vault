@@ -28,7 +28,10 @@ Graphical separation in $\mathcal{G} \iff$ conditional independence between the 
 
 $\Theta$ indicate the set of parameters of the global distribution of $\mathbf{X}$, $P(\mathbf{X})$. The global distribution decomposes in one *local distribution* for each $X_{i}$ (with parameters $\Theta_{X_{i}}$) conditional on its parents $\Pi_{X_{i}}$.
 
+$$
+ P (\mathbf{X},  \mathcal{G}, \Theta) = \prod_{i=1}^{N} P (X_{i} | \Pi_{X_{i}}, \Theta_{X_{i}})
+$$
 
-$$
- P (\mathbf{X},  \mathcal{G}, \Theta) = \prod_{i=1}^{N} P (X_{i} | )
-$$
+The DAG $\mathcal{G}$ does not uniquely identify a Bayesian Network (BN). 
+
+> A *v-structure* in a BN is a pattern of arcs like $X_{i} \rightarrow X_{j} \leftarrow X_{k}$. 
