@@ -35,3 +35,7 @@ $$
 The DAG $\mathcal{G}$ does not uniquely identify a Bayesian Network (BN). 
 
 > A *v-structure* in a BN is a pattern of arcs like $X_{i} \rightarrow X_{j} \leftarrow X_{k}$. 
+
+Equivalence class of BN defined by the same
+- underlying *undirected graph* and 
+- v-structures 
