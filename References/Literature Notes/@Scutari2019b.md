@@ -39,3 +39,4 @@ The DAG $\mathcal{G}$ does not uniquely identify a Bayesian Network (BN).
 Equivalence class of BN defined by the same
 - underlying *undirected graph* and 
 - v-structures 
+
