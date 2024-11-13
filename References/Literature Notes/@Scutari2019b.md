@@ -25,18 +25,17 @@ Three classes of algorithms to learn the structure of Bayesian networks from dat
 
 Set of random variables $\mathbf{X} = \{ X_{1}, \dots, X_{N} \}$ associated to nodes of a directed acyclic graph (**DAG**) $\mathcal{G}$. We indicate with $A$ the set of arcs of $\mathcal{G}$. 
 Graphical separation in $\mathcal{G} \iff$ conditional independence between the respective variables.
-
-$\Theta$ indicate the set of parameters of the global distribution of $\mathbf{X}$, $P(\mathbf{X})$. The global distribution decomposes in one *local distribution* for each $X_{i}$ (with parameters $\Theta_{X_{i}}$) conditional on its parents $\Pi_{X_{i}}$.
-
+	As a result the following factorization hold
 $$
  P (\mathbf{X},  \mathcal{G}, \Theta) = \prod_{i=1}^{N} P (X_{i} | \Pi_{X_{i}}, \Theta_{X_{i}})
 $$
+$\Theta$ indicate the set of parameters of the global distribution of $\mathbf{X}$, $P(\mathbf{X})$. The global distribution decomposes in one *local distribution* for each $X_{i}$ (with parameters $\Theta_{X_{i}}$) conditional on its parents $\Pi_{X_{i}}$.
 
 The DAG $\mathcal{G}$ does not uniquely identify a Bayesian Network (BN). 
 
 > A *v-structure* in a BN is a pattern of arcs like $X_{i} \rightarrow X_{j} \leftarrow X_{k}$. 
 
-Equivalence class of BN defined by the same
+An **equivalence class** of BN is defined by the same
 - underlying *undirected graph* and 
 - v-structures 
 
