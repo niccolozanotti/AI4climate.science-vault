@@ -15,3 +15,8 @@ draft: true
 - precise
 - custom made
 
+---
+
+## Data acquisition
+
+Done with an app. 
