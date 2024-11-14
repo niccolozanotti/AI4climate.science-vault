@@ -28,3 +28,10 @@ description: Collection of random (but useful) stuff
 
 ## Articles on AI Weather forecasting
 - [AI is transforming weather forecasting. Is the U.S. falling behind?](https://12ft.io/https://www.washingtonpost.com/weather/2024/10/25/ai-weather-models-helene-milton-forecasts/) (Washington Post)
+
+## AI-powered code writing assistants
+- [Bolt](https://bolt.new)
+
+## Research AI tools
+- [Elicit](https://elicit.com): ask a research question, answers with relevant references
+- [notebooklm](http://notebooklm.google.com/) (set VPN to the US)
