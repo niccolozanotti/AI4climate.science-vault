@@ -1,4 +1,4 @@
-]---
+---
 title: >
    Marco Scutari et al. (2019)
 type: article
