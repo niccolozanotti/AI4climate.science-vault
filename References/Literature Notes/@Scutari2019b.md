@@ -39,7 +39,7 @@ An **equivalence class** of BN is defined by the same
 - underlying *undirected graph* and 
 - v-structures 
 
-**Gaussian Bayesian Network**s (GBNs) assume that  the $X_{i}$  are univariate normal random variables linked by linear dependencies to their parents,
+**Gaussian Bayesian Network**s (GBNs) ([5](https://arxiv.org/pdf/1302.6808)) assume that  the $X_{i}$  are univariate normal random variables linked by linear dependencies to their parents,
 $$
  X_{i} | \Pi_{X_{i}} \sim N(\mu_{x_{i}} + \Pi_{X_{i}} \mathbf{\beta}_{X_{i}}, \sigma^{2}_{X_{i}})
 $$
