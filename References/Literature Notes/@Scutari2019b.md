@@ -39,3 +39,4 @@ An **equivalence class** of BN is defined by the same
 - underlying *undirected graph* and 
 - v-structures 
 
+
