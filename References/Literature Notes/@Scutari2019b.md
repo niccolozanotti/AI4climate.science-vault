@@ -40,4 +40,8 @@ An **equivalence class** of BN is defined by the same
 - v-structures 
 
 **Gaussian Bayesian Network**s (GBNs) assume that  the $X_{i}$  are univariate normal random variables linked by linear dependencies to their parents,
-
+$$
+ X_{i} | \Pi_{X_{i}} \sim N(\mu_{x_{i}} + \Pi_{X_{i}} \mathbf{\beta}_{X_{i}}, \sigma^{2}_{X_{i}})
+$$
+in what is essentially a linear regression model of Xi against the $X_{i}$ with regression coefficients $\mathbf{\beta}_{X_{i}} = {\beta_{X_{i}, X_{j}}, X_{j} \in \Pi_{X_{i}}}$.
+$\mathbf{X}$ is then multivariate normal, and we generally assume that its covariance matrix $\Sigma$ is positive definite. Equivalently [6], we can consider the precision matrix $\Omega = \Sigma^{-1}$ and parametrize $X_{i} | \Pi_{X_{i}}$ with the partial correlations
