@@ -45,3 +45,11 @@ $$
 $$
 in what is essentially a linear regression model of Xi against the $X_{i}$ with regression coefficients $\mathbf{\beta}_{X_{i}} = {\beta_{X_{i}, X_{j}}, X_{j} \in \Pi_{X_{i}}}$.
 $\mathbf{X}$ is then multivariate normal, and we generally assume that its covariance matrix $\Sigma$ is positive definite. Equivalently [6], we can consider the precision matrix $\Omega = \Sigma^{-1}$ and parametrize $X_{i} | \Pi_{X_{i}}$ with the partial correlations
+$$
+ \rho_{X_{i}, X_{j}| \Pi_{X_{i}} \backslash X_{j}} = \frac{\Omega_{ij}}{\sqrt{ \Omega_{ii} }\Omega_{jj} }
+$$
+between $X_{i}$ and each parent $X_{j} \in \Pi_{X_{i}}$ given the rest, since
+$$
+ \beta_{X_{i},X_{j}} = \rho_{X_{i}, X_{j}| \Pi_{X_{i}} \backslash X_{j}} \sqrt{ \frac{\Omega_{ii}}{\Omega_{jj}} } \, .
+$$
+
