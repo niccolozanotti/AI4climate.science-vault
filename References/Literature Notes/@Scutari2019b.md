@@ -23,7 +23,7 @@ Three classes of algorithms to learn the structure of Bayesian networks from dat
 Notes
 ## Background and notation
 
-Set of random variables $\mathbf{X} = \{ X_{1}, \dots, X_{N} \}$associated to nodes of a directed acyclic graph (**DAG**)$\mathcal{G}$. We indicate with$A$the set of arcs of$\mathcal{G}$. 
+Set of random variables $\mathbf{X} = \{ X_{1}, \dots, X_{N} \}$associated to nodes of a directed acyclic graph (**DAG**)$\mathcal{G}$. We indicate with$A$the set of arcs of $\mathcal{G}$. 
 Graphical separation in$\mathcal{G} \iff$conditional independence between the respective variables.
 	As a result the following factorization hold
 $$
@@ -66,7 +66,7 @@ The climate case study from the document involves modeling global surface temper
 
 1. **Data Source:**
 
-• Monthly surface temperature values on a global 10° grid (approx. 1000 km resolution) from the NCEP/NCAR reanalysis for the period 1981–2010.
+• Monthly surface temperature values on a global 10° grid (approx. 1000 km resolution) from the [NCEP/NCAR reanalysis](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html) for the period 1981–2010.
 
 2. **Preprocessing:**
 
@@ -200,7 +200,7 @@ $$
 
 where:
 -$P(G | D)$: Posterior probability of structure$G$.
--$P(\theta | G, D)$: Posterior probability of parameters$\theta$.
+-$P(\theta | G, D)$: Posterior probability of parameters $\theta$.
 
 ---
 
