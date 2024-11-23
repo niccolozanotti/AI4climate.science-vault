@@ -23,7 +23,7 @@ Three classes of algorithms to learn the structure of Bayesian networks from dat
 Notes
 ## Background and notation
 
-Set of random variables$\mathbf{X} = \{ X_{1}, \dots, X_{N} \}$associated to nodes of a directed acyclic graph (**DAG**)$\mathcal{G}$. We indicate with$A$the set of arcs of$\mathcal{G}$. 
+Set of random variables $\mathbf{X} = \{ X_{1}, \dots, X_{N} \}$associated to nodes of a directed acyclic graph (**DAG**)$\mathcal{G}$. We indicate with$A$the set of arcs of$\mathcal{G}$. 
 Graphical separation in$\mathcal{G} \iff$conditional independence between the respective variables.
 	As a result the following factorization hold
 $$
@@ -114,7 +114,7 @@ Recognized that constraint-based algorithms (e.g., PC-Stable, GS) struggle with 
 
 • Conflict in arc directions leading to invalid CPDAGs.
 
-• Introduced$\text{BIC}_{\gamma}$to enforce sparsity and address issues:
+• Introduced $\text{BIC}_{\gamma}$to enforce sparsity and address issues:
 
 • Regularization coefficient for penalizing the number of arcs.
 
@@ -158,7 +158,6 @@ Recognized that constraint-based algorithms (e.g., PC-Stable, GS) struggle with 
 
 **Findings**
 
-
 • Only score-based algorithms effectively modeled complex data with teleconnections, crucial for understanding global climate variability.
 • Constraint-based algorithms performed well in small-scale scenarios but failed to generalize to dense, real-world networks.
 • The study underscored the importance of algorithm selection and parameter tuning for complex spatial data modeling.
@@ -172,7 +171,7 @@ Recognized that constraint-based algorithms (e.g., PC-Stable, GS) struggle with 
 ## Bayesian Networks (BNs)
 
 Bayesian networks (BNs) are graphical models representing the joint probability distribution over a set of random variables$X = \{X_1, X_2, \dots, X_N\}$. The structure is defined by:
-- A **Directed Acyclic Graph (DAG)**$G$where each node corresponds to a variable.
+- A **Directed Acyclic Graph (DAG)** $G$ where each node corresponds to a variable.
 - Conditional independence relationships between variables encoded by$G$.
 
 The joint probability distribution factorizes as:
@@ -297,3 +296,149 @@ $$
 ---
 
 This mathematical foundation supports structure learning for climate modeling, enabling better handling of complex data.
+
+
+---
+
+# Climate Case Study: Algorithms Used
+
+## Constraint-Based Algorithms
+
+Constraint-based algorithms learn the structure of Bayesian Networks (BNs) by identifying independence relationships among variables using conditional independence (CI) tests.
+
+### 1. **PC-Stable Algorithm**
+
+The PC-Stable algorithm is an improved version of the PC algorithm, ensuring consistent results regardless of variable order.
+
+#### Procedure:
+1. **Initialization:**
+   - Start with a fully connected undirected graph $G$ over the variables.
+
+2. **Edge Removal (Skeleton Discovery):**
+   - For each pair of nodes $X_i$ and $X_j$, perform CI tests with conditioning sets of increasing size.
+   - Remove the edge $X_i - X_j$ if $X_i$ and $X_j$ are conditionally independent given some set $S$.
+
+3. **Orient Edges (V-Structure Discovery):**
+   - Identify v-structures $X_i \to X_k \leftarrow X_j$, where $X_i$ and $X_j$ are not adjacent, and $X_k$ is their common neighbor.
+
+4. **Propagation of Edge Directions:**
+   - Apply rules to orient remaining edges without introducing cycles.
+
+---
+
+### 2. **Grow-Shrink (GS) Algorithm**
+
+The GS algorithm is another constraint-based method focused on local structure learning.
+
+#### Procedure:
+1. **Forward Phase (Grow):**
+   - Identify the Markov blanket of each variable $X$ by iteratively adding variables that are dependent on $X$.
+
+2. **Backward Phase (Shrink):**
+   - Remove false positives from the Markov blanket by performing CI tests.
+
+3. **Structure Construction:**
+   - Combine local Markov blankets into a global structure, followed by orientation of edges.
+
+---
+
+## Score-Based Algorithms
+
+Score-based algorithms search the space of possible network structures and assign a score to each based on its fit to the data.
+
+### 3. **Tabu Search**
+
+Tabu search is an iterative optimization algorithm that avoids revisiting previously explored solutions.
+
+#### Procedure:
+1. **Initialization:**
+   - Start with an empty graph or a random DAG.
+
+2. **Local Search:**
+   - Modify the current graph by adding, deleting, or reversing edges to maximize a scoring function (e.g., $\text{BIC}_\gamma$).
+
+3. **Tabu List:**
+   - Maintain a list of recently visited graphs to prevent cycling.
+
+4. **Stopping Condition:**
+   - Terminate when no further improvements are found or a predefined number of iterations is reached.
+
+---
+
+### 4. **Hill Climbing (HC)**
+
+Hill climbing is a greedy optimization algorithm that iteratively improves the network structure.
+
+#### Procedure:
+1. **Initialization:**
+   - Start with an empty graph or a random DAG.
+
+2. **Iterative Improvement:**
+   - Evaluate all possible single-edge changes (addition, deletion, reversal).
+   - Update the graph with the change that gives the highest improvement in the scoring function (e.g., $\text{BIC}_\gamma$).
+
+3. **Stopping Condition:**
+   - Terminate when no single-edge modification improves the score.
+
+---
+
+## Hybrid Algorithms
+
+Hybrid algorithms combine constraint-based and score-based approaches to leverage the strengths of both.
+
+### 5. **Max-Min Hill Climbing (MMHC)**
+
+MMHC first restricts the search space using CI tests and then scores potential structures.
+
+#### Procedure:
+1. **Skeleton Discovery (Constraint-Based):**
+   - Use CI tests to identify a candidate set of edges for each node.
+
+2. **Structure Optimization (Score-Based):**
+   - Perform a local search (e.g., hill climbing) within the restricted search space to maximize a scoring function.
+
+---
+
+### 6. **H2PC Algorithm**
+
+H2PC uses heuristic optimizations to speed up constraint-based skeleton discovery and integrates score-based methods for final structure refinement.
+
+#### Procedure:
+1. **Heuristic Skeleton Discovery:**
+   - Identify candidate edges using CI tests with heuristics to reduce the number of tests.
+
+2. **Structure Optimization:**
+   - Refine the structure using a score-based algorithm, typically hill climbing.
+
+---
+
+## Comparison of Algorithms
+
+### Constraint-Based:
+- **Strengths:**
+  - Efficient for sparse networks.
+  - Relies on statistical tests for independence.
+
+- **Weaknesses:**
+  - Struggles with dense networks.
+  - Can fail to produce valid CPDAGs.
+
+### Score-Based:
+- **Strengths:**
+  - Handles dense networks effectively.
+  - Captures higher-order dependencies (e.g., teleconnections).
+
+- **Weaknesses:**
+  - Computationally intensive for large networks.
+
+### Hybrid:
+- **Strengths:**
+  - Combines the efficiency of constraint-based and accuracy of score-based methods.
+  - Suitable for moderately dense networks.
+
+- **Weaknesses:**
+  - Less effective than score-based algorithms for very dense networks.
+
+---
+
+This suite of algorithms provided the foundation for modeling climate data in the study, with adjustments to ensure valid structures and efficient computation for complex spatial dependencies.
