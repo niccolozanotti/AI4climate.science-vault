@@ -6,6 +6,8 @@ tags:
 description: Collection of random (but useful) stuff
 ---
 
+
+ 2024-11-28 niccolo.zanotti@studio.unibo.it niccolo.zanotti@
 ## python
 
 - [[python|python material]] 
