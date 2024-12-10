@@ -15,3 +15,5 @@ Using $p-$coordinates i can neglect $\rho$
 $$
  \vec{v} = \unitv{k} \times \frac{1}{f} \nabla_{p} \Phi
 $$
+
+
