@@ -14,3 +14,5 @@ description:
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*zWT8lXrc337WQKtV.png)
 
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*SWHTwOyGUDUDtYqL.png)
+
+![](https://www.fullstackpython.com/img/visuals/web-browser-server-wsgi.png)
