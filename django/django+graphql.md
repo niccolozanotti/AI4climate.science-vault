@@ -7,6 +7,7 @@ description:
 ---
 ![500x600](https://lh7-us.googleusercontent.com/5-P9d9XS7dYIL8rBZO0FCMmBOjSUoa3QGTGrYo2FexVhcjQkytIy6EJZKlC4zb7jOJW0EqL-xa1gdKvEaL-gGnbnBSxHT1g1Oc6AtRo5Ad5lnEYA1QJLIuFkS_xdcgrRl8DObm75v2VO2QqmPxDQReI)
 
+
 - Django + GraphQL Medium: https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-764babd30bb0
 
 ![](https://miro.medium.com/v2/resize:fit:1222/format:webp/0*elVoHxIj2tG957cE.png)
