@@ -14,4 +14,6 @@ GraphQL operations:
 - **Mutation**: changes data;
 - **Subscription**: listens for live, streaming data;
 
+### Tools to build a query
 
+- [Apollo Sandbox Explorer](https://studio.apollographql.com/sandbox/explorer?_gl=1%2A18qpk51%2A_gcl_au%2AMTk1MDE4ODEwLjE3MzUyNTIzMDA.) 
