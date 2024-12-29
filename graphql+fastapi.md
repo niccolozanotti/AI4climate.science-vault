@@ -78,8 +78,8 @@ class Query:
         predictions = model.predict(latitude, longitude, hours_ahead)
         return predictions
 ```
+`weather_model.py`:
 ```python
-# model/weather_model.py
 from datetime import datetime, timedelta
 import numpy as np
 
