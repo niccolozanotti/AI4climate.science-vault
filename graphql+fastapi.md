@@ -7,13 +7,7 @@ description: >
   Containerized GraphQL API for deploying a (weather) forecasting ML-model as a fastAPI using Strawberry. 
 ---
 
-
 > Containerized GraphQL API for deploying a (weather) forecasting ML-model as a fastAPI using Strawberry. 
-
-
-Let me help you design a containerized GraphQL API for your weather forecasting model. GraphQL is a great choice here since weather data often involves complex, nested queries where users might want specific combinations of variables.
-
-Let's build a deployment solution using FastAPI (which has excellent GraphQL support through Strawberry) and Docker. I'll create a basic setup that you can extend.
 
 `structure.txt`:
 ```
