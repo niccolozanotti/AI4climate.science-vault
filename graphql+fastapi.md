@@ -177,3 +177,7 @@ To extend this further, you might want to consider:
 5. Adding monitoring and logging
 6. Setting up health checks
 
+
+### Heroku deployment
+
+Heroku Github Student Developer pack: 13$/month worth of heroku credits per 12 months. See [here](https://blog.heroku.com/github-student-developer-program).
