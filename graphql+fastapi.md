@@ -1,10 +1,15 @@
 ---
-title: 
+title: GraphQL + FastAPI + Strawberry
 aliases: 
 date: 2024-12-29
 tags: 
-description:
+description: > 
+  Containerized GraphQL API for deploying a (weather) forecasting ML-model as a fastAPI using Strawberry. 
 ---
+
+
+> Containerized GraphQL API for deploying a (weather) forecasting ML-model as a fastAPI using Strawberry. 
+
 
 Let me help you design a containerized GraphQL API for your weather forecasting model. GraphQL is a great choice here since weather data often involves complex, nested queries where users might want specific combinations of variables.
 
