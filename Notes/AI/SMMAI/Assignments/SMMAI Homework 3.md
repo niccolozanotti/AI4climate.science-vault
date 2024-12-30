@@ -6,140 +6,117 @@ date: 2024-08-24
 tags: 
 description: Optimization via Gradient Descent
 ---
-Correspondent labs: 
-#todo check with the original assignment (some eqs may be inaccurate)
 
----
 ## Optimization via Gradient Descent
-In this homework, we want to study methods to solve the general optimization problem where, given a function $f : \mathbb{R}^n \rightarrow \mathbb{R}$, we want to compute
+In this Homework, we will consider a general optimization problem:
+
 $$
-x^* = \arg \min_{x \in \mathbb{R}^n} f(x)
+x^* = \arg\min_{x \in \mathbb{R}^n}f(x).
 $$
-In particular, we will consider the situation where $f(x)$ is at least differentiable, which implies that we can compute its gradient $\nabla f(x)$.
 
-In this framework, one of the most common ways to approach (1) is to use the Gradient Descent (GD) method, which is an iterative algorithm that, given an initial iterate $x_0 \in \mathbb{R}^n$ and a positive parameter called step size $\alpha_k > 0$ for each iteration, computes
+where, $f: \mathbb{R}^n \to \mathbb{R}$ is a differentiable function for which we know how to compute $\nabla f(x)$.
+This is done by the Gradient Descent (GD) method: an iterative algorithm that, given an initial iterate $x_0 \in \mathbb{R}^n$ and a positive parameter $\alpha_k %3E $ called *step size*, computes:
+
 $$
-x_{k+1} = x_k - \alpha_k \nabla f(x_k)
+x_{k+1} = x_k − \alpha_k \nabla f (x_k).
 $$
-You are asked to implement the GD method (2) in Python and to test it with some remarkable functions.
 
-Write a script that implements the GD algorithm, with the following structure:
-```
-INPUT:
-  f:    the function f(x) we want to optimize.
-        It is supposed to be a Python function, not an array.
-	        grad_f: the gradient of f(x). It is supposed to be a Python function,            not an array.
-  x0:   an n-dimensional array which represents the initial iterate.
-        kmax: an integer. The maximum possible number of iterations (to avoid            infinite loops)
-  tolf: small float. The relative tollerance of the algorithm.
-        Convergence happens if ||grad_f(x_k)||_2 < tolf ||grad_f(x_0)||_2
-  tolx: small float. The tollerance in the input domain.
-        Convergence happens if ||x_{k} - x_{k-1}||_2 < tolx.
-        Pay attention to to the first iterate.
-```
-```
-OUTPUT:
-   x:     an array that contains the value of x_k FOR EACH iterate x_k (not only           the latter).
-   k:     an integer. The number of iteration needed to converge. k < kmax.
-   f_val: an array that contains the value of f(x_k) FOR EACH iterate x_k.
-   grads: an array that contains the value of grad_f(x_k) FOR EACH iterate x_k.
-   err:   an array the contains the value of ||grad_f(x_k)||_2 FOR EACH iterate            x_k.
-```
+You are asked to implement the GD method in Python and to test it with some exemplar functions. In particular:
 
--  On [my website](https://www.evangelistadavide.com/teaching/gradient_descent2024/#backtracking), you can find a Python implementation of the backtracking algorithm for the automatic selection of the step size. That function works as follows:
-```
-INPUT:
-  f:      the function $f(x)$ we want to optimize. It is supposed to be a Python           function, not an array.
-  grad_f: the gradient of $f(x)$. It is supposed to be a Python function, not an           array.
-  x:      an array. The actual iterate $x_k$ for which you want to find the                correct value for $\alpha$.
-```
-```
-OUTPUT:
-  alpha: a float. The correct step size for the next iteration
-```
+*  Write a script that implement the GD algorithm with fixed step size (i.e. no backtracking), with the input-output structure discussed in the first Exercise of the Gradient Descent section (https://devangelista2.github.io/statistical-mathematical-methods/Optimization/GD.html).
+* Write a script that implement the GD algorithm with backtracking, with the input-output structure discussed in the second Exercise of the Gradient Descent section (https://devangelista2.github.io/statistical-mathematical-methods/Optimization/GD.html).
+* Test the algorithm above on the following functions:
+    1. $f: \mathbb{R}^2 \to \mathbb{R}$ such that:
 
-Modify the code for the GD method to let it be able to use the backtracking algorithm for the choice of the step size.
+       $$
+       f(x_1, x_2) = (x_1 - 3)^2 + (x_2 - 1)^2, 
+       $$
 
+       for which the true solution is $x^* = (3, 1)^T$.
 
-Test the algorithm above on the following functions:
-1. $f : \mathbb{R}^2 \rightarrow \mathbb{R}$ such that $f(x_1, x_2) = (x_1 - 3)^2 + (x_2 - 1)^2$, for which the true optimum is $x^* = (3, 1)^T$.
-2. $f : \mathbb{R}^2 \rightarrow \mathbb{R}$ such that $f(x_1, x_2) = 10(x_1 - 1)^2 + (x_2 - 2)^2$, for which the true optimum is $x^* = (1, 2)^T$.
-3.  $f : \mathbb{R}^n \rightarrow \mathbb{R}$ such that $f(x) = \frac{1}{2} \|Ax - b\|_2^2$, where $A \in \mathbb{R}^{n \times n}$ is the Vandermonde matrix associated with the vector $v \in \mathbb{R}^n$ that contains $n$ equispaced values in the interval $[0, 1]$, and $b \in \mathbb{R}^n$ is computed by first setting $x_{\text{true}} = (1, 1, \dots, 1)^T$ and then $b = Ax_{\text{true}}$. Try for different values of $n$ (e.g., $n = 5, 10, 15, \dots$).
-4.  $f : \mathbb{R}^n \rightarrow \mathbb{R}$ such that $f(x) = \frac{1}{2} \|Ax - b\|_2^2 + \frac{\lambda}{2} \|x\|_2^2$, where $A$ and $b$ are the same as in the exercise above, while $\lambda$ is a fixed value in the interval $[0, 1]$. Try different values for $\lambda$.
-5.  $f : \mathbb{R} \rightarrow \mathbb{R}$ such that $f(x) = x^4 + x^3 - 2x^2 - 2x$.
+    2. $f: \mathbb{R}^2 \to \mathbb{R}$ such that:
 
--  For each of the functions above, run the GD method with and without the backtracking, trying different values for the step size $\alpha > 0$ when you are not using backtracking. Observe the different behavior of GD.
--  To help visualization, it is convenient to plot the error vector that contains the $\|\nabla f(x_k)\|_2$, to check that it goes to zero. Compare the convergence speed (in terms of the number of iterations $k$) in the different cases.
--  For each of the points above, fix $x_0= (0, 0, \dots, 0)^T$, $\text{kmax}= 100$, while choose your values for `tolf` and `tolx`}. It is recommended to also plot the error $\|x_k - x^*\|_2$ varying $k$ when the true $x^*$ is available.
--  Only for the non-convex function defined in (5), plot it in the interval $[-3, 3]$ and test the convergence point of GD with different values of $x_0$ and different step sizes. Observe when the convergence point is the global minimum and when it stops on a local minimum or maximum.
-- *Hard* (*optional*): For the functions (1) and (2), plot the contour around the minimum and the path defined by the iterations (following the example seen during the lesson). See `plt.contour` to do that.
- 
+       $$
+       f(x_1, x_2) = 10(x_1 − 1)^2 + (x_2 − 2)^2, 
+       $$
+
+       for which the true solution is $x^* = (1, 2)^T$.
+    3. $f: \mathbb{R}^n \to \mathbb{R}$ such that:
+
+       $$
+       f(x) = \frac{1}{2}|| Ax - b ||_2^2, 
+       $$
+
+       where $A \in \mathbb{R}^{n times n}$ is the Vandermonde matrix associated with the vector $v \in \mathbb{R}^n$ that contains $n$ equispaced values in the interval $[0,1]$, and $b \in \mathbb{R}^n$ is computed by first setting $x^* = (1, 1, \dots ,1)^T$, and then $b = A x^*$. Try for different values of $n$ (e.g. $n = 5,10,15, \dots$).
+    4. $f: \mathbb{R}^n \to \mathbb{R}$ such that:
+
+       $$
+       f(x) = \frac{1}{2} || Ax - b ||_2^2 + \frac{\lambda}{2} ||x||_2^2, 
+       $$
+
+       where $A \in \mathbb{R}^{n times n}$ and $b \in \mathbb{R}^n$ are the same of the exercise above, while $\lambda$ is a fixed value in the interval $[0, 1]$. Try different values of $\lambda$ and comment the result.
+    5. $f: \mathbb{R} \to \mathbb{R}$ such that:
+
+       $$
+       f(x) = x^4 + x^3 - 2x^2 - 2x.
+       $$
+
+* For each of the functions above, test the GD method with and without backtracking, trying different values for the step size $\alpha > 0$ when backtracking is not employed. Comment on the results.
+* Plot the value of $||\nabla f(x_k)||_2$ as a function of $k$, check that it goes to zero, and compare the convergence speed (in terms of the number of iterations $k$) for the different values of $\alpha > 0$ and with backtracking.
+* For each of the points above, use:
+  - `x0` = $(0, 0, \dots, 0)^T$ (except for function 5, which is discussed in the following point),
+  - `kmax` = 100,
+  - `tolf` = `tolx` = `1e-5`. 
+  Also, when the true solution $x^*$ is given, plot the error $||x_k−x^*||_2$ as a function of $k$.
+* Plot the graph of the non-convex function 5 in the interval $[−3,3]$, and test the convergence of GD with different values of `x0` (of your choice) and different step-sizes. When is the convergence point the global minimum?
+* *Hard (optional):* For functions 1 and 2, show the contour plot around the true minimum and visualize the path described by the iterations, i.e. representing on the contour plot the position of each iterate computed by the GD algorithm. See the `plt.contour` documentation.
+
 ## Optimization via Stochastic Gradient Descent
-While working with Machine Learning (ML), you are usually given a dataset $D = \{X,Y\}$ with
-$$
-X = [x_1x_2 \dots x_N] \in \mathbb{R}^{d \times N}
-$$
-and
-$$
-Y = [y_1y_2 \dots y_N] \in \mathbb{R}^N
-$$
-and a parametric function $f_w(x)$ where the vector $w$ is usually referred to as the weights of the model. The training procedure can be written as
-$$
-w^* = \arg \min_{w} \ell(w;D) = \arg \min_{w} \sum_{i=1}^{N} \ell_i(w;x_i, y_i)
-$$
-What is interesting in (3) from the optimization point of view is that the objective function $\ell(w;D)$ is written as a sum of independent terms that are related to data points (we will see in the next lab why this formulation is so common).
+Consider a dataset $(X,Y)$, where:
 
-Suppose we want to apply GD to (3). Given an initial vector $w_0 \in \mathbb{R}^n$, the iteration becomes
 $$
-w_{k+1} = w_k - \alpha_k \nabla_w \ell(w_k;D) = w_k - \alpha_k \sum_{i=1}^{N} \nabla_w \ell_i(w_k;x_i, y_i)
+X = \begin{bmatrix} x^1 & x^2 & \dots & x^N \end{bmatrix} \in \mathbb{R}^{d \times N}, \qquad Y = \begin{bmatrix} y^1 & y^2 & \dots & y^N \end{bmatrix} \in \mathbb{R}^N,
 $$
-Thus, to compute the iteration, we need the gradient with respect to the weights of the objective function, which can be computed by summing up the gradients of the independent functions $\ell_i(w;x_i, y_i)$.
 
-Unfortunately, even if it is easy to compute the gradient for each of the $\ell_i(w;x_i, y_i)$, when the number of samples $N$ is large (which is common in Machine Learning), the computation of the full gradient $\nabla_w \ell(w_k;D)$ is prohibitive. For this reason, in such optimization problems, instead of using a standard GD algorithm, it is better to use the Stochastic Gradient Descent (SGD) method. That is a variant of the classical GD where, instead of computing $\nabla_w \ell(w;D) = \sum_{i=1}^{N} \nabla_w \ell_i(w;x_i, y_i)$, the summation is reduced to a limited number of terms, called a batch. The idea is the following:
- 
- -  Given a number $\text{Nbatch}$ (usually called batch size), randomly extract a subdataset $\mathcal{M}$ with $|\mathcal{M}| = \text{Nbatch}$ from $D$.
- -  Approximate the true gradient $\nabla_w \ell(w;D) = \sum_{i=1}^{N} \nabla_w \ell_i(w;x_i, y_i)$ with $\nabla_w \ell(w;M) = \sum_{i \in M} \nabla_w \ell_i(w;x_i, y_i)$.
- -  Compute one single iteration of the GD algorithm
-   $$ 
-     w_{k+1} = w_k - \alpha_k \nabla_w \ell(w;M)
+together with a model $f_\theta(x)$, with vector of parameters $\theta$. **Training** a ML model requires solving:
+
+$$
+\theta^* = \arg\min_{\theta} \ell(\theta; X, Y) = \arg\min_{\theta} \sum_{i=1}^N \ell_i(\theta; x^i, y^i). 
+$$
+
+Since the optimization problem above is written as a sum of independent terms that only depends on the single datapoints, it satisfies the hypothesis for the application of the Stochastic Gradient Descent (SGD) algorithm, which articulates as follows:
+
+* Given an integer `batch_size`, *randomly* extract a sub-dataset $\mathcal{M}$ such that $|\mathcal{M}| = `batch_size`$ from the original dataset. Note that the random sampling at each iteration has to be done without replacement.
+* Compute the gradient of the loss function on the sampled batch $\mathcal{M}$ as:
+
   $$
- -  Repeat until you have extracted the full dataset. Notice that the random sampling at each iteration is done without replacement.
- 
-Each iteration of the algorithm above is usually called a batch iteration. When the whole dataset has been processed, we say that we completed an epoch of the SGD method. This algorithm should be repeated for a fixed number $E$ of epochs to reach convergence.
+  \nabla \ell(\theta; \mathcal{M}) = \frac{1}{| \mathcal{M} |} \sum_{i \in \mathcal{M}} \nabla \ell (\theta; x^i, y^i),
+  $$
+* Compute one single iteration of the GD algorithm on the direction described by $\nabla \ell(\theta; \mathcal{M})$:
 
-Unfortunately, one of the biggest drawbacks of SGD with respect to GD is that now we cannot check the convergence anymore (since we can’t obviously compute the gradient of $\ell(w;D)$ to check its distance from zero) and we can’t use the backtracking algorithm, for the same reason. As a consequence, the algorithm will stop ONLY after reaching the fixed number of epochs, and we must set a good value for the step size $\alpha_k$ by hand. Those problems are solved by recent algorithms like SGD with Momentum, Adam, AdaGrad, ...
+  $$
+  \theta_{k+1} = \theta_k - \alpha_k \nabla \ell(\theta_k; \mathcal{M}),
+  $$
 
- 
- - Write a Python script that implements the SGD algorithm, following the structure you already wrote for GD. That script should work as follows:
-```
-INPUT:
-    l:          the function $\ell(w; D)$ we want to optimize. It is supposed to                 be a Python function, not an array.
-    grad_l:     the gradient of $\ell(w; D)$. It is supposed to be a Python                      function, not an array.
-    w0:         an n-dimensional array that represents the initial iterate. By                   default, it should be randomly sampled.
-    data:       a tuple $(x, y)$ that contains the two arrays $x$ and $y$, where                 $x$ is the input data, and $y$ is the output data.
-    batch_size: an integer. The dimension of each batch. Should be a divisor of                  the number of data.
-    n_epochs:   an integer. The number of epochs you want to repeat the                          iterations.
-```
-```
-OUTPUT:
-   w:     an array that contains the value of $w_k$ FOR EACH iterate $w_k$ (not             only the latter)
-   f_val:     an array that contains the value of $\ell(w_k; D)$ FOR EACH iterate $w_k$ ONLY after each epoch.
-   grads: an array that contains the value of $`grad\_l}(w_k; D)$ FOR EACH iterate $w_k$ ONLY after each epoch.
-   err:   an array that contains the value of $\|`grad\_l}(w_k; D)\|_2$ FOR EACH iterate $w_k$ ONLY after each epoch.
-```
-    
-     
--  To test the script above, consider the MNIST dataset we used in the previous laboratories, and do the following:
-      1. From the dataset, select only two digits. It would be great to let the user input the two digits to select.
-      2. Do the same operation as in the previous homework to obtain the training and test set from $(X,Y)$, selecting the $N_{\text{train}}$ you prefer.
-      3. Consider [Lecture 11 on my website](https://www.evangelistadavide.com/teaching/logistic_regression2024/) about the implementation of Logistic Regression for binary classification. It has not been described in class, but it is equivalent to Linear Regression with a slightly modified model. After carefully reading the post, implement a logistic regression classifier.
+* Repeat until the full dataset has been extracted. When this happens, we say that we completed an **epoch** of the SGD method. Repeat this procedure for a number of epochs equal to a parameter `n_epochs`, given as input.
 
-	
--  Test the logistic regression classifier for different digits and different training set dimensions.
--  The training procedure will end up with a set of optimal parameters $w^*$. Compare $w^*$ when computed with Gradient Descent and Stochastic Gradient Descent, for different digits and different training set dimensions.
--  Comment on the obtained results (in terms of the accuracy of the learned classifier).
+Consider the dataset `poly_regression_large.csv`, provided on Virtuale, and let $f_\theta(x)$ be a polynomial regression model, as discussed in https://devangelista2.github.io/statistical-mathematical-methods/regression_classification/regression.html.
 
+* Split the dataset into training and test set as in the Homework 2, with a proportion of 80% training and 20% test. 
+* Fix a degree $K$ for the polynomial. 
+* Train the polynomial regression model on the training set via the Stochastic Gradient Descent algorithm.
+* Train the polynomial regression model on the training set via the Gradient Descent algorithm.
+* Train the polynomial regression model on the `poly_regression_small.csv` dataset. Use the full dataset for this test, without splitting it into training and test set.
+* Compare the performance of the three regression model computed above. In particular, if $(X_{test}, Y_{test})$ is the test set from the `poly_regression_large.csv` dataset, for each of the model, compute:
 
+  $$
+  Err = \frac{1}{N_{test}} \sum_{i=1}^{N_{test}} (f_\theta(x^i) - y^i)^2,
+  $$
+
+  where $N_{test}$ is the number of elements in the test set, $(x^i, y^i)$ are the input and output elements in the test set. Comment the performance of the three models.
+
+* Repeat the experiment by varying the degree $K$ of the polynomial. Comment the results.
+* Set $K=5$ (so that the polynomial regression model is a polynomial of degree 4). Compare the parameters learned by the three models with the true parameter $\theta^* = [0, 0, 4, 0, -3]$.
 ---
 Other assignments:
 - [[SMMAI Homework 1|Homework 1]]
