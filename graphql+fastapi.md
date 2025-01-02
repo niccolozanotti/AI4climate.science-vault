@@ -5,6 +5,7 @@ date: 2024-12-29
 tags: 
 description: > 
   Containerized GraphQL API for deploying a (weather) forecasting ML-model as a fastAPI using Strawberry. 
+draft: true
 ---
 
 > Containerized GraphQL API for deploying a (weather) forecasting ML-model as a fastAPI using Strawberry. 
