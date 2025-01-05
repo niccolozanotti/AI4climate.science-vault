@@ -33,13 +33,24 @@ greater(s(s(zero)), s(zero)).
 
 
 ```prolog
-Likes(bob, applepie).
-Likes(eve, spymovies).
-Likes(alice, applepie).
-Likes(alice, programming).
+likes(bob, applepie).
+likes(eve, spymovies).
+likes(alice, applepie).
+likes(alice, programming).
 
-commoninterest(A, B) :- Likes(A, C), Likes(B, C), A\==B.
+%% commoninterest(A, B) :- likes(A, C), likes(B, C), A\==B. %%
 
 % query
-commoninterest(alice, x).
+commoninterest(alice, x). 
+
+likes(alice, x)
+```
+
+```prolog
+likes(john, pizza).
+likes(john, cheese).
+likes(jane, beer).
+
+% query
+likes(john, X).
 ```
