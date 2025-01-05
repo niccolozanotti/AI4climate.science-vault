@@ -1,4 +1,12 @@
+```prolog
+greater(zero, s(_)).
+greater(s(N), s(M)) :- greater(N, M).
+
+?- greater(s(zero), zero).
 ```
-greater (nil,nil)
-zanna
+
+```python
+
+x = 2
+print(x)
 ```
