@@ -15,7 +15,8 @@ Links:
 
 ---
 ## [[LAAFAI Mod2 ToC|Table of contents]]
-
+>[!summary]- Table of Contents
+> 
 ## [[LAAFAI Mod2 Labs|Lab lectures]]
 
 List of lectures:
