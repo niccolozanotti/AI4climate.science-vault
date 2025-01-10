@@ -14,9 +14,23 @@ Links:
 - [Course webpage](https://www.unibo.it/en/study/phd-professional-masters-specialisation-schools-and-other-programmes/course-unit-catalogue/course-unit/2023/446595)
 
 ---
-## [[LAAFAI Mod2 ToC|Table of contents]]
 >[!summary]- Table of Contents
-> 
+> -  [[Symbolic AI]] and the need for [[logic]]
+> - Introduction to [[logic]]
+>    - [[Propositional logic]]
+>    - [[First Order Logic]] (FOL)
+>    - [[Resolution]]
+>   - [[Unification]]
+> - [[Logic programming]]
+    - Procedural interpretation
+    - Declarative interpretation
+    - [[Prolog]] (1st part, 2nd part in another course)
+- [[Constraint programming]]
+    - [[CLP]]
+    - [[MiniZinc]] (1st part, 2nd part in [[CDMO]] course)
+
+
+
 ## [[LAAFAI Mod2 Labs|Lab lectures]]
 
 List of lectures:
