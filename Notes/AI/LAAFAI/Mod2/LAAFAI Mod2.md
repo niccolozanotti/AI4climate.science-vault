@@ -17,17 +17,17 @@ Links:
 >[!summary]- Table of Contents
 > -  [[Symbolic AI]] and the need for [[logic]]
 > - Introduction to [[logic]]
->    - [[Propositional logic]]
->    - [[First Order Logic]] (FOL)
->    - [[Resolution]]
->   - [[Unification]]
+>	- [[Propositional logic]]
+>	- [[First Order Logic]] (FOL)
+>	- [[Resolution]]
+>	- [[Unification]]
 > - [[Logic programming]]
-    - Procedural interpretation
+- Procedural interpretation
     - Declarative interpretation
     - [[Prolog]] (1st part, 2nd part in another course)
-- [[Constraint programming]]
-    - [[CLP]]
-    - [[MiniZinc]] (1st part, 2nd part in [[CDMO]] course)
+> - [[Constraint programming]]
+>   - [[CLP]]
+>    - [[MiniZinc]] (1st part, 2nd part in [[CDMO]] course)
 
 
 
