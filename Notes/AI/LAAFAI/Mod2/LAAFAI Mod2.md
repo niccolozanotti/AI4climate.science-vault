@@ -22,9 +22,9 @@ Links:
 >	- [[Resolution]]
 >	- [[Unification]]
 > - [[Logic programming]]
-- Procedural interpretation
-    - Declarative interpretation
-    - [[Prolog]] (1st part, 2nd part in another course)
+> - Procedural interpretation
+>    - Declarative interpretation
+>    - [[Prolog]] (1st part, 2nd part in another course)
 > - [[Constraint programming]]
 >   - [[CLP]]
 >    - [[MiniZinc]] (1st part, 2nd part in [[CDMO]] course)
