@@ -2,18 +2,14 @@
 draft: true
 ---
 
-
 ```prolog
-% P01 (*): Find the last element of a list
+direct_flight(paris,damascus).
+direct_flight(firenze,roma).
+direct_flight(firenze,paris).
 
-% my_last(X,L) :- X is the last element of the list L
-%    (element,list) (?,?)
-
-% Note: last(?Elem, ?List) is predefined
-
-my_last(X,[X]).
-my_last(X,[_|L]) :- my_last(X,L).
+flight(X,Y):- direct_flight(X,Y).
+flight(X,Y):- direct_flight(X,Z), flight(Z,Y).
 
 % query
-
+direct_flight(X, damascus).
 ```
