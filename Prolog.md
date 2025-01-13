@@ -13,3 +13,11 @@ flight(X,Y):- direct_flight(X,Z), flight(Z,Y).
 % query
 direct_flight(X, damascus).
 ```
+
+```prolog
+p(a).
+p(X):-p(X).
+
+% query
+p(Y).
+```
