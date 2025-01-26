@@ -36,7 +36,8 @@ Possible solutions for routers with OpenWRT:
 
 Needing a static IP address (for accessing my home network through a VPN server) I found out that Cloudflare offers a DNS record update [API](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/update/) which can effectively replace the need for a third-party DDNS Provider (e.g. [noip](https://www.noip.com/)). 
 
-```{title=}
+
+```
 ddns.cloudflare=service
 ddns.cloudflare.service_name='cloudflare.com-v4'
 ddns.cloudflare.use_ipv6='0'
