@@ -31,3 +31,7 @@ Possible solutions for routers with OpenWRT:
 - Gist with installation guide of OpenWrt on the [TL-MR6400 v5](https://gist.github.com/fbett/8dc22b482eede8a9828eaacc51a4447a) using [QMI](https://search.brave.com/search?q=qmi+protocol+cellular&source=desktop&conversation=70c595d2721cc8923e340b&summary=1)
 ### Home Router
 - [GL.iNet GL-MT6000](https://openwrt.org/toh/gl.inet/gl-mt6000) (comes mounted with a fork of OpenWrt out-of-the-box)
+
+## DDNS with Cloudflare and OpenWrt
+
+Needing a static IP address (for accessing my home network through a VPN server) I found out that Cloudflare offers a DNS record update [API](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/update/) which can effectively replace the need for a third-party DDNS Provider (e.g. )
