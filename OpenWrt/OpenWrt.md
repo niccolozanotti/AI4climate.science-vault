@@ -34,4 +34,28 @@ Possible solutions for routers with OpenWRT:
 
 ## DDNS with Cloudflare and OpenWrt
 
-Needing a static IP address (for accessing my home network through a VPN server) I found out that Cloudflare offers a DNS record update [API](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/update/) which can effectively replace the need for a third-party DDNS Provider (e.g. )
+Needing a static IP address (for accessing my home network through a VPN server) I found out that Cloudflare offers a DNS record update [API](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/update/) which can effectively replace the need for a third-party DDNS Provider (e.g. [noip](https://www.noip.com/)). 
+
+```{title=}
+ddns.cloudflare=service
+ddns.cloudflare.service_name='cloudflare.com-v4'
+ddns.cloudflare.use_ipv6='0'
+ddns.cloudflare.enabled='1'
+ddns.cloudflare.lookup_host='home.your-domain.com’
+ddns.cloudflare.domain='home@your-domain.com’
+ddns.cloudflare.username='Bearer'
+ddns.cloudflare.password='CLOUDLARE-API-TOKEN’
+ddns.cloudflare.use_https='1'
+ddns.cloudflare.cacert='/etc/ssl/certs'
+ddns.cloudflare.interface='wan'
+ddns.cloudflare.use_syslog='2'
+ddns.cloudflare.check_unit='minutes'
+ddns.cloudflare.force_unit='minutes'
+ddns.cloudflare.retry_unit='seconds'
+ddns.cloudflare.ip_source='web'
+ddns.cloudflare.ip_url='https://api.ipify.org'
+ddns.cloudflare.check_interval='10'
+ddns.cloudflare.force_interval='30'
+
+uci commit ddns
+```
