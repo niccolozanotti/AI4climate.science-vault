@@ -43,26 +43,27 @@ opkg install wget ca-certificates
 opkg install curl ca-bundle
 ```
 
+If you want to use a subdomain of your domain `your-domain.com`, say `home.your-domain.com` then the configuration can be set via UCI as follows
 ```
-ddns.cloudflare=service
-ddns.cloudflare.service_name='cloudflare.com-v4'
-ddns.cloudflare.use_ipv6='0'
-ddns.cloudflare.enabled='1'
-ddns.cloudflare.lookup_host='home.your-domain.com’
-ddns.cloudflare.domain='home@your-domain.com’
-ddns.cloudflare.username='Bearer'
-ddns.cloudflare.password='CLOUDLARE-API-TOKEN’
-ddns.cloudflare.use_https='1'
-ddns.cloudflare.cacert='/etc/ssl/certs'
-ddns.cloudflare.interface='wan'
-ddns.cloudflare.use_syslog='2'
-ddns.cloudflare.check_unit='minutes'
-ddns.cloudflare.force_unit='minutes'
-ddns.cloudflare.retry_unit='seconds'
-ddns.cloudflare.ip_source='web'
-ddns.cloudflare.ip_url='https://api.ipify.org'
-ddns.cloudflare.check_interval='10'
-ddns.cloudflare.force_interval='30'
+uci set ddns.cloudflare=service
+uci set ddns.cloudflare.service_name='cloudflare.com-v4'
+uci set ddns.cloudflare.use_ipv6='0'
+uci set ddns.cloudflare.enabled='1'
+uci set ddns.cloudflare.lookup_host='home.your-domain.com’
+uci set ddns.cloudflare.domain='home@your-domain.com’
+uci set ddns.cloudflare.username='Bearer'
+uci set ddns.cloudflare.password='CLOUDLARE-API-TOKEN’
+uci set ddns.cloudflare.use_https='1'
+uci set ddns.cloudflare.cacert='/etc/ssl/certs'
+uci set ddns.cloudflare.interface='wan'
+uci set ddns.cloudflare.use_syslog='2'
+uci set ddns.cloudflare.check_unit='minutes'
+uci set ddns.cloudflare.force_unit='minutes'
+uci set ddns.cloudflare.retry_unit='seconds'
+uci set ddns.cloudflare.ip_source='web'
+uci set ddns.cloudflare.ip_url='https://api.ipify.org'
+uci set ddns.cloudflare.check_interval='10'
+uci set ddns.cloudflare.force_interval='30'
 
 uci commit ddns
 ```
