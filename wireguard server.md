@@ -11,10 +11,16 @@ The following commands assume that a SSH connection with the OpenWrt router has 
 ```shell
 root@GL-MT6000:~#
 ```
+### Generate server key-pair
+```shell
+cd /root
+wg genkey | tee wg_server.key | wg pubkey > wg_server.pub
+SERVER_PRIVATE_KEY=$(cat /root/wg_server.key)
+SERVER_PUBLIC_KEY=$(cat /root/wg_server.pub)
+```
 ### Wireguard interface
 
 ```shell
-# Create WireGuard interface
 uci set network.wg0=interface
 uci set network.wg0.proto='wireguard'
 uci set network.wg0.private_key='SERVER_PRIVATE_KEY'
@@ -58,11 +64,49 @@ uci commit firewall
 /etc/init.d/network restart
 /etc/init.d/firewall restart
 ```
+### Adding a peer (VPN client)
 
-
+```shell
+cd /root
+wg genkey | tee wg_client.key | wg pubkey > wg_client.pub
 ```
-# Set server configuration using existing key
-SERVER_PRIVATE_KEY=$(cat /root/wgserver.key)
-uci set network.wg0.private_key="$SERVER_PRIVATE_KEY"
+```shell
+# Add peer configuration for iPhone
+uci add network wireguard_wg0
+uci set network.@wireguard_wg0[-1].description='iPhone'
+uci set network.@wireguard_wg0[-1].public_key=$(cat /root/wgclient.pub)
+uci set network.@wireguard_wg0[-1].allowed_ips='10.0.0.2/32'
+uci set network.@wireguard_wg0[-1].persistent_keepalive='25'
 uci commit network
+```
+
+
+
+```shell
+# Generate keys for MacBook
+cd /root
+wg genkey | tee macbook.key | wg pubkey > macbook.pub
+
+# Add peer configuration
+uci add network wireguard_wg0
+uci set network.@wireguard_wg0[-1].description='MacBook'
+uci set network.@wireguard_wg0[-1].public_key="$(cat macbook.pub)"
+uci set network.@wireguard_wg0[-1].allowed_ips='10.0.0.3/32'
+uci set network.@wireguard_wg0[-1].persistent_keepalive='25'
+uci commit network
+ifup wg0
+
+# Generate client config
+cat << EOF > macbook_client_config.conf
+[Interface]
+PrivateKey = $(cat macbook.key)
+Address = 10.0.0.3/32
+DNS = 192.168.8.1
+
+[Peer]
+PublicKey = $(cat wgserver.pub)
+Endpoint = home.your-domain.com:51820
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+EOF
 ```
