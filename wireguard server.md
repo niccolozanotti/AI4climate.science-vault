@@ -23,7 +23,7 @@ SERVER_PUBLIC_KEY=$(cat /root/wg_server.pub)
 ```shell
 uci set network.wg0=interface
 uci set network.wg0.proto='wireguard'
-uci set network.wg0.private_key='SERVER_PRIVATE_KEY'
+uci set network.wg0.private_key="$SERVER_PRIVATE_KEY"
 uci set network.wg0.listen_port='51820'
 uci add_list network.wg0.addresses='10.0.0.1/24'
 ```
@@ -69,18 +69,37 @@ uci commit firewall
 ```shell
 cd /root
 wg genkey | tee wg_client.key | wg pubkey > wg_client.pub
+CLIENT_PRIVATE_KEY=$(cat /root/wg_client.key)
+CLIENT_PUBLIC_KEY=$(cat /root/wg_client.pub)
 ```
 ```shell
-# Add peer configuration for iPhone
+# Add peer configuration for client
 uci add network wireguard_wg0
-uci set network.@wireguard_wg0[-1].description='iPhone'
-uci set network.@wireguard_wg0[-1].public_key=$(cat /root/wgclient.pub)
+uci set network.@wireguard_wg0[-1].description='client'
+uci set network.@wireguard_wg0[-1].public_key="$CLIENT_PUBLIC_KEY"
 uci set network.@wireguard_wg0[-1].allowed_ips='10.0.0.2/32'
 uci set network.@wireguard_wg0[-1].persistent_keepalive='25'
 uci commit network
 ```
+Generate configuration file to 
+```shell
+cat << EOF > client.conf
+[Interface]
+PrivateKey = $CLIENT_PRIVATE_KEY
+Address = 10.0.0.3/32
+DNS = 192.168.8.1
 
-
+[Peer]
+PublicKey = $(cat wgserver.pub)
+Endpoint = home.your-domain.com:51820
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+EOF
+```
+(Optional) Generate Qr-code to
+```shell
+qrencode -t ansiutf8 < iphone_client_config.conf
+```
 
 ```shell
 # Generate keys for MacBook
