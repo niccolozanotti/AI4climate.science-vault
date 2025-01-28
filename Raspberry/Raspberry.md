@@ -8,7 +8,8 @@ description:
 
 
 ### Fan control
-Script to control 
+Script run a system service to control GPIO-connected active cooler (Fan PIN is 18):
+
 ```python title="/usr/local/bin/fan_control.py"
 #!/usr/bin/env python3
 import os
