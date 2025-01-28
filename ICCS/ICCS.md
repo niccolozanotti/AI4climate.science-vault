@@ -8,6 +8,9 @@ description:
 
 Relevant material: 
 
+- [FTorch workshop](https://github.com/Cambridge-ICCS/FTorch-workshop)
+- [Byte-sized RSE](https://www.universe-hpc.ac.uk/events/byte-sized-rse/)
+
 
 
 
