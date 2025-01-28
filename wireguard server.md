@@ -6,13 +6,18 @@ tags:
 description:
 ---
 
+
+The following commands assume that a SSH connection with the OpenWrt router has been established
+```shell
+root@GL-MT6000:~#
+```
 ### Wireguard interface
 
 ```shell
 # Create WireGuard interface
 uci set network.wg0=interface
 uci set network.wg0.proto='wireguard'
-uci set network.wg0.private_key='YOUR_EXISTING_PRIVATE_KEY'
+uci set network.wg0.private_key='SERVER_PRIVATE_KEY'
 uci set network.wg0.listen_port='51820'
 uci add_list network.wg0.addresses='10.0.0.1/24'
 ```
@@ -52,4 +57,12 @@ uci commit firewall
 # Restart services
 /etc/init.d/network restart
 /etc/init.d/firewall restart
+```
+
+
+```
+# Set server configuration using existing key
+SERVER_PRIVATE_KEY=$(cat /root/wgserver.key)
+uci set network.wg0.private_key="$SERVER_PRIVATE_KEY"
+uci commit network
 ```
