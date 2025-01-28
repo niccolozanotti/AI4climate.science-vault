@@ -67,3 +67,7 @@ uci set ddns.cloudflare.force_interval='30'
 
 uci commit ddns
 ```
+
+### Wireguard server
+
+[[wireguard server]]
