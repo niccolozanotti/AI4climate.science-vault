@@ -11,6 +11,14 @@ The following commands assume that a SSH connection with the OpenWrt router has 
 ```shell
 root@GL-MT6000:~#
 ```
+## Get a static IP address
+
+If not having access to a static IP address (many ISP offer that as a paid service) 
+## Install necessary packages
+```shell
+opkg update
+opkg install wireguard-tools
+```
 ### Generate server key-pair
 ```shell
 cd /root
@@ -81,7 +89,7 @@ uci set network.@wireguard_wg0[-1].allowed_ips='10.0.0.2/32'
 uci set network.@wireguard_wg0[-1].persistent_keepalive='25'
 uci commit network
 ```
-Generate configuration file to 
+Generate configuration file to add to Wireguard on the client's device
 ```shell
 cat << EOF > client.conf
 [Interface]
@@ -90,42 +98,14 @@ Address = 10.0.0.3/32
 DNS = 192.168.8.1
 
 [Peer]
-PublicKey = $(cat wgserver.pub)
+PublicKey = $SERVER_PUBLIC_KEY
 Endpoint = home.your-domain.com:51820
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
 EOF
 ```
-(Optional) Generate Qr-code to
+(Optional) Generate Qr-code for an easier setup:
 ```shell
+opkg install qrencode
 qrencode -t ansiutf8 < iphone_client_config.conf
-```
-
-```shell
-# Generate keys for MacBook
-cd /root
-wg genkey | tee macbook.key | wg pubkey > macbook.pub
-
-# Add peer configuration
-uci add network wireguard_wg0
-uci set network.@wireguard_wg0[-1].description='MacBook'
-uci set network.@wireguard_wg0[-1].public_key="$(cat macbook.pub)"
-uci set network.@wireguard_wg0[-1].allowed_ips='10.0.0.3/32'
-uci set network.@wireguard_wg0[-1].persistent_keepalive='25'
-uci commit network
-ifup wg0
-
-# Generate client config
-cat << EOF > macbook_client_config.conf
-[Interface]
-PrivateKey = $(cat macbook.key)
-Address = 10.0.0.3/32
-DNS = 192.168.8.1
-
-[Peer]
-PublicKey = $(cat wgserver.pub)
-Endpoint = home.your-domain.com:51820
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
-EOF
 ```

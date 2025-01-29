@@ -70,4 +70,4 @@ uci commit ddns
 
 ### Wireguard server
 
-[[wireguard server]]
+[[wireguard server|How to quickly setup your OpenWrt Router as a wireguard server]]
