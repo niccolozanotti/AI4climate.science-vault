@@ -6,15 +6,14 @@ tags:
 description:
 ---
 
->[!warning]- WIP
+>[!warning] WIP
 > The guide is still a work in progress
-
 
 ## Get a static IP address
 
 If you don't have a static IP address at your disposal (many [ISP](https://en.wikipedia.org/wiki/Internet_service_provider) offer that as a paid service) a workaround is to configure a [DDNS](https://en.wikipedia.org/wiki/Dynamic_DNS) service like [noip](https://www.noip.com/) on your router. 
 
-Personally, owning a domain at [Cloudflare](https://www.cloudflare.com/) I opted for their [API](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/update/) which dynamically updates the DNS record associated to the (sub)domain you are using. Check out [[OpenWrt#DDNS with Cloudflare and OpenWrt|here]] to see how to sort that out.
+Personally, owning a domain at [Cloudflare](https://www.cloudflare.com/) I opted for their [API](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/update/) which dynamically updates the DNS record associated to the (sub)domain you are using. Check out [[DDNS cloudflare]] to see how to sort that out.
 ## Install necessary packages
 The following assumes a [SSH connection with your OpenWrt router](https://openwrt.org/docs/guide-quick-start/sshadministration#ssh_access_for_newcomers) has been established
 ```shell
@@ -110,7 +109,7 @@ AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
 EOF
 ```
-In my case `Endpoint= home.mydomain.com` since I set up the subdomain `@home` to point to my public IP Address (see [[OpenWrt#DDNS with Cloudflare and OpenWrt|here]]).
+In my case `Endpoint= home.mydomain.com` since I set up the subdomain `@home` to point to my public IP Address (see [[DDNS cloudflare|here]]).
 
 (Optional) Generate Qr-code for an easier setup:
 ```shell
