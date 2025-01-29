@@ -1,5 +1,5 @@
 ---
-title: 
+title: How to setup a Wireguard VPN server 
 aliases: 
 date: 2025-01-28
 tags: 
@@ -13,7 +13,7 @@ root@GL-MT6000:~#
 ```
 ## Get a static IP address
 
-If not having access to a static IP address (many ISP offer that as a paid service) 
+If you don't have a static IP address at your disposal (many [ISP](https://en.wikipedia.org/wiki/Internet_service_provider) offer that as a paid service) a workaround is to configure a [DDNS](https://en.wikipedia.org/wiki/Dynamic_DNS) service like [noip](https://www.noip.com/) on your router. Personally, owning a domain at Clouflare I opted for their [API](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/update/) which dynamicall 
 ## Install necessary packages
 ```shell
 opkg update
