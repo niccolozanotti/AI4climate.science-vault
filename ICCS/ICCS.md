@@ -12,6 +12,3 @@ Relevant material:
 - [Byte-sized RSE](https://www.universe-hpc.ac.uk/events/byte-sized-rse/)
 - [Society of RSE Slack](https://society-rse.org/get-involved/slack-faq/)
 
-
-
-
