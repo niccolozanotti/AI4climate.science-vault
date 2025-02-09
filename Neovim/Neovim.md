@@ -414,6 +414,8 @@ require("mason-nvim-lint").setup({
 ![Screenshot](nvchad-cpp.png)
 https://www.youtube.com/watch?v=upeAH74q0q4
 # Python
+
+- [YT video](https://www.youtube.com/watch?v=m0OobzFjEKE)
 ## lspconfig
 Edit file `~/.config/nvim/lua/configs/lspconfig.lua`. \
 Add `"pyright",` to `lspconfig.servers`.
@@ -462,8 +464,7 @@ Add syntax highlighting for Python.
 ```lua
         "python",
 ```
-![Screenshot](nvchad-python-doc.png)
-https://www.youtube.com/watch?v=m0OobzFjEKE
+
 # Python (Dreams of Code)
 ## lspconfig
 Edit file `~/.config/nvim/lua/configs/lspconfig.lua`. \
@@ -631,7 +632,7 @@ end, { desc = "Run DAP Python test method" })
 ```
 ## mason-nvim-dap
 Edit file `~/.config/nvim/lua/plugins/init.lua`. \
-We will used `mason-nvim-dap` to automagicly install debugpy. We will set it's loading to verylazy so it doesn't slowdown nvim startup time. It will also load its config from `configs/mason-dap.lua`
+We will use `mason-nvim-dap` to automatically install `debugpy`. We will set it's loading to *verylazy* so it doesn't slowdown `nvim` startup time. It will also load its config from `configs/mason-dap.lua`
 ```lua
     {
         "jay-babu/mason-nvim-dap.nvim",
