@@ -16,7 +16,7 @@ cmake .. \
 -DCMAKE_C_COMPILER=gcc \
 -DCMAKE_CXX_COMPILER=g++ \
 -DCMAKE_PREFIX_PATH=/Users/niccolozanotti/demo/libs/libtorch/share/cmake/Torch
--DCMAKE_INSTALL_PREFIX=~/FTorchbin
+-DCMAKE_INSTALL_PREFIX=/Users/niccolozanotti/demo/FTorchbin
 ```
 
 >[!warning]
