@@ -15,15 +15,22 @@ wget https://download.pytorch.org/libtorch/cpu/libtorch-macos-arm64-2.6.0.zip
 unzip libtorch-macos-arm64-2.6.0.zip
 ```
 This will place libtorch under a local `libtorch/` directory.
-
 ```shell
-cmake .. \
+cd FTorch/src
+mkdir build && cd build
+```
+```shell
+cmake ../.. \
 -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_Fortran_COMPILER=gfortran \
 -DCMAKE_C_COMPILER=gcc \
 -DCMAKE_CXX_COMPILER=g++ \
--DCMAKE_PREFIX_PATH=/Users/niccolozanotti/demo/libs/libtorch/share/cmake/Torch \
--DCMAKE_INSTALL_PREFIX=/Users/niccolozanotti/demo/FTorchbin
+-DCMAKE_PREFIX_PATH=~/demo/libs/libtorch/share/cmake/Torch \
+-DCMAKE_INSTALL_PREFIX=~/demo/FTorchbin
+```
+The install
+```shell
+cmake --build . --target install
 ```
 
 >[!warning]
