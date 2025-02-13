@@ -6,7 +6,7 @@ tags:
 description:
 draft: true
 ---
-
+YT [Video](https://www.youtube.com/watch?v=Np-EUXa2Tvg&list=PL3PByZO-B6dM4pw2AwLepEBsfDrly9L0w)
 Cmake command to build the library: 
 
 Install `torch` from the binary
