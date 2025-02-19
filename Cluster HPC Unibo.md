@@ -114,3 +114,50 @@ echo "=== End of Job ==="
 ```
 
 To submit and manage the SLURM job, follow the same [[Cluster-DISI-unibo#Executing OpenMP jobs|instructions]] given for OpenMP.
+
+
+---
+
+## Official Instructions to access the cluster
+
+(Updated January 2025)
+
+To use the cluster, the first step is enabling your institutional unibo.it account to access departmental systems and the cluster itself. If you are not already enabled, you will receive an email confirming your enablement. With your institutional credentials, you will have access, including remote access, to all machines in the Ercolani laboratory. The email contains the link dedicated to departmental IT services (https://disi.unibo.it/it/dipartimento/servizi-tecnici-e-amministrativi/servizi-informatici), and in the Remote Access section, you can find details about these machines and how to access them. Additionally, you can access the giano.cs.unibo.it machine in the same way, from which you can use the cluster scheduler and where you need to set up the job execution environment as it contains updated versions of Python and any additional required libraries.
+
+The maximum user quota is currently set to *400 MB*. If you need more space, you can create your own directory in /scratch.hpc/, where individual files are deleted if not accessed in the last 40 days (the /public/ directory is normally deleted every first Sunday of the month, while the `/public.hpc/` directory is being decommissioned). The user home is a shared storage space between machines, so the execution environment and files needed for processing present in the `giano.cs.unibo.it` machine from which to launch the job that will be executed in GPU-equipped machines will also be visible in all other laboratory machines. The `/scratch.hpc/` and `/public.hpc/`  directories are only visible from the giano.cs.unibo.it machine.
+
+Two scheduling queues are present in the cluster:
+
+* **rtx2080**: with processing nodes (single quad-core CPU, 44 GB RAM) each containing an Nvidia GeForce RTX 2080 Ti graphics card (GPU Turing TU102 with 4352 cores, 11 GB memory) driven by Nvidia driver v. 535 and CUDA 11.8 computing libraries.
+
+* **l40**: with processing nodes (single octa-core CPU, 64 GB RAM) each containing an Nvidia L40 graphics card (GPU Ada Lovelace AD102GL with 18176 cores, 48 GB memory) driven by Nvidia driver v. 535 and CUDA 11.8 computing libraries.
+
+A possible work setup is to create a Python virtual environment in the giano machine, inserting everything needed inside and using pip for installing necessary modules; for example, when installing pytorch, you'll need to use the command `pip3 install torch --no-cache-dir --index-url https://download.pytorch.org/whl/cu118` (ref. https://pytorch.org/).
+
+**Note**: The pip package manager uses a cache in the user space by default, and the relative quota could run out quickly. It is therefore recommended to always include the --no-cache-dir parameter in the module installation command, and in case you need to delete an existing cache, use the command `pip3 cache purge`.
+
+The cluster uses a SLURM scheduler (https://slurm.schedmd.com/overview.html) for job distribution. To submit a job, you must prepare a SLURM script file in your work area (e.g., script.sbatch) where you insert the directives for configuring the job itself. After the directives, you can insert script commands (e.g., BASH). Here's an example script:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=jobname
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=name.surname@unibo.it
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=31G
+#SBATCH --partition=partitionname
+#SBATCH --output=outputname
+#SBATCH --chdir=/scratch.hpc/name.surname
+#SBATCH --gres=gpu:1
+
+venv/bin/python3 test.py # to activate the python virtual environment
+```
+
+In the previous example, the directive to be kept unchanged is --gres=gpu:1 (each computation node has a single GPU available and must be activated to use it). The others can be customized. For the definition of these and other directives, refer to the SLURM documentation (https://slurm.schedmd.com/sbatch.html). In the example, after the directives, the program was invoked.
+
+The process must be queued from the giano.cs.unibo.it machine (accessible via ssh) by launching the command `sbatch scriptname` (e.g., `sbatch script.sbatch`). With the directives specified in the example, emails will be sent to the specified address at job start, completion, and in case of errors. The processing results will be present in the outputname file as indicated in the directive.
+
+Execution on the machines takes place within the same relative path which, being shared, is seen by the laboratory machines, the giano machine, and the related processing nodes (except for the `/scratch.hpc/` and `/public.hpc/` directories which are not visible from the laboratory machines).
